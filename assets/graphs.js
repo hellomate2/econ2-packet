@@ -18,6 +18,14 @@ function dt(x,y,lbl,dx,dy){return{k:"dt",x:x,y:y,lbl:lbl,dx:dx,dy:dy};}
 function tx(x,y,t,c,an,sz,w){return{k:"tx",x:x,y:y,t:t,c:c,an:an,sz:sz,w:w};}
 function arw(x1,y1,x2,y2,c){return{k:"arw",x1:x1,y1:y1,x2:x2,y2:y2,c:c};}
 
+// keep a text label inside the canvas: returns an adjusted px x-coordinate
+function fitX(px,an,t,sz){
+  var w=String(t).length*sz*0.6;
+  var x0=an==='end'?px-w:an==='middle'?px-w/2:px;
+  if(x0+w>VW-3) px-=(x0+w)-(VW-3);
+  if(x0<3) px+=3-x0;
+  return px;
+}
 function draw(spec){
   var o=[];
   o.push('<svg viewBox="0 0 '+VW+' '+VH+'" role="img" aria-label="'+esc(spec.alt||"diagram")+'">');
@@ -27,7 +35,7 @@ function draw(spec){
   o.push('<line x1="'+X(0)+'" y1="'+Y(0)+'" x2="'+X(104)+'" y2="'+Y(0)+'" stroke="'+C.r+'" stroke-width="1.2"/>');
   o.push('<line x1="'+X(0)+'" y1="'+Y(0)+'" x2="'+X(0)+'" y2="'+Y(104)+'" stroke="'+C.r+'" stroke-width="1.2"/>');
   o.push('<text x="'+X(104)+'" y="'+(Y(0)+15)+'" fill="'+C.m+'" font-size="10" font-family="var(--mono)" text-anchor="end">'+esc(spec.xl||"")+'</text>');
-  o.push('<text x="'+(X(0)-4)+'" y="11" fill="'+C.m+'" font-size="10" font-family="var(--mono)" text-anchor="end">'+esc(spec.yl||"")+'</text>');
+  o.push('<text x="2" y="11" fill="'+C.m+'" font-size="10" font-family="var(--mono)" text-anchor="start">'+esc(spec.yl||"")+'</text>');
 
   (spec.it||[]).forEach(function(e){
     if(e.k==="ar"){
@@ -39,14 +47,14 @@ function draw(spec){
       o.push('<line x1="'+X(e.x1)+'" y1="'+Y(e.y1)+'" x2="'+X(e.x2)+'" y2="'+Y(e.y2)+'" stroke="'+e.c+'" stroke-width="1.9"'+(e.dash?' stroke-dasharray="'+e.dash+'"':'')+' stroke-linecap="round"/>');
       if(e.lbl){
         var p=e.lp||[e.x2,e.y2], an=p[2]||"start";
-        o.push('<text x="'+X(p[0])+'" y="'+Y(p[1])+'" fill="'+e.c+'" font-size="10.5" font-family="var(--mono)" font-weight="500" text-anchor="'+an+'">'+esc(e.lbl)+'</text>');
+        o.push('<text x="'+fitX(X(p[0]),an,e.lbl,10.5)+'" y="'+Y(p[1])+'" fill="'+e.c+'" font-size="10.5" font-family="var(--mono)" font-weight="500" text-anchor="'+an+'">'+esc(e.lbl)+'</text>');
       }
     }
     else if(e.k==="cv"){
       var d=e.p.map(function(q,i){return (i?"L":"M")+X(q[0])+","+Y(q[1]);}).join(" ");
       o.push('<path d="'+d+'" fill="none" stroke="'+e.c+'" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>');
       if(e.lbl){var q=e.lp||e.p[e.p.length-1];
-        o.push('<text x="'+X(q[0])+'" y="'+Y(q[1])+'" fill="'+e.c+'" font-size="10.5" font-family="var(--mono)" font-weight="500" text-anchor="'+(q[2]||"start")+'">'+esc(e.lbl)+'</text>');}
+        o.push('<text x="'+fitX(X(q[0]),q[2]||"start",e.lbl,10.5)+'" y="'+Y(q[1])+'" fill="'+e.c+'" font-size="10.5" font-family="var(--mono)" font-weight="500" text-anchor="'+(q[2]||"start")+'">'+esc(e.lbl)+'</text>');}
     }
     else if(e.k==="dr"){
       o.push('<line x1="'+X(0)+'" y1="'+Y(e.y)+'" x2="'+X(e.x)+'" y2="'+Y(e.y)+'" stroke="'+C.m+'" stroke-width=".9" stroke-dasharray="3 3" opacity=".8"/>');
@@ -59,7 +67,7 @@ function draw(spec){
       if(e.lbl) o.push('<text x="'+(X(e.x)+(e.dx===undefined?5:e.dx))+'" y="'+(Y(e.y)-(e.dy===undefined?5:e.dy))+'" fill="'+C.i+'" font-size="10" font-family="var(--mono)">'+esc(e.lbl)+'</text>');
     }
     else if(e.k==="tx"){
-      o.push('<text x="'+X(e.x)+'" y="'+Y(e.y)+'" fill="'+(e.c||C.m)+'" font-size="'+(e.sz||9.5)+'" font-family="var(--mono)" font-weight="'+(e.w||400)+'" text-anchor="'+(e.an||"middle")+'">'+esc(e.t)+'</text>');
+      o.push('<text x="'+fitX(X(e.x),e.an||"middle",e.t,e.sz||9.5)+'" y="'+Y(e.y)+'" fill="'+(e.c||C.m)+'" font-size="'+(e.sz||9.5)+'" font-family="var(--mono)" font-weight="'+(e.w||400)+'" text-anchor="'+(e.an||"middle")+'">'+esc(e.t)+'</text>');
     }
     else if(e.k==="arw"){
       o.push('<line x1="'+X(e.x1)+'" y1="'+Y(e.y1)+'" x2="'+X(e.x2)+'" y2="'+Y(e.y2)+'" stroke="'+(e.c||C.m)+'" stroke-width="1.3" marker-end="url(#ah)"/>');
@@ -111,14 +119,14 @@ G["sd-equilibrium"]={xl:"Quantity",yl:"Price",alt:"supply and demand equilibrium
   arw(60,72,72,72,C.m), arw(40,32,28,32,C.m)
 ]};
 G["sd-shifts"]={xl:"Quantity",yl:"Price",alt:"shifts in supply and demand",it:[
-  ln(D1[0],D1[1],D1[2],D1[3],C.d,"D₁",[93,17]),
-  ln(S1[0],S1[1],S1[2],S1[3],C.s,"S₁",[93,84]),
-  ln(26,20,100,76,C.s,"S₂",[84,96,"end"],"5 3"),
-  ln(26,88,100,22,C.d,"D₂",[46,94,"middle"],"5 3"),
-  dt(50,52,"E₁",6,4),
-  dt(64,62,"E₂ᴰ",5,3), dt(62,42,"E₂ˢ",5,-8),
-  tx(20,34,"supply out ⇒ P↓ Q↑",C.s,"start",8.5),
-  tx(20,27,"demand out ⇒ P↑ Q↑",C.d,"start",8.5)
+  ln(8,88,92,16,C.d,"D₁",[93,17]),
+  ln(8,20,92,84,C.s,"S₁",[93,84]),
+  ln(26,20,104,79.4,C.s,"S₂",[86,95,"end"],"5 3"),
+  ln(26,88,104,21.1,C.d,"D₂",[48,94,"middle"],"5 3"),
+  dt(50,52,"E₁",-17,2),
+  dt(59.5,59.3,"E₂ᴰ",6,3), dt(58.5,44.7,"E₂ˢ",6,-10),
+  tx(14,34,"supply out ⇒ P↓ Q↑",C.s,"start",8.5),
+  tx(14,27,"demand out ⇒ P↑ Q↑",C.d,"start",8.5)
 ]};
 
 /* ---- 4. welfare ---- */
@@ -130,34 +138,34 @@ G["surplus"]={xl:"Quantity",yl:"Price",alt:"consumer and producer surplus",it:[
   dr(50,52,"Q₁","P₁"), dt(50,52)
 ]};
 G["dwl-under"]={xl:"Quantity",yl:"Price",alt:"deadweight loss from underproduction",it:[
-  ar([[32,74],[50,52],[32,38]],C.gf,"DWL",39,55,.42),
-  ln(D1[0],D1[1],D1[2],D1[3],C.d,"D",[93,17]),
-  ln(S1[0],S1[1],S1[2],S1[3],C.s,"S",[93,84]),
+  ar([[32,67.4],[50,52],[32,38.3]],C.gf,"DWL",38,53,.42),
+  ln(8,88,92,16,C.d,"D",[93,17]),
+  ln(8,20,92,84,C.s,"S",[93,84]),
   dr(50,52,"Q₁",""), dt(50,52),
-  ln(32,0,32,74,C.m,"",null,"3 3"),
+  ln(32,0,32,67.4,C.m,"",null,"3 3"),
   tx(32,-7,"Q₂",C.i,"middle",9.5),
   tx(20,92,"MB > MC here",C.m,"start",9)
 ]};
 G["dwl-over"]={xl:"Quantity",yl:"Price",alt:"deadweight loss from overproduction",it:[
-  ar([[50,52],[70,69],[70,35]],C.gf,"DWL",62,52,.42),
-  ln(D1[0],D1[1],D1[2],D1[3],C.d,"D",[93,17]),
-  ln(S1[0],S1[1],S1[2],S1[3],C.s,"S",[93,84]),
+  ar([[50,52],[70,67.2],[70,34.9]],C.gf,"DWL",63,52,.42),
+  ln(8,88,92,16,C.d,"D",[93,17]),
+  ln(8,20,92,84,C.s,"S",[93,84]),
   dr(50,52,"Q₁",""), dt(50,52),
-  ln(70,0,70,69,C.m,"",null,"3 3"),
+  ln(70,0,70,67.2,C.m,"",null,"3 3"),
   tx(70,-7,"Q₂",C.i,"middle",9.5),
   tx(20,92,"MC > MB here",C.m,"start",9)
 ]};
 G["ceiling"]={xl:"Quantity",yl:"Price",alt:"binding price ceiling",it:[
-  ar([[8,88],[30,69],[30,34],[8,34]],C.d,"CS",18,64,.2),
-  ar([[8,20],[30,34],[8,34]],C.s,"PS",15,28,.24),
-  ar([[30,69],[50,52],[30,34]],C.gf,"DWL",37,52,.42),
-  ln(D1[0],D1[1],D1[2],D1[3],C.d,"D",[93,17]),
-  ln(S1[0],S1[1],S1[2],S1[3],C.s,"S",[93,84]),
+  ar([[8,88],[26.4,72.3],[26.4,34],[8,34]],C.d,"CS",16,60,.2),
+  ar([[8,20],[26.4,34],[8,34]],C.s,"PS",13,29,.24),
+  ar([[26.4,72.3],[50,52],[26.4,34]],C.gf,"DWL",34,52,.42),
+  ln(8,88,92,16,C.d,"D",[93,17]),
+  ln(8,20,92,84,C.s,"S",[93,84]),
   ln(8,34,92,34,C.a,"P_C",[93,33]),
   dt(50,52,"",0,0),
-  ln(30,0,30,69,C.m,"",null,"3 3"), ln(70,0,70,34,C.m,"",null,"3 3"),
-  tx(30,-7,"Q_S",C.i,"middle",9.5), tx(70,-7,"Q_D",C.i,"middle",9.5),
-  arw(32,24,68,24,C.m), tx(50,15,"shortage",C.m,"middle",9)
+  ln(26.4,0,26.4,72.3,C.m,"",null,"3 3"), ln(71,0,71,34,C.m,"",null,"3 3"),
+  tx(26.4,-7,"Q_S",C.i,"middle",9.5), tx(71,-7,"Q_D",C.i,"middle",9.5),
+  arw(29,24,68,24,C.m), tx(49,16,"shortage",C.m,"middle",9)
 ]};
 
 /* ---- 6. elasticity ---- */
@@ -175,34 +183,36 @@ G["elastic-vs-inelastic"]={xl:"Quantity",yl:"Price",alt:"elastic versus inelasti
 
 /* ---- 7. tax & subsidy ---- */
 G["tax-wedge"]={xl:"Quantity",yl:"Price",alt:"tax wedge with revenue and deadweight loss",it:[
-  ar([[34,66],[50,52],[34,38]],C.gf,"DWL",41,52,.42),
-  ar([[8,66],[34,66],[34,38],[8,38]],C.a,"revenue",21,52,.17),
-  ln(D1[0],D1[1],D1[2],D1[3],C.d,"D",[93,17]),
-  ln(S1[0],S1[1],S1[2],S1[3],C.s,"S",[93,84]),
-  ln(22,48,100,112,C.s,"S + tax",[64,98,"end"],"5 3"),
-  dr(34,66,"Q₂","P₂"), dt(34,66), dt(34,38), dt(50,52),
-  tx(6,38,"P₂−tax",C.i,"end",9.5),
-  tx(50,42,"Q₁",C.m,"middle",9)
+  ar([[38.9,61.5],[50,52],[38.9,43.5]],C.gf,"DWL",44.5,52,.42),
+  ar([[8,61.5],[38.9,61.5],[38.9,43.5],[8,43.5]],C.a,"revenue",23,52,.17),
+  ln(8,88,92,16,C.d,"D",[93,17]),
+  ln(8,20,92,84,C.s,"S",[93,84]),
+  ln(8,38,84,95.9,C.s,"S + tax",[66,95,"end"],"5 3"),
+  dr(38.9,61.5,"Q₂","P₂"), dt(38.9,61.5), dt(38.9,43.5), dt(50,52),
+  tx(6,43.5,"P₂−tax",C.i,"end",9.5),
+  tx(51,-7,"Q₁",C.m,"middle",9)
 ]};
 G["tax-incidence"]={xl:"Quantity",yl:"Price",alt:"tax incidence with inelastic versus elastic demand",it:[
   ln(40,94,60,8,C.d,"inelastic D",[38,96,"start"]),
   ln(8,64,92,40,C.d,"elastic D",[93,39],"5 3"),
   ln(8,20,92,84,C.s,"S",[93,84]),
-  ln(22,34,100,98,C.s,"S+tax",[78,96,"end"],"5 3"),
-  dt(49,51), dt(47,65), dt(56,37), dt(52,60),
-  arw(46,52,46,64,C.d),
-  tx(30,80,"consumer price",C.d,"start",8.5), tx(30,73,"rises ≈ full tax",C.d,"start",8.5),
-  tx(64,18,"consumer price",C.m,"start",8.5), tx(64,11,"barely moves",C.m,"start",8.5)
+  ln(8,34,92,98,C.s,"S+tax",[80,97,"end"],"5 3"),
+  dt(49.8,51.8), dt(47,63.7), dt(50,52), dt(36.6,55.8),
+  arw(44,53,44,63,C.d),
+  tx(16,82,"steep D: consumer price",C.d,"start",8.5),
+  tx(16,75,"rises by nearly the tax",C.d,"start",8.5),
+  tx(56,22,"flat D: consumer price",C.m,"start",8.5),
+  tx(56,15,"barely moves",C.m,"start",8.5)
 ]};
 G["subsidy"]={xl:"Quantity",yl:"Price",alt:"subsidy with government cost and deadweight loss",it:[
-  ar([[50,52],[66,66],[66,38]],C.gf,"DWL",59,52,.42),
-  ar([[8,66],[66,66],[66,38],[8,38]],C.a,"gov't cost",30,52,.15),
-  ln(D1[0],D1[1],D1[2],D1[3],C.d,"D",[93,17]),
-  ln(S1[0],S1[1],S1[2],S1[3],C.s,"S",[93,84]),
-  ln(-6,6,78,70,C.s,"S − subsidy",[16,4,"start"],"5 3"),
-  dr(66,38,"Q₂","P_C"), dt(66,38), dt(66,66), dt(50,52),
-  tx(6,66,"P_P",C.i,"end",9.5),
-  tx(50,42,"Q₁",C.m,"middle",9)
+  ar([[50,52],[58.6,58.6],[58.6,44.6]],C.gf,"DWL",55.8,52,.42),
+  ar([[8,58.6],[58.6,58.6],[58.6,44.6],[8,44.6]],C.a,"gov't cost",29,51.5,.15),
+  ln(8,88,92,16,C.d,"D",[93,17]),
+  ln(8,20,92,84,C.s,"S",[93,84]),
+  ln(8,6,92,70,C.s,"S − subsidy",[93,68],"5 3"),
+  dr(58.6,44.6,"Q₂","P_C"), dt(58.6,44.6), dt(58.6,58.6), dt(50,52),
+  tx(6,58.6,"P_P",C.i,"end",9.5),
+  tx(48,-7,"Q₁",C.m,"middle",9)
 ]};
 
 /* ---- 8. households ---- */
@@ -251,39 +261,40 @@ G["lr-supply"]={xl:"Firm output (q)",yl:"$",alt:"long-run industry supply",it:[
 
 /* ---- 10. monopoly ---- */
 G["monopoly"]={xl:"Quantity",yl:"Price",alt:"monopoly price, quantity and deadweight loss",it:[
-  ar([[36,58],[58,44],[36,29]],C.gf,"DWL",45,44,.42),
+  ar([[40.7,60],[60.7,42.8],[40.7,31.9]],C.gf,"DWL",47.5,45,.42),
   ln(8,88,92,16,C.d,"D, MB",[93,17]),
-  ln(8,88,50,52,C.d,"MR",[27,65,"start"],"5 3"),
+  ln(8,88,57,4,C.d,"MR",[31,56,"start"],"5 3"),
   ln(8,14,92,60,C.s,"MC",[93,60]),
-  dr(36,58,"Q_m","P_m"), dt(36,58),
-  dt(36,29), dt(58,44,"",0,0),
-  tx(58,-7,"Q_c",C.m,"middle",9.5),
-  tx(14,20,"① MR = MC ⇒ Q",C.a,"start",8.5),
-  tx(14,13,"② read P off D",C.a,"start",8.5),
-  tx(66,86,"MR is twice",C.d,"start",8.5), tx(66,79,"as steep as D",C.d,"start",8.5)
+  dr(40.7,60,"Q_m","P_m"), dt(40.7,60),
+  dt(40.7,31.9), dt(60.7,42.8,"",0,0),
+  tx(61,-7,"Q_c",C.m,"middle",9.5),
+  tx(13,20,"① MR = MC ⇒ Q",C.a,"start",8.5),
+  tx(13,13,"② read P off D",C.a,"start",8.5),
+  tx(68,88,"MR is twice",C.d,"start",8.5), tx(68,81,"as steep as D",C.d,"start",8.5)
 ]};
 
 /* ---- 11. externalities ---- */
 G["neg-ext"]={xl:"Quantity",yl:"Price",alt:"negative externality",it:[
-  ar([[36,63],[50,52],[36,43]],C.gf,"DWL",42,52,.42),
-  ln(D1[0],D1[1],D1[2],D1[3],C.d,"D = PMB = SMB",[93,17]),
-  ln(S1[0],S1[1],S1[2],S1[3],C.s,"PMC",[93,84]),
-  ln(8,43,92,107,C.g,"SMC",[70,96,"end"]),
-  dt(50,52), dt(36,63),
-  ln(36,0,36,63,C.m,"",null,"3 3"), ln(50,0,50,52,C.m,"",null,"3 3"),
-  tx(36,-7,"Q*",C.i,"middle",9.5), tx(52,-7,"Q₁",C.i,"middle",9.5),
-  tx(14,30,"external MC",C.g,"start",8.5),
-  arw(20,26,20,38,C.g)
+  ar([[35.8,64.2],[50,52],[50,75]],C.gf,"DWL",45.3,63.5,.42),
+  ln(8,88,92,16,C.d,"D = PMB = SMB",[93,17]),
+  ln(8,20,92,84,C.s,"PMC",[93,84]),
+  ln(8,43,92,107,C.g,"SMC",[74,99,"end"]),
+  dt(50,52), dt(35.8,64.2),
+  ln(35.8,0,35.8,64.2,C.m,"",null,"3 3"), ln(50,0,50,52,C.m,"",null,"3 3"),
+  tx(34,-7,"Q*",C.i,"middle",9.5), tx(52,-7,"Q₁",C.i,"middle",9.5),
+  tx(12,30,"external MC",C.g,"start",8.5),
+  arw(18,26,18,38,C.g)
 ]};
 G["pos-ext"]={xl:"Quantity",yl:"Price",alt:"positive externality",it:[
-  ar([[50,52],[64,63],[64,42]],C.gf,"DWL",57,52,.42),
-  ln(D1[0],D1[1],D1[2],D1[3],C.d,"PMB",[93,17]),
-  ln(8,111,92,39,C.g,"SMB",[93,38]),
-  ln(S1[0],S1[1],S1[2],S1[3],C.s,"S = PMC = SMC",[70,92,"end"]),
-  dt(50,52), dt(64,63),
-  ln(50,0,50,52,C.m,"",null,"3 3"), ln(64,0,64,63,C.m,"",null,"3 3"),
-  tx(48,-7,"Q₁",C.i,"middle",9.5), tx(66,-7,"Q*",C.i,"middle",9.5),
-  tx(16,30,"external MB",C.g,"start",8.5)
+  ar([[50,52],[50,68],[59.9,59.5]],C.gf,"DWL",53.5,59.8,.42),
+  ln(8,88,92,16,C.d,"PMB",[93,17]),
+  ln(8,104,92,32,C.g,"SMB",[93,31]),
+  ln(8,20,92,84,C.s,"S = PMC = SMC",[80,76,"end"]),
+  dt(50,52), dt(59.9,59.5),
+  ln(50,0,50,52,C.m,"",null,"3 3"), ln(59.9,0,59.9,59.5,C.m,"",null,"3 3"),
+  tx(48,-7,"Q₁",C.i,"middle",9.5), tx(62,-7,"Q*",C.i,"middle",9.5),
+  tx(14,30,"external MB",C.g,"start",8.5),
+  arw(20,38,20,26,C.g)
 ]};
 
 /* ---- 12-13. labor ---- */
@@ -294,17 +305,19 @@ G["labor-market"]={xl:"Employment (L)",yl:"Wage (W)",alt:"labor market",it:[
   tx(20,32,"MRP_L = MP_L × MR",C.d,"start",9)
 ]};
 G["skill-bias"]={xl:"Employment (L)",yl:"Wage (W)",alt:"skill-biased technological change",it:[
-  ln(8,74,50,38,C.d,"D_L",[8,80,"start"]),
-  ln(8,10,50,46,C.s,"S_L",[8,4,"start"]),
-  dt(30,56,"",0,0), dr(30,56,"",""),
-  tx(28,92,"LOW-SKILL",C.m,"middle",9,600),
-  ln(56,74,98,38,C.d,"D_H1",[56,80,"start"]),
-  ln(70,88,112,52,C.d,"D_H2",[88,92,"end"],"5 3"),
-  ln(56,10,98,46,C.s,"S_H",[56,4,"start"]),
-  dt(78,56,"",0,0), dt(86,63,"",0,0),
-  tx(80,92,"HIGH-SKILL",C.m,"middle",9,600),
-  arw(74,50,84,58,C.d),
-  ln(53,0,53,100,C.r,"",null,"2 4")
+  ln(10,72,48,30,C.d,"D_L",[10,76,"start"]),
+  ln(10,18,48,60,C.s,"S_L",[10,12,"start"]),
+  dt(34.4,45), ln(34.4,0,34.4,45,C.m,"",null,"3 3"),
+  tx(29,92,"LOW-SKILL",C.m,"middle",9,600),
+  tx(29,84,"wage unchanged",C.m,"middle",8.5),
+  ln(58,72,96,30,C.d,"D_H1",[58,76,"start"]),
+  ln(58,86,96,44,C.d,"D_H2",[92,92,"end"],"5 3"),
+  ln(58,18,96,60,C.s,"S_H",[58,12,"start"]),
+  dt(82.4,45), dt(88.8,52),
+  ln(82.4,0,82.4,45,C.m,"",null,"3 3"), ln(88.8,0,88.8,52,C.m,"",null,"3 3"),
+  tx(77,92,"HIGH-SKILL",C.m,"middle",9,600),
+  tx(77,84,"wage rises",C.d,"middle",8.5),
+  arw(80,50,87,57,C.d)
 ]};
 G["eitc"]={xl:"Employment (L)",yl:"Wage (W)",alt:"EITC as a wage subsidy",it:[
   ln(8,88,92,16,C.d,"D = MRP_L",[93,17]),
@@ -331,13 +344,13 @@ G["investment-demand"]={xl:"Investment (I)",yl:"Real interest rate (r)",alt:"inv
 
 /* ---- 15-16. trade ---- */
 G["trade-ppc-cpc"]={xl:"Soybeans (S)",yl:"Washing machines (WM)",alt:"PPC and consumption possibilities curve",it:[
-  cv([[6,84],[28,80],[50,70],[68,54],[80,32],[86,6]],C.s,"PPC",[30,72,"start"]),
-  ln(6,100,94,12,C.a,"CPC",[94,18,"end"]),
-  dt(54,66,"A",-14,4), dt(78,40,"B",6,2),
-  arw(56,62,74,44,C.m),
-  tx(20,32,"slope = −terms of trade",C.m,"start",8.5),
-  tx(20,25,"CPC lies outside PPC",C.g,"start",8.5),
-  tx(70,80,"produce at A,",C.m,"start",8.5), tx(70,73,"consume at B",C.m,"start",8.5)
+  cv([[6,84],[28,80],[50,70],[68,54],[80,32],[86,6]],C.s,"PPC",[30,73,"start"]),
+  ln(6,100.8,94,39.2,C.a,"CPC",[94,45,"end"]),
+  dt(50,70,"A",-14,4), dt(76,51.8,"B",6,2),
+  arw(54,68,72,54,C.m),
+  tx(14,30,"slope = −terms of trade",C.m,"start",8.5),
+  tx(14,23,"CPC lies outside PPC",C.g,"start",8.5),
+  tx(58,90,"produce at A,",C.m,"start",8.5), tx(58,83,"consume at B",C.m,"start",8.5)
 ]};
 G["trade-export"]={xl:"Quantity",yl:"Price",alt:"export good with world price",it:[
   ln(D1[0],D1[1],D1[2],D1[3],C.d,"D_US",[93,17]),
@@ -377,11 +390,11 @@ G["growth-labor"]={xl:"Population / employment (L)",yl:"Real wage (W)",alt:"Malt
   ln(28,104,96,36,C.d,"D shifts out (post-1800)",[94,30,"end"],"5 3"),
   ln(8,14,92,78,C.s,"S₁",[44,52,"end"]),
   ln(34,6,118,70,C.s,"S₂",[92,74],"5 3"),
-  dt(28,66,"1300",-4,6), dt(46,48,"1650",6,2), dt(60,36,"1800",6,2),
-  dt(76,60,"1860",6,2),
-  arw(62,42,74,56,C.g),
-  tx(16,34,"more people ⇒ lower wages",C.m,"start",8.5),
-  tx(16,27,"= the Malthusian trap",C.m,"start",8.5)
+  dt(28,66,"1300",-4,6), dt(46,48,"1650",6,2), dt(60,34,"1800",6,2),
+  dt(76,56,"1860",6,2),
+  arw(63,36,74,52,C.g),
+  tx(14,34,"more people ⇒ lower wages",C.m,"start",8.5),
+  tx(14,27,"= the Malthusian trap",C.m,"start",8.5)
 ]};
 
 /* ---- 20-21. keynesian ---- */
@@ -445,10 +458,10 @@ G["fx-market"]={xl:"Quantity of $ traded",yl:"Price of $ (¥ per $)",alt:"foreig
   ln(24,100,108,28,C.d,"D₂",[93,26],"5 3"),
   ln(8,20,92,84,C.s,"S₁",[44,52,"end"]),
   ln(-8,32,76,96,C.s,"S₂",[74,100,"end"],"5 3"),
-  dt(50,52,"e₁",-14,2), dt(56,70,"e₂",6,2),
-  arw(46,62,44,76,C.d), arw(62,48,58,40,C.s),
-  tx(16,30,"both shifts raise",C.g,"start",8.5),
-  tx(16,23,"the price: $ appreciates",C.g,"start",8.5)
+  dt(50,52,"e₁",-16,2), dt(50.9,76.9,"e₂",7,2),
+  arw(44,60,42,74,C.d), arw(60,46,56,38,C.s),
+  tx(14,30,"both shifts raise",C.g,"start",8.5),
+  tx(14,23,"the price: $ appreciates",C.g,"start",8.5)
 ]};
 G["saving-investment"]={xl:"I*, S* + NKI*",yl:"Real interest rate (r*)",alt:"long-run real interest rate",it:[
   ln(8,88,92,16,C.d,"I",[93,17]),
