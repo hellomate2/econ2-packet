@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Externalities &middot; Econ 2 Packet</title>
+<meta name="description" content="Unit 11 of the Econ 2 master packet: Externalities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Spectral:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232B4C8C'/%3E%3Cpath d='M8 23 L14 15 L19 19 L25 9' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="topbar"><button class="btn" id="menu" aria-label="Open unit navigator">Units</button><span class="nm">Externalities</span><button class="btn" id="theme" aria-label="Toggle colour theme">Theme</button></div>
+<div class="wrap">
+<nav class="rail" id="rail" aria-label="Unit navigator">
+<div class="railhead">
+<a class="homelink" href="index.html"><span class="mark">ECON 2 &middot; Berkeley</span><span class="nm">Master Packet</span></a>
+</div>
+<div class="progwrap"><div class="progbar"><i id="pbar"></i></div>
+<div class="progtxt"><span id="ptxt">&nbsp;</span><button class="btn mini" id="reset">Reset</button></div></div>
+<button class="btn wide-btn" id="searchbtn">Search <kbd>/</kbd></button>
+<div class="navgrp"><span class="lbl">Part I &middot; Microeconomics</span>
+<a href="u01.html" data-unit="1"><span class="n">1</span>Scarcity, Choice &amp; Opportunity Cost</a>
+<a href="u02.html" data-unit="2"><span class="n">2</span>Comparative Advantage</a>
+<a href="u03.html" data-unit="3"><span class="n">3</span>Supply &amp; Demand</a>
+<a href="u04.html" data-unit="4"><span class="n">4</span>Surplus &amp; Deadweight Loss</a>
+<a href="u05.html" data-unit="5"><span class="n">5</span>Price Controls</a>
+<a href="u06.html" data-unit="6"><span class="n">6</span>Elasticity</a>
+<a href="u07.html" data-unit="7"><span class="n">7</span>Taxes &amp; Subsidies</a>
+<a href="u08.html" data-unit="8"><span class="n">8</span>Households &amp; Utility</a>
+<a href="u09.html" data-unit="9"><span class="n">9</span>Firms, Costs &amp; Profit</a>
+<a href="u10.html" data-unit="10"><span class="n">10</span>Monopoly &amp; Market Power</a>
+<a href="u11.html" class="cur" data-unit="11"><span class="n">11</span>Externalities</a>
+</div>
+<div class="navgrp"><span class="lbl">Part II &middot; Factors &amp; Trade</span>
+<a href="u12.html" data-unit="12"><span class="n">12</span>Labor Markets &amp; Wages</a>
+<a href="u13.html" data-unit="13"><span class="n">13</span>Inequality</a>
+<a href="u14.html" data-unit="14"><span class="n">14</span>Capital, Interest &amp; Present Value</a>
+<a href="u15.html" data-unit="15"><span class="n">15</span>International Trade</a>
+<a href="u16.html" data-unit="16"><span class="n">16</span>Trade Policy &amp; Tariffs</a>
+</div>
+<div class="navgrp"><span class="lbl">Part III &middot; Macroeconomics</span>
+<a href="u17.html" data-unit="17"><span class="n">17</span>GDP &amp; Measurement</a>
+<a href="u18.html" data-unit="18"><span class="n">18</span>Inflation &amp; Price Indexes</a>
+<a href="u19.html" data-unit="19"><span class="n">19</span>Long-Run Growth</a>
+<a href="u20.html" data-unit="20"><span class="n">20</span>The Keynesian Cross</a>
+<a href="u21.html" data-unit="21"><span class="n">21</span>Fiscal Policy</a>
+<a href="u22.html" data-unit="22"><span class="n">22</span>Monetary Policy &amp; Financial Crises</a>
+<a href="u23.html" data-unit="23"><span class="n">23</span>Inflation &amp; the Return to Potential</a>
+<a href="u24.html" data-unit="24"><span class="n">24</span>International Macroeconomics</a>
+</div>
+<div class="navgrp"><span class="lbl">Part IV &middot; Exam Lab</span>
+<a href="u25.html" data-unit="25"><span class="n">25</span>The Graph Vault</a>
+<a href="u26.html" data-unit="26"><span class="n">26</span>The Midterm, Worked</a>
+<a href="u27.html" data-unit="27"><span class="n">27</span>The Final, Worked</a>
+<a href="u28.html" data-unit="28"><span class="n">28</span>Cheat Sheet Blueprint</a>
+</div>
+</nav>
+<main class="main">
+<div class="col">
+<div class="crumb"><a href="index.html">Packet</a> <span>/</span> <span>Part I &middot; Microeconomics</span></div>
+<section class="unit solo" id="u11">
+  <div class="uhead"><span class="unum">11</span><div>
+    <h3>Externalities</h3>
+    <div class="meta">Class 11 · Chapter 11 <span class="tag both">Midterm + Final</span></div>
+  </div></div>
+
+  <div class="body">
+    <p>An externality is a cost or benefit falling on someone <strong>outside the transaction</strong>. The market prices only the private costs and benefits, so it gets the quantity wrong.</p>
+    <div class="eq">SMC = PMC + external marginal cost    SMB = PMB + external marginal benefit<span class="cm">"Private" = the buyers and sellers in the market. "Social" = everyone, inside and outside.</span></div>
+    <ul>
+      <li><strong>Negative externality</strong> (pollution): SMC lies <em>above</em> PMC. The market <strong>overproduces</strong>.</li>
+      <li><strong>Positive externality</strong> (vaccines, education): SMB lies <em>above</em> PMB. The market <strong>underproduces</strong>.</li>
+    </ul>
+    <p>In both cases the market settles where PMC = PMB, but the social optimum is where SMC = SMB, and the gap generates a deadweight loss triangle that — as always — <strong>points toward the social optimum.</strong></p>
+  </div>
+
+  <div class="figrow">
+    <figure class="fig"><div class="plot" data-graph="neg-ext"></div>
+      <figcaption><b>Negative.</b> Gasoline. SMC above PMC, so Q* &lt; Q₁. Fix with a tax equal to the external MC.</figcaption></figure>
+    <figure class="fig"><div class="plot" data-graph="pos-ext"></div>
+      <figcaption><b>Positive.</b> Vaccines. SMB above PMB, so Q* &gt; Q₁. Fix with a subsidy equal to the external MB.</figcaption></figure>
+  </div>
+
+  <div class="body">
+    <h4 class="sub">The answer that surprises people</h4>
+    <p>A past midterm asked whether the optimal level of pollution is always zero. <strong>It is not.</strong> If a polluting activity raises social marginal cost by some quantifiable amount, the socially optimal quantity is found where SMC meets SMB — and that is typically <strong>nonzero and finite</strong>. It <em>could</em> land at zero, but there is no reason to expect it must. This sounds preposterous to a biologist and it is the economist's answer.</p>
+
+    <h4 class="sub">Fixing it</h4>
+    <p><strong>Pigouvian taxes and subsidies.</strong> Named for Arthur Pigou. Charge a per-unit tax equal to the external harm, or pay a per-unit subsidy equal to the external benefit, and private incentives line up with social ones. The right size is the marginal external effect <em>at the socially efficient point</em>. Real examples: gasoline taxes earmarked for road maintenance (which handles wear and tear, not global warming), London's congestion charge — £5 in 2003, now £15 — New York's $9 Manhattan congestion charge below 61st Street from 2025, and R&amp;D tax credits as a positive-externality subsidy.</p>
+    <p><strong>Coase.</strong> If property rights are clearly defined, private parties can negotiate their way to the efficient outcome without government. Negotiation is costly, though, so it matters that rights are assigned well. Nobel 1991.</p>
+    <p><strong>Ostrom.</strong> Elinor Ostrom's fieldwork showed communities managing common resources sustainably without either privatization or central control. Her ingredients were long-term interest, monitoring, and — the five-letter word from her Nobel lecture — <strong>trust</strong>. Her lesson: it is wrong to insist everything must be either privately owned or state-administered. People are not mindlessly trapped in the tragedy of the commons. Nobel 2009.</p>
+    <p><strong>Regulation</strong> is what actually happens most of the time: outright bans, emission limits, smog checks. Fines are economically a tax but psychologically very different. The fairness problem is that abatement costs vary enormously — electric cars exist, electric planes do not, so a uniform CO₂ rule could wipe out aviation.</p>
+    <p><strong>Cap and trade</strong> splits the difference: hand out permits, let firms trade them, and every emitter faces the same price. Set the cap so the permit price equals social marginal cost and the system is efficient. It worked for SO₂ (acid rain) and CFCs (ozone), where immediate bans were infeasible and allowances shrank over years.</p>
+
+    <h4 class="sub">Climate change</h4>
+    <p>The costs: extreme weather making populated places less livable, potentially driving disruptive mass migration; agricultural disruption, which bites hard because <strong>food demand is inelastic in the short run</strong>, so output shortfalls become price spikes and famines in low-income countries; and biodiversity loss. The pace of change is what makes adaptation so hard.</p>
+    <p>The economists' solution is a carbon tax equal to the marginal damage of CO₂. The unresolved problem is that the damage depends enormously on <strong>how you discount the future</strong>, since most damage lies ahead. Discount heavily — assume we are impatient — and the implied cost is small and warming is tolerable. Discount lightly and a large, politically unpopular carbon tax is optimal. The economics does not settle the discount rate; ethics does.</p>
+  </div>
+
+  <div class="moves"><div class="hd">The moves</div><ol>
+    <li>Draw the private equilibrium first — PMC and PMB crossing at Q₁.</li>
+    <li>Add the social curve above the private one on the correct side. Negative externality ⇒ SMC above PMC. Positive ⇒ SMB above PMB.</li>
+    <li>Mark Q* where SMC = SMB, and state whether the market over- or underproduces.</li>
+    <li>Put the deadweight loss triangle between Q* and Q₁ with its point at Q*.</li>
+    <li>Prescribe: tax for negative, subsidy for positive, sized to the external effect at Q*.</li>
+  </ol></div>
+
+  <div class="traps"><div class="hd">Traps</div><ul>
+    <li>Shifting the wrong curve. Pollution is a cost, so it moves the cost curve.</li>
+    <li>Saying the optimal level of pollution is zero.</li>
+    <li>Forgetting that Coase needs clearly defined property rights <em>and</em> low negotiation costs.</li>
+    <li>Treating the carbon tax as a settled number. The discount rate is the whole argument.</li>
+  </ul></div>
+
+  <div class="drills"><div class="hd">Drills · Unit 11</div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u11q1"><div class="qtext">
+      <span class="qkind exam">exam</span>Can there be an "optimal" level of polluting, or is the optimal level always zero? Refer to social marginal cost and social marginal benefit.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>It may sound preposterous to biologists, but economists hold that if a polluting activity raises social marginal cost by some <strong>quantifiable</strong> amount, then the socially optimal quantity and price in that market are typically <strong>nonzero and finite</strong>.</p>
+        <p>They are found at the intersection of <strong>social marginal cost and social marginal benefit</strong> — the latter being demand, or willingness to pay. That intersection <em>could</em> occur at zero quantity and therefore zero pollution, but there is no reason to expect that it must.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u11q2"><div class="qtext">
+      <span class="qkind graph">graph</span>Draw the market for gasoline with a pollution externality. Show the market equilibrium, the social optimum, the deadweight loss, and the corrective policy.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>Demand is PMB = SMB, since the externality is on the cost side. Supply is PMC. They cross at Q₁, the market equilibrium.</p>
+        <p>Draw <strong>SMC above PMC</strong>, separated vertically by the external marginal cost. SMC crosses demand at <strong>Q* &lt; Q₁</strong> — the market overproduces.</p>
+        <p>The deadweight loss triangle sits between Q* and Q₁, bounded by SMC above and demand below, with its point at Q*. At Q₁, social marginal cost exceeds social marginal benefit.</p>
+        <p><strong>The fix:</strong> a Pigouvian tax equal to the external marginal cost at Q*, which shifts the supply curve up until it coincides with SMC and the market delivers Q* on its own.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u11q3"><div class="qtext">
+      <span class="qkind">concept</span>Contrast Coase's and Ostrom's answers to externalities.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p><strong>Coase (Nobel 1991):</strong> with <em>clearly defined property rights</em>, private parties can negotiate to the efficient outcome without government. Since negotiation is costly, it matters that rights are assigned in the right way.</p>
+        <p><strong>Ostrom (Nobel 2009):</strong> field evidence that communities manage common-pool resources sustainably without either privatization or central control. The conditions are long-term interest in the resource, investment in monitoring, and <strong>trust</strong>. Her broader claim is that it is wrong to assume everything must be either privately owned or state-administered — actors invested for the long run find ways forward rather than being mindlessly trapped.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u11q4"><div class="qtext">
+      <span class="qkind">concept</span>Why do economists favor cap and trade over a uniform emissions regulation?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>Because <strong>abatement costs differ enormously across emitters</strong>. A uniform rule forces expensive reductions where they are hard and cheap ones where they are easy — electric cars exist, electric planes do not, so a flat CO₂ requirement could destroy high-value aviation.</p>
+        <p>Cap and trade hands out permits and lets firms trade, so <strong>every emitter faces the same permit price</strong> and reductions happen wherever they are cheapest. Set the cap so the price equals social marginal cost and the system is efficient. It worked for SO₂ under acid-rain rules and for ozone-depleting CFCs, where immediate bans were infeasible and allowances were phased down over years.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u11q5"><div class="qtext">
+      <span class="qkind">concept</span>Why can't economists agree on the size of the optimal carbon tax?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>The tax should equal the <strong>marginal damage of CO₂</strong>, but almost all of that damage lands in the future, so the number depends overwhelmingly on the <strong>discount rate</strong>.</p>
+        <ul>
+          <li>Discount the future heavily — assume humans are impatient — and the present value of damage is small, implying a low tax and tolerating a lot of warming.</li>
+          <li>Discount lightly and the damage is enormous, implying a large and politically unpopular carbon tax.</li>
+        </ul>
+        <p>The economics cannot settle the discount rate; it is a question about how much weight to give future generations. That is why the 2019 economists' carbon tax letter could unite signatories on the <em>instrument</em> and not on the number.</p>
+      </div></details>
+    </div></div></div>
+
+  </div>
+</section>
+<nav class="pager">
+<a class="pg prev" href="u10.html"><span class="pglbl">&larr; Previous</span><span class="pgt">10 &middot; Monopoly &amp; Market Power</span></a>
+<a class="pg next" href="u12.html"><span class="pglbl">Next &rarr;</span><span class="pgt">12 &middot; Labor Markets &amp; Wages</span></a>
+</nav></div>
+</main>
+</div>
+<div class="searchwrap" id="searchwrap" hidden><div class="searchbox"><input id="searchin" type="search" placeholder="Search all 28 units&hellip;" autocomplete="off" aria-label="Search the packet"><div class="searchres" id="searchres"></div></div></div>
+<script src="assets/manifest.js"></script>
+<script src="assets/search.js"></script>
+<script src="assets/graphs.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

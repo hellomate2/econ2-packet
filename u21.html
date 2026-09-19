@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Fiscal Policy &middot; Econ 2 Packet</title>
+<meta name="description" content="Unit 21 of the Econ 2 master packet: Fiscal Policy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Spectral:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232B4C8C'/%3E%3Cpath d='M8 23 L14 15 L19 19 L25 9' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="topbar"><button class="btn" id="menu" aria-label="Open unit navigator">Units</button><span class="nm">Fiscal Policy</span><button class="btn" id="theme" aria-label="Toggle colour theme">Theme</button></div>
+<div class="wrap">
+<nav class="rail" id="rail" aria-label="Unit navigator">
+<div class="railhead">
+<a class="homelink" href="index.html"><span class="mark">ECON 2 &middot; Berkeley</span><span class="nm">Master Packet</span></a>
+</div>
+<div class="progwrap"><div class="progbar"><i id="pbar"></i></div>
+<div class="progtxt"><span id="ptxt">&nbsp;</span><button class="btn mini" id="reset">Reset</button></div></div>
+<button class="btn wide-btn" id="searchbtn">Search <kbd>/</kbd></button>
+<div class="navgrp"><span class="lbl">Part I &middot; Microeconomics</span>
+<a href="u01.html" data-unit="1"><span class="n">1</span>Scarcity, Choice &amp; Opportunity Cost</a>
+<a href="u02.html" data-unit="2"><span class="n">2</span>Comparative Advantage</a>
+<a href="u03.html" data-unit="3"><span class="n">3</span>Supply &amp; Demand</a>
+<a href="u04.html" data-unit="4"><span class="n">4</span>Surplus &amp; Deadweight Loss</a>
+<a href="u05.html" data-unit="5"><span class="n">5</span>Price Controls</a>
+<a href="u06.html" data-unit="6"><span class="n">6</span>Elasticity</a>
+<a href="u07.html" data-unit="7"><span class="n">7</span>Taxes &amp; Subsidies</a>
+<a href="u08.html" data-unit="8"><span class="n">8</span>Households &amp; Utility</a>
+<a href="u09.html" data-unit="9"><span class="n">9</span>Firms, Costs &amp; Profit</a>
+<a href="u10.html" data-unit="10"><span class="n">10</span>Monopoly &amp; Market Power</a>
+<a href="u11.html" data-unit="11"><span class="n">11</span>Externalities</a>
+</div>
+<div class="navgrp"><span class="lbl">Part II &middot; Factors &amp; Trade</span>
+<a href="u12.html" data-unit="12"><span class="n">12</span>Labor Markets &amp; Wages</a>
+<a href="u13.html" data-unit="13"><span class="n">13</span>Inequality</a>
+<a href="u14.html" data-unit="14"><span class="n">14</span>Capital, Interest &amp; Present Value</a>
+<a href="u15.html" data-unit="15"><span class="n">15</span>International Trade</a>
+<a href="u16.html" data-unit="16"><span class="n">16</span>Trade Policy &amp; Tariffs</a>
+</div>
+<div class="navgrp"><span class="lbl">Part III &middot; Macroeconomics</span>
+<a href="u17.html" data-unit="17"><span class="n">17</span>GDP &amp; Measurement</a>
+<a href="u18.html" data-unit="18"><span class="n">18</span>Inflation &amp; Price Indexes</a>
+<a href="u19.html" data-unit="19"><span class="n">19</span>Long-Run Growth</a>
+<a href="u20.html" data-unit="20"><span class="n">20</span>The Keynesian Cross</a>
+<a href="u21.html" class="cur" data-unit="21"><span class="n">21</span>Fiscal Policy</a>
+<a href="u22.html" data-unit="22"><span class="n">22</span>Monetary Policy &amp; Financial Crises</a>
+<a href="u23.html" data-unit="23"><span class="n">23</span>Inflation &amp; the Return to Potential</a>
+<a href="u24.html" data-unit="24"><span class="n">24</span>International Macroeconomics</a>
+</div>
+<div class="navgrp"><span class="lbl">Part IV &middot; Exam Lab</span>
+<a href="u25.html" data-unit="25"><span class="n">25</span>The Graph Vault</a>
+<a href="u26.html" data-unit="26"><span class="n">26</span>The Midterm, Worked</a>
+<a href="u27.html" data-unit="27"><span class="n">27</span>The Final, Worked</a>
+<a href="u28.html" data-unit="28"><span class="n">28</span>Cheat Sheet Blueprint</a>
+</div>
+</nav>
+<main class="main">
+<div class="col">
+<div class="crumb"><a href="index.html">Packet</a> <span>/</span> <span>Part III &middot; Macroeconomics</span></div>
+<section class="unit solo" id="u21">
+  <div class="uhead"><span class="unum">21</span><div>
+    <h3>Fiscal Policy</h3>
+    <div class="meta">Class 20 · Chapter 25 <span class="tag fin">Final</span></div>
+  </div></div>
+
+  <div class="body">
+    <p>Fiscal policy is tax rates, transfers and government purchases. Definitions first, because they are easy to invert:</p>
+    <ul>
+      <li><strong>Budget surplus</strong> = T − G.</li>
+      <li><strong>Contractionary</strong> fiscal policy <em>increases</em> the surplus, which lowers PAE.</li>
+      <li><strong>Expansionary</strong> fiscal policy <em>decreases</em> the surplus, which raises PAE.</li>
+      <li><strong>Countercyclical</strong> means working against the business cycle — expansionary in recession.</li>
+    </ul>
+    <p><strong>Deficit versus debt:</strong> the deficit is the annual excess of spending over taxes; the debt is the accumulation of past deficits.</p>
+
+    <h4 class="sub">The composition point that gets tested</h4>
+    <p>Look again at PAE = (C̄ − cT + I<sup>P</sup> + G + NX) + cY. <strong>G enters one-for-one; T enters multiplied by c.</strong> So:</p>
+    <div class="eq">$100bn more G ⟹ PAE rises $100bn<br>$100bn of tax cuts ⟹ PAE rises only c × $100bn<span class="cm">Because households save part of a tax cut. Dollar for dollar, spending is a stronger stimulus than tax cuts — though tax cuts may act faster.</span></div>
+    <p>The three design questions for any stimulus, from the 2009 Recovery Act: <strong>how big</strong> (needs an estimate of how far PAE shifted, which is not directly observable in real time), <strong>what composition</strong> (different instruments have different multipliers and speeds), and <strong>how long</strong> (needs a forecast of how long PAE stays depressed — if more than a year, the stimulus must last more than a year).</p>
+  </div>
+
+  <figure class="fig"><div class="plot" data-graph="fiscal-offset"></div>
+    <figcaption><b>Countercyclical fiscal policy.</b> A negative shock drops PAE₁ to PAE₂ and output to Y₂. A tax cut or spending increase lifts it back toward PAE₃. The Recovery Act counteracted some — <b>but by no means all</b> — of the 2008–09 fall. The hard parts are timing and magnitude, and neither is obvious in real time.</figcaption></figure>
+
+  <div class="body">
+    <h4 class="sub">2008, as the worked case</h4>
+    <p>The housing bubble had raised both I<sup>P</sup> and C above where they would otherwise have been, and left households heavily indebted. When house prices collapsed:</p>
+    <ul>
+      <li><strong>Investment fell</strong> — the housing bust cut the expected future MRP<sub>K</sub> of housing, which is a kind of capital, and the financial crisis damaged animal spirits and made credit hard to get.</li>
+      <li><strong>Consumption fell</strong> — the housing and stock declines destroyed wealth, and the crisis hurt confidence and restricted household credit.</li>
+    </ul>
+    <p>Both push PAE down, so Y falls by a multiplied amount.</p>
+
+    <h4 class="sub">Why the debt matters</h4>
+    <p>Federal debt held by the public is historically high as a share of GDP, and the CBO projects the July 2025 reconciliation bill adds about 9.5 percentage points by 2034 — from roughly 118% to 127.5% of GDP in 2035. The concerns:</p>
+    <ul>
+      <li>More debt probably <strong>raises interest rates</strong>.</li>
+      <li>Debt rising too fast as a share of GDP can trigger a <strong>debt crisis</strong> if investors lose confidence quickly.</li>
+      <li>Debt can be serviced rather than repaid, but that means <strong>future generations pay more</strong> to carry it.</li>
+    </ul>
+    <p>The constraints are real: savers must be willing to buy the debt; state and local governments face balanced budget requirements that force service and school cuts in downturns; and the federal government faces debt ceilings and budget fights — the 2025 shutdown was the longest on record, ended by a continuing resolution on 12 November 2025. Edwards's normative line: debt should not cause paralysis, but <strong>in good times we should run surpluses and keep our powder dry.</strong></p>
+  </div>
+
+  <div class="moves"><div class="hd">The moves</div><ol>
+    <li>Identify which component the policy hits. G is direct; T works through c.</li>
+    <li>Compute the change in autonomous spending, then multiply by 1/(1 − c).</li>
+    <li>To fully offset a shock, match the <em>shift in PAE</em>, not the change in Y.</li>
+    <li>Add the caveat about timing and magnitude — it is a real source of credit.</li>
+  </ol></div>
+
+  <div class="traps"><div class="hd">Traps</div><ul>
+    <li>Treating a $100bn tax cut as equivalent to $100bn of spending. It is smaller by a factor of c.</li>
+    <li>Inverting the definitions — expansionary policy <em>reduces</em> the surplus.</li>
+    <li>Sizing the offset to the output gap rather than to the PAE shift.</li>
+  </ul></div>
+
+  <div class="drills"><div class="hd">Drills · Unit 21</div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u21q1"><div class="qtext">
+      <span class="qkind calc">calc</span>With mpc = 0.5, compare $100bn of extra government purchases with $100bn of tax cuts.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p><strong>Spending:</strong> G enters autonomous spending one-for-one, so PAE rises $100bn and Y rises 100 × 1/(1−0.5) = <strong>$200bn</strong>.</p>
+        <p><strong>Tax cut:</strong> taxes enter as −cT, so PAE rises only 0.5 × 100 = $50bn, and Y rises 50 × 2 = <strong>$100bn</strong>.</p>
+        <p><strong>Dollar for dollar, spending is twice as powerful here</strong>, because households save part of a tax cut rather than spending it. The counterargument is speed: tax cuts can reach people faster than new spending programs can be stood up.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u21q2"><div class="qtext">
+      <span class="qkind graph">graph</span>Show a fall in autonomous consumption followed by an offsetting tax cut on one Keynesian Cross.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>Start at PAE₁ crossing the 45° line at Y*. The fall in C̄ shifts the line down in parallel to <strong>PAE₂</strong>, and output falls to Y₂ — by more than the shift, thanks to the multiplier.</p>
+        <p>The tax cut raises disposable income and therefore consumption, shifting the line back up to <strong>PAE₃</strong>. If sized correctly, PAE₃ coincides with PAE₁ and output returns to Y*.</p>
+        <p>The sentence that earns the last point: <strong>the keys to getting this right are timing and magnitude, and neither is obvious in real time</strong> — you cannot directly observe how far PAE has shifted.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u21q3"><div class="qtext">
+      <span class="qkind">concept</span>Why did the housing bust reduce both investment and consumption?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p><strong>Investment:</strong> housing is a form of capital, and the bust slashed its <strong>expected future MRP<sub>K</sub></strong>, which by Unit 14 lowers the present value of new housing capital and therefore investment in it. The financial crisis then damaged animal spirits and made credit hard for firms to obtain.</p>
+        <p><strong>Consumption:</strong> collapsing house and stock prices <strong>destroyed wealth</strong>, and wealth is a determinant of C. The crisis also hurt consumer confidence and restricted household access to credit.</p>
+        <p>Both shift PAE down, and the multiplier turns that into a larger fall in output.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u21q4"><div class="qtext">
+      <span class="qkind">concept</span>Give three reasons to worry about government debt.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <ul>
+          <li><strong>Higher interest rates.</strong> More government borrowing probably pushes rates up, which crowds out private investment.</li>
+          <li><strong>Debt crisis risk.</strong> If debt rises too far as a share of GDP, investors can lose confidence quickly and abruptly.</li>
+          <li><strong>Intergenerational burden.</strong> Debt can be serviced rather than repaid, but servicing costs mean future generations pay more.</li>
+        </ul>
+        <p>Context: federal debt held by the public is at historically high shares of GDP, and the CBO projects the July 2025 reconciliation bill raises it about 9.5 percentage points by 2034. Edwards's line is that debt should not cause paralysis, but <strong>in good times governments should run surpluses</strong>.</p>
+      </div></details>
+    </div></div></div>
+
+  </div>
+</section>
+<nav class="pager">
+<a class="pg prev" href="u20.html"><span class="pglbl">&larr; Previous</span><span class="pgt">20 &middot; The Keynesian Cross</span></a>
+<a class="pg next" href="u22.html"><span class="pglbl">Next &rarr;</span><span class="pgt">22 &middot; Monetary Policy &amp; Financial Crises</span></a>
+</nav></div>
+</main>
+</div>
+<div class="searchwrap" id="searchwrap" hidden><div class="searchbox"><input id="searchin" type="search" placeholder="Search all 28 units&hellip;" autocomplete="off" aria-label="Search the packet"><div class="searchres" id="searchres"></div></div></div>
+<script src="assets/manifest.js"></script>
+<script src="assets/search.js"></script>
+<script src="assets/graphs.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

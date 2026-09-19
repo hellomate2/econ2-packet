@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Long-Run Growth &middot; Econ 2 Packet</title>
+<meta name="description" content="Unit 19 of the Econ 2 master packet: Long-Run Growth.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Spectral:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232B4C8C'/%3E%3Cpath d='M8 23 L14 15 L19 19 L25 9' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="topbar"><button class="btn" id="menu" aria-label="Open unit navigator">Units</button><span class="nm">Long-Run Growth</span><button class="btn" id="theme" aria-label="Toggle colour theme">Theme</button></div>
+<div class="wrap">
+<nav class="rail" id="rail" aria-label="Unit navigator">
+<div class="railhead">
+<a class="homelink" href="index.html"><span class="mark">ECON 2 &middot; Berkeley</span><span class="nm">Master Packet</span></a>
+</div>
+<div class="progwrap"><div class="progbar"><i id="pbar"></i></div>
+<div class="progtxt"><span id="ptxt">&nbsp;</span><button class="btn mini" id="reset">Reset</button></div></div>
+<button class="btn wide-btn" id="searchbtn">Search <kbd>/</kbd></button>
+<div class="navgrp"><span class="lbl">Part I &middot; Microeconomics</span>
+<a href="u01.html" data-unit="1"><span class="n">1</span>Scarcity, Choice &amp; Opportunity Cost</a>
+<a href="u02.html" data-unit="2"><span class="n">2</span>Comparative Advantage</a>
+<a href="u03.html" data-unit="3"><span class="n">3</span>Supply &amp; Demand</a>
+<a href="u04.html" data-unit="4"><span class="n">4</span>Surplus &amp; Deadweight Loss</a>
+<a href="u05.html" data-unit="5"><span class="n">5</span>Price Controls</a>
+<a href="u06.html" data-unit="6"><span class="n">6</span>Elasticity</a>
+<a href="u07.html" data-unit="7"><span class="n">7</span>Taxes &amp; Subsidies</a>
+<a href="u08.html" data-unit="8"><span class="n">8</span>Households &amp; Utility</a>
+<a href="u09.html" data-unit="9"><span class="n">9</span>Firms, Costs &amp; Profit</a>
+<a href="u10.html" data-unit="10"><span class="n">10</span>Monopoly &amp; Market Power</a>
+<a href="u11.html" data-unit="11"><span class="n">11</span>Externalities</a>
+</div>
+<div class="navgrp"><span class="lbl">Part II &middot; Factors &amp; Trade</span>
+<a href="u12.html" data-unit="12"><span class="n">12</span>Labor Markets &amp; Wages</a>
+<a href="u13.html" data-unit="13"><span class="n">13</span>Inequality</a>
+<a href="u14.html" data-unit="14"><span class="n">14</span>Capital, Interest &amp; Present Value</a>
+<a href="u15.html" data-unit="15"><span class="n">15</span>International Trade</a>
+<a href="u16.html" data-unit="16"><span class="n">16</span>Trade Policy &amp; Tariffs</a>
+</div>
+<div class="navgrp"><span class="lbl">Part III &middot; Macroeconomics</span>
+<a href="u17.html" data-unit="17"><span class="n">17</span>GDP &amp; Measurement</a>
+<a href="u18.html" data-unit="18"><span class="n">18</span>Inflation &amp; Price Indexes</a>
+<a href="u19.html" class="cur" data-unit="19"><span class="n">19</span>Long-Run Growth</a>
+<a href="u20.html" data-unit="20"><span class="n">20</span>The Keynesian Cross</a>
+<a href="u21.html" data-unit="21"><span class="n">21</span>Fiscal Policy</a>
+<a href="u22.html" data-unit="22"><span class="n">22</span>Monetary Policy &amp; Financial Crises</a>
+<a href="u23.html" data-unit="23"><span class="n">23</span>Inflation &amp; the Return to Potential</a>
+<a href="u24.html" data-unit="24"><span class="n">24</span>International Macroeconomics</a>
+</div>
+<div class="navgrp"><span class="lbl">Part IV &middot; Exam Lab</span>
+<a href="u25.html" data-unit="25"><span class="n">25</span>The Graph Vault</a>
+<a href="u26.html" data-unit="26"><span class="n">26</span>The Midterm, Worked</a>
+<a href="u27.html" data-unit="27"><span class="n">27</span>The Final, Worked</a>
+<a href="u28.html" data-unit="28"><span class="n">28</span>Cheat Sheet Blueprint</a>
+</div>
+</nav>
+<main class="main">
+<div class="col">
+<div class="crumb"><a href="index.html">Packet</a> <span>/</span> <span>Part III &middot; Macroeconomics</span></div>
+<section class="unit solo" id="u19">
+  <div class="uhead"><span class="unum">19</span><div>
+    <h3>Long-Run Growth</h3>
+    <div class="meta">Class 18 · Chapter 19 <span class="tag fin">Final</span></div>
+  </div></div>
+
+  <div class="body">
+    <p>Robert Lucas: <em>"Once you start thinking about growth, it's hard to think about anything else."</em> The reason is compounding.</p>
+    <p>Two countries start equal; one grows 1 percentage point faster per year. After 1 year it is 1% ahead. After 2 years, 2.01%. <strong>After 70 years it is twice as rich.</strong> After two centuries, more than seven times. Small differences in growth rates dominate everything else about long-run living standards.</p>
+
+    <h4 class="sub">The framework</h4>
+    <p>From Unit 17: Y*/POP = (N*/POP) × (Y*/N*), and productivity depends on capital per worker and technology. Ask which piece explains the differences we see.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Source</th><th>Across countries</th><th>Over time</th></tr></thead>
+      <tbody>
+        <tr><td><b>N*/POP</b></td><td>Not very important — it does not vary much</td><td>Mattered in some periods (women's labor force participation) but cannot rise forever, and diminishing returns blunt it</td></tr>
+        <tr><td><b>K*/N*</b></td><td>Very important — varies enormously</td><td>Somewhat important; diminishing returns mean doubling capital per worker less than doubles output per worker</td></tr>
+        <tr><td><b>Technology</b></td><td>Very important — roughly half of cross-country differences with capital</td><td><b>Crucial — perhaps two-thirds of growth</b>, by elimination</td></tr>
+      </tbody>
+    </table></div>
+    <p>The sharpest finding: <strong>the variation in "technology" that matters across countries is not knowledge, it is institutions.</strong> Knowledge is broadly available; what differs is whether a society can use it. Three features matter:</p>
+    <ul>
+      <li>A <strong>market-based system</strong> for allocating resources.</li>
+      <li><strong>Government protection of property</strong> from others.</li>
+      <li><strong>Protection of property from the government</strong> — corruption, theft, arbitrary taxation.</li>
+    </ul>
+    <p>That third item is the one people forget, and the final exam tests it directly as "social infrastructure": rule of law, property rights, and protection <em>from</em> government. Hall and Jones showed average labor productivity tracks social infrastructure closely.</p>
+
+    <h4 class="sub">Growth in the labor market diagram</h4>
+    <p>Edwards's preferred framing for ECON 2. Only <strong>permanent outward shifts in labor demand</strong> raise wages and employment in the long run, and labor demand is MRP<sub>L</sub> = P × MP<sub>L</sub>. So growth comes from anything that raises the price of what workers make (trade, better terms of trade) or raises their marginal product (capital, technology). Shifts big enough can also sustain population growth — labor supply shifting out — while wages keep rising.</p>
+  </div>
+
+  <figure class="fig"><div class="plot" data-graph="growth-labor"></div>
+    <figcaption><b>Escaping the Malthusian trap.</b> Gregory Clark's English real wage data from 1250 to 1800 scatter along a <em>static</em> downward-sloping labor demand curve — more people meant lower wages, which is the trap. Only after about 1800 does labor demand start shifting out persistently, so population and wages rise together. That is the Industrial Revolution in one diagram.</figcaption></figure>
+
+  <div class="body">
+    <h4 class="sub">Where technological progress comes from</h4>
+    <p>New production techniques (electric motor, tractor, assembly line, modern accounting), new products (Nordhaus's list runs from aeronautics and air-conditioning through penicillin, the transistor and the digital computer), and better institutions such as opening to trade.</p>
+    <p>Does the free market supply the socially optimal amount of invention? <strong>Almost certainly not</strong> — inventions have large positive externalities, especially basic science, so a private inventor captures only part of the social benefit. That is a Unit 11 argument applied to ideas, and it justifies subsidizing R&amp;D, funding basic research directly, strengthening property rights in inventions, and expanding education. The 2025 Nobel to Mokyr, Aghion and Howitt sits here: Mokyr on how scientific innovation must connect to practical and commercial knowledge <em>and</em> social acceptance of change, Aghion and Howitt modelling growth as <strong>creative destruction</strong>, where profitable innovation is driven by temporary patent monopolies.</p>
+  </div>
+
+  <div class="moves"><div class="hd">The moves</div><ol>
+    <li>Decompose into N*/POP, K*/N*, and T. Then say which piece the question is really about.</li>
+    <li>If asked why poor countries stay poor, lead with institutions, not knowledge.</li>
+    <li>Use the compounding numbers — 1 point faster doubles you in 70 years.</li>
+    <li>If asked to draw growth, use the labor market with labor demand shifting out.</li>
+  </ol></div>
+
+  <div class="traps"><div class="hd">Traps</div><ul>
+    <li>Explaining cross-country income gaps with capital alone. Institutions do about half.</li>
+    <li>Thinking poor countries lack knowledge. They lack the institutions to deploy it.</li>
+    <li>Forgetting protection <em>from</em> government. It is a third of the social infrastructure answer.</li>
+  </ul></div>
+
+  <div class="drills"><div class="hd">Drills · Unit 19</div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u19q1"><div class="qtext">
+      <span class="qkind exam">exam</span>Which is an important aspect of "social infrastructure"? (a) rule of law, (b) property rights, (c) protection from government, (d) all of the above.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p><strong>(d) All of the above.</strong></p>
+        <p>Social infrastructure is the set of basic building blocks that let markets function: the <strong>rule of law</strong>, <strong>property rights</strong>, and — the one people leave out — <strong>protection of property from the government itself</strong>, meaning from corruption, expropriation, theft and arbitrary taxation. Hall and Jones showed average labor productivity tracks it closely across countries.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u19q2"><div class="qtext">
+      <span class="qkind calc">calc</span>Country A grows 1 percentage point faster than B from the same starting point. How much richer after 70 years? After 200?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>After 70 years: 1.01<sup>70</sup> ≈ 2, so <strong>twice as rich</strong>. After 200 years: 1.01<sup>200</sup> ≈ 7.3, so <strong>more than seven times</strong>.</p>
+        <p>(After 1 year, 1% richer; after 2, 1.01² = 1.0201, so 2.01% richer.) The lesson is that <strong>small, sustained differences in growth rates swamp almost everything else</strong> about long-run living standards — which is why Lucas said that once you think about growth it is hard to think about anything else.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u19q3"><div class="qtext">
+      <span class="qkind">concept</span>Which contributes most to growth in potential output per person over time, and how do we know?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p><strong>Technology — perhaps two-thirds of growth.</strong> The argument is by elimination.</p>
+        <ul>
+          <li><strong>N*/POP</strong> does not change much, cannot rise indefinitely, and when it rises, capital per worker falls, so output per person rises less than proportionally.</li>
+          <li><strong>K*/N*</strong> matters somewhat — human capital has risen a lot — but <strong>diminishing returns</strong> mean doubling capital per worker less than doubles output per worker, and observed increases are not large enough to account for observed growth.</li>
+        </ul>
+        <p>What is left is technology, broadly defined to include institutions.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u19q4"><div class="qtext">
+      <span class="qkind graph">graph</span>Use a labor market diagram to show the escape from the Malthusian trap around 1800.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p><strong>Before 1800:</strong> labor demand is essentially <em>static</em>. Clark's English data from 1250 to about 1640 scatter along a single downward-sloping labor demand curve — when population rose, labor supply shifted out along a fixed demand curve and <strong>real wages fell</strong>. That is the Malthusian trap: more people, lower living standards.</p>
+        <p><strong>After 1800:</strong> labor demand begins shifting <em>out persistently</em>, driven by capital accumulation and technology raising MP<sub>L</sub>. Now labor supply can shift out with population growth <em>and</em> wages still rise. Clark's scatter stops tracing a curve and becomes an arrow heading up and to the right.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u19q5"><div class="qtext">
+      <span class="qkind">concept</span>Does the free market produce the socially optimal amount of invention?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p><strong>Almost certainly not.</strong> Inventions carry large <strong>positive externalities</strong> — the inventor captures only part of the social benefit while others build on the idea. By Unit 11's logic, the market therefore <em>underproduces</em> invention.</p>
+        <p>This is especially true of <strong>basic science</strong>, where the payoff is distant, diffuse and unpatentable. Hence the policy list: subsidize R&amp;D, fund basic research directly, make property rights in inventions secure, and expand education.</p>
+      </div></details>
+    </div></div></div>
+
+  </div>
+</section>
+<nav class="pager">
+<a class="pg prev" href="u18.html"><span class="pglbl">&larr; Previous</span><span class="pgt">18 &middot; Inflation &amp; Price Indexes</span></a>
+<a class="pg next" href="u20.html"><span class="pglbl">Next &rarr;</span><span class="pgt">20 &middot; The Keynesian Cross</span></a>
+</nav></div>
+</main>
+</div>
+<div class="searchwrap" id="searchwrap" hidden><div class="searchbox"><input id="searchin" type="search" placeholder="Search all 28 units&hellip;" autocomplete="off" aria-label="Search the packet"><div class="searchres" id="searchres"></div></div></div>
+<script src="assets/manifest.js"></script>
+<script src="assets/search.js"></script>
+<script src="assets/graphs.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

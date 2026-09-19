@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Supply &amp; Demand &middot; Econ 2 Packet</title>
+<meta name="description" content="Unit 3 of the Econ 2 master packet: Supply &amp; Demand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Spectral:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232B4C8C'/%3E%3Cpath d='M8 23 L14 15 L19 19 L25 9' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="topbar"><button class="btn" id="menu" aria-label="Open unit navigator">Units</button><span class="nm">Supply &amp; Demand</span><button class="btn" id="theme" aria-label="Toggle colour theme">Theme</button></div>
+<div class="wrap">
+<nav class="rail" id="rail" aria-label="Unit navigator">
+<div class="railhead">
+<a class="homelink" href="index.html"><span class="mark">ECON 2 &middot; Berkeley</span><span class="nm">Master Packet</span></a>
+</div>
+<div class="progwrap"><div class="progbar"><i id="pbar"></i></div>
+<div class="progtxt"><span id="ptxt">&nbsp;</span><button class="btn mini" id="reset">Reset</button></div></div>
+<button class="btn wide-btn" id="searchbtn">Search <kbd>/</kbd></button>
+<div class="navgrp"><span class="lbl">Part I &middot; Microeconomics</span>
+<a href="u01.html" data-unit="1"><span class="n">1</span>Scarcity, Choice &amp; Opportunity Cost</a>
+<a href="u02.html" data-unit="2"><span class="n">2</span>Comparative Advantage</a>
+<a href="u03.html" class="cur" data-unit="3"><span class="n">3</span>Supply &amp; Demand</a>
+<a href="u04.html" data-unit="4"><span class="n">4</span>Surplus &amp; Deadweight Loss</a>
+<a href="u05.html" data-unit="5"><span class="n">5</span>Price Controls</a>
+<a href="u06.html" data-unit="6"><span class="n">6</span>Elasticity</a>
+<a href="u07.html" data-unit="7"><span class="n">7</span>Taxes &amp; Subsidies</a>
+<a href="u08.html" data-unit="8"><span class="n">8</span>Households &amp; Utility</a>
+<a href="u09.html" data-unit="9"><span class="n">9</span>Firms, Costs &amp; Profit</a>
+<a href="u10.html" data-unit="10"><span class="n">10</span>Monopoly &amp; Market Power</a>
+<a href="u11.html" data-unit="11"><span class="n">11</span>Externalities</a>
+</div>
+<div class="navgrp"><span class="lbl">Part II &middot; Factors &amp; Trade</span>
+<a href="u12.html" data-unit="12"><span class="n">12</span>Labor Markets &amp; Wages</a>
+<a href="u13.html" data-unit="13"><span class="n">13</span>Inequality</a>
+<a href="u14.html" data-unit="14"><span class="n">14</span>Capital, Interest &amp; Present Value</a>
+<a href="u15.html" data-unit="15"><span class="n">15</span>International Trade</a>
+<a href="u16.html" data-unit="16"><span class="n">16</span>Trade Policy &amp; Tariffs</a>
+</div>
+<div class="navgrp"><span class="lbl">Part III &middot; Macroeconomics</span>
+<a href="u17.html" data-unit="17"><span class="n">17</span>GDP &amp; Measurement</a>
+<a href="u18.html" data-unit="18"><span class="n">18</span>Inflation &amp; Price Indexes</a>
+<a href="u19.html" data-unit="19"><span class="n">19</span>Long-Run Growth</a>
+<a href="u20.html" data-unit="20"><span class="n">20</span>The Keynesian Cross</a>
+<a href="u21.html" data-unit="21"><span class="n">21</span>Fiscal Policy</a>
+<a href="u22.html" data-unit="22"><span class="n">22</span>Monetary Policy &amp; Financial Crises</a>
+<a href="u23.html" data-unit="23"><span class="n">23</span>Inflation &amp; the Return to Potential</a>
+<a href="u24.html" data-unit="24"><span class="n">24</span>International Macroeconomics</a>
+</div>
+<div class="navgrp"><span class="lbl">Part IV &middot; Exam Lab</span>
+<a href="u25.html" data-unit="25"><span class="n">25</span>The Graph Vault</a>
+<a href="u26.html" data-unit="26"><span class="n">26</span>The Midterm, Worked</a>
+<a href="u27.html" data-unit="27"><span class="n">27</span>The Final, Worked</a>
+<a href="u28.html" data-unit="28"><span class="n">28</span>Cheat Sheet Blueprint</a>
+</div>
+</nav>
+<main class="main">
+<div class="col">
+<div class="crumb"><a href="index.html">Packet</a> <span>/</span> <span>Part I &middot; Microeconomics</span></div>
+<section class="unit solo" id="u3">
+  <div class="uhead"><span class="unum">03</span><div>
+    <h3>Supply &amp; Demand</h3>
+    <div class="meta">Class 4 · Chapter 3 <span class="tag both">Midterm + Final</span></div>
+  </div></div>
+
+  <div class="body">
+    <p>The workhorse. Everything after this is a variation.</p>
+    <p><strong>Demand slopes down because marginal benefit falls.</strong> The demand curve <em>is</em> willingness to pay, and it <em>is</em> marginal utility. The first ice cream is fantastic, the second good, the third eaten on a dare, and by the sixth marginal utility has gone negative. Across a market, the same logic sorts buyers: the high-value users sit at the top of the curve, lower-value users further right.</p>
+    <p><strong>Supply slopes up because marginal cost rises.</strong> The supply curve <em>is</em> the marginal cost curve. You already saw why in Unit 2: the low-opportunity-cost producer goes first (Bill, at 1 fish per coconut), and squeezing out more means turning to higher-cost producers (Chris, at 4 fish per coconut). In the world oil market it is Saudi Arabia first, US fracking later.</p>
+    <p>Both sides are assumed to be <strong>price takers</strong> — many small buyers, many small sellers, no collusion. That is the competitive model, and Unit 10 is what happens when you drop it.</p>
+  </div>
+
+  <figure class="fig"><div class="plot" data-graph="sd-equilibrium"></div>
+    <figcaption><b>Why equilibrium is the only resting point.</b> Below <span class="num">P₁</span>, quantity demanded exceeds quantity supplied — a shortage, which bids the price up. Above <span class="num">P₁</span>, a surplus, which pushes it down. Only at the crossing does nobody have a reason to move.</figcaption></figure>
+
+  <div class="body">
+    <h4 class="sub">Shifts versus movements — the distinction they test</h4>
+    <p>A change in <strong>the good's own price</strong> moves you <em>along</em> a curve. Everything else shifts the curve. Edwards asks this explicitly: would a change in the price of the good shift the supply curve? No — it causes a movement along it.</p>
+    <div class="tw"><table>
+      <thead><tr><th></th><th>Shifts out (increase)</th><th>Shifts in (decrease)</th></tr></thead>
+      <tbody>
+        <tr><td><b>Supply</b></td><td>Productivity-raising innovation; cheaper inputs; more producers enter</td><td>Productivity-reducing regulation; costlier inputs; producers exit; a tax</td></tr>
+        <tr><td><b>Demand</b></td><td>New complementary good; substitute's price rises; people get richer; becomes fashionable</td><td>Complement's price rises; substitute's price falls; goes out of fashion or obsolete</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <figure class="fig"><div class="plot" data-graph="sd-shifts"></div>
+    <figcaption><b>The four cases.</b> Supply out: P down, Q up. Supply in: P up, Q down. Demand out: P up, Q up. Demand in: P down, Q down. <b>Price and quantity move together for demand shifts and in opposite directions for supply shifts</b> — which is how you diagnose which curve moved from data alone.</figcaption></figure>
+
+  <div class="body">
+    <h4 class="sub">Reading real events: which curve moved?</h4>
+    <p>The past midterm's egg question is exactly this. Egg prices spiked in early 2023 and again in early 2025. Supply shock or demand shock? <strong>Supply.</strong> Wild birds migrate in fall and spring, spreading avian flu, and prices peak in January after the fall migration. A demand story would need bakers to suddenly want far more eggs in January 2023, not again until January 2025 — not credible. A supply shift also predicts price up <em>and</em> quantity down, which is what happened.</p>
+
+    <h4 class="sub">How you would actually estimate a demand curve</h4>
+    <p>In real data you only observe the intersection, never the curves. The demand curve is revealed only when <strong>supply shifts while demand stays put</strong>. Working (1925) used weather-driven variation in Minneapolis potato production for exactly this. The modern version is randomized pricing: Dupas and Miguel offered preventive health products at randomly assigned prices and traced out demand directly, finding demand falls sharply with price and is small at market prices even for products with large health benefits — an argument for public provision rather than market allocation.</p>
+  </div>
+
+  <div class="moves"><div class="hd">The moves</div><ol>
+    <li>Name the market explicitly: "the market for X," with axes P and Q.</li>
+    <li>Decide which curve moves and in which direction, and say <em>why</em> in mechanism terms.</li>
+    <li>Read the new equilibrium off the graph and state both P and Q.</li>
+    <li>If both curves move, one of P or Q is ambiguous. Say which, and say why.</li>
+  </ol></div>
+
+  <div class="traps"><div class="hd">Traps</div><ul>
+    <li>Shifting a curve when the good's own price changed. That is a movement along.</li>
+    <li>Shifting demand for a supply-side event. A tax on producers shifts supply, not demand.</li>
+    <li>Forgetting that "supply increases" draws as a shift <em>right/down</em>, which lowers price.</li>
+  </ul></div>
+
+  <div class="drills"><div class="hd">Drills · Unit 3</div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u3q1"><div class="qtext">
+      <span class="qkind exam">exam</span>Which curve slopes downward, demand or supply? Why does it slope down?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p><strong>Demand.</strong> It slopes down because the marginal benefit, marginal utility, or willingness to pay for a good <strong>falls as quantity increases</strong>. More is better, but at a decreasing rate. Across a market, the same thing shows up as high-value buyers being served before low-value ones.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u3q2"><div class="qtext">
+      <span class="qkind exam">exam</span>Egg prices spiked in early 2023 and early 2025. More plausible: a supply shock from avian flu carried by migrating birds, or a demand shock from baking? Explain.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p><strong>The supply shock.</strong> Wild birds migrate in fall and spring, and the price of eggs peaks around January, right after the fall migration. Seasonal demand fluctuations exist, but there is no plausible story for why bakers would demand many more eggs in January 2023, then not again until January 2025.</p>
+        <p>The diagram check seals it: an inward supply shift raises P and lowers Q, which matches. An outward demand shift would have raised P and <em>raised</em> Q.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u3q3"><div class="qtext">
+      <span class="qkind graph">graph</span>UC Berkeley opens Anchor House, adding 244 apartments for 772 students at market prices. Effect on price and quantity of rental apartments in Berkeley?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>Supply of rental housing shifts <strong>out</strong>. <strong>Price falls, quantity rises.</strong></p>
+        <p>Careful with the follow-up version of this question: if instead Berkeley grows its undergraduate class from 8,000 to 10,000, <strong>demand</strong> shifts out, so <strong>price rises and quantity rises</strong>. Same market, opposite curve, opposite price effect.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u3q4"><div class="qtext">
+      <span class="qkind">concept</span>Europe lifts its ban on fracking. Effect on the world price and quantity of oil?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>World supply shifts out. <strong>Price falls, quantity rises.</strong> Note this is a genuine shift, not a movement along — the change came from technology and access, not from the price of oil itself.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u3q5"><div class="qtext">
+      <span class="qkind">concept</span>Why can't you just estimate a demand curve from observed prices and quantities?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>Because you only ever observe <strong>the intersection</strong> of supply and demand, not either curve. Prices and quantities move because <em>both</em> curves shift.</p>
+        <p>The demand curve is traced out only when <strong>supply shifts while demand holds still</strong> — as with weather-driven potato harvests in Working (1925) — or when the researcher randomizes prices directly, as Dupas and Miguel did with preventive health products.</p>
+      </div></details>
+    </div></div></div>
+
+  </div>
+</section>
+<nav class="pager">
+<a class="pg prev" href="u02.html"><span class="pglbl">&larr; Previous</span><span class="pgt">02 &middot; Comparative Advantage</span></a>
+<a class="pg next" href="u04.html"><span class="pglbl">Next &rarr;</span><span class="pgt">04 &middot; Surplus &amp; Deadweight Loss</span></a>
+</nav></div>
+</main>
+</div>
+<div class="searchwrap" id="searchwrap" hidden><div class="searchbox"><input id="searchin" type="search" placeholder="Search all 28 units&hellip;" autocomplete="off" aria-label="Search the packet"><div class="searchres" id="searchres"></div></div></div>
+<script src="assets/manifest.js"></script>
+<script src="assets/search.js"></script>
+<script src="assets/graphs.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

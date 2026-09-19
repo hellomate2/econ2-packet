@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>GDP &amp; Measurement &middot; Econ 2 Packet</title>
+<meta name="description" content="Unit 17 of the Econ 2 master packet: GDP &amp; Measurement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Spectral:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232B4C8C'/%3E%3Cpath d='M8 23 L14 15 L19 19 L25 9' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="topbar"><button class="btn" id="menu" aria-label="Open unit navigator">Units</button><span class="nm">GDP &amp; Measurement</span><button class="btn" id="theme" aria-label="Toggle colour theme">Theme</button></div>
+<div class="wrap">
+<nav class="rail" id="rail" aria-label="Unit navigator">
+<div class="railhead">
+<a class="homelink" href="index.html"><span class="mark">ECON 2 &middot; Berkeley</span><span class="nm">Master Packet</span></a>
+</div>
+<div class="progwrap"><div class="progbar"><i id="pbar"></i></div>
+<div class="progtxt"><span id="ptxt">&nbsp;</span><button class="btn mini" id="reset">Reset</button></div></div>
+<button class="btn wide-btn" id="searchbtn">Search <kbd>/</kbd></button>
+<div class="navgrp"><span class="lbl">Part I &middot; Microeconomics</span>
+<a href="u01.html" data-unit="1"><span class="n">1</span>Scarcity, Choice &amp; Opportunity Cost</a>
+<a href="u02.html" data-unit="2"><span class="n">2</span>Comparative Advantage</a>
+<a href="u03.html" data-unit="3"><span class="n">3</span>Supply &amp; Demand</a>
+<a href="u04.html" data-unit="4"><span class="n">4</span>Surplus &amp; Deadweight Loss</a>
+<a href="u05.html" data-unit="5"><span class="n">5</span>Price Controls</a>
+<a href="u06.html" data-unit="6"><span class="n">6</span>Elasticity</a>
+<a href="u07.html" data-unit="7"><span class="n">7</span>Taxes &amp; Subsidies</a>
+<a href="u08.html" data-unit="8"><span class="n">8</span>Households &amp; Utility</a>
+<a href="u09.html" data-unit="9"><span class="n">9</span>Firms, Costs &amp; Profit</a>
+<a href="u10.html" data-unit="10"><span class="n">10</span>Monopoly &amp; Market Power</a>
+<a href="u11.html" data-unit="11"><span class="n">11</span>Externalities</a>
+</div>
+<div class="navgrp"><span class="lbl">Part II &middot; Factors &amp; Trade</span>
+<a href="u12.html" data-unit="12"><span class="n">12</span>Labor Markets &amp; Wages</a>
+<a href="u13.html" data-unit="13"><span class="n">13</span>Inequality</a>
+<a href="u14.html" data-unit="14"><span class="n">14</span>Capital, Interest &amp; Present Value</a>
+<a href="u15.html" data-unit="15"><span class="n">15</span>International Trade</a>
+<a href="u16.html" data-unit="16"><span class="n">16</span>Trade Policy &amp; Tariffs</a>
+</div>
+<div class="navgrp"><span class="lbl">Part III &middot; Macroeconomics</span>
+<a href="u17.html" class="cur" data-unit="17"><span class="n">17</span>GDP &amp; Measurement</a>
+<a href="u18.html" data-unit="18"><span class="n">18</span>Inflation &amp; Price Indexes</a>
+<a href="u19.html" data-unit="19"><span class="n">19</span>Long-Run Growth</a>
+<a href="u20.html" data-unit="20"><span class="n">20</span>The Keynesian Cross</a>
+<a href="u21.html" data-unit="21"><span class="n">21</span>Fiscal Policy</a>
+<a href="u22.html" data-unit="22"><span class="n">22</span>Monetary Policy &amp; Financial Crises</a>
+<a href="u23.html" data-unit="23"><span class="n">23</span>Inflation &amp; the Return to Potential</a>
+<a href="u24.html" data-unit="24"><span class="n">24</span>International Macroeconomics</a>
+</div>
+<div class="navgrp"><span class="lbl">Part IV &middot; Exam Lab</span>
+<a href="u25.html" data-unit="25"><span class="n">25</span>The Graph Vault</a>
+<a href="u26.html" data-unit="26"><span class="n">26</span>The Midterm, Worked</a>
+<a href="u27.html" data-unit="27"><span class="n">27</span>The Final, Worked</a>
+<a href="u28.html" data-unit="28"><span class="n">28</span>Cheat Sheet Blueprint</a>
+</div>
+</nav>
+<main class="main">
+<div class="col">
+<div class="crumb"><a href="index.html">Packet</a> <span>/</span> <span>Part III &middot; Macroeconomics</span></div>
+<section class="unit solo" id="u17">
+  <div class="uhead"><span class="unum">17</span><div>
+    <h3>GDP &amp; Measurement</h3>
+    <div class="meta">Class 17 · Chapter 17 <span class="tag fin">Final</span></div>
+  </div></div>
+
+  <div class="body">
+    <p><strong>GDP is the market value of final goods and services newly produced in a country during a period.</strong> Every word in that definition is load-bearing: <em>final</em> (not intermediate, to avoid double counting), <em>newly produced</em> (not resales), <em>in a country</em>, <em>in a period</em>.</p>
+    <p>The identity worth internalizing: <strong>total production = total income = total spending.</strong> Your spending is someone's income. That is why the same number can be measured three ways:</p>
+    <ul>
+      <li><strong>Expenditure:</strong> Y = C + I + G + NX. This is the one you will use.</li>
+      <li><strong>Production (value added):</strong> follow goods through each stage.</li>
+      <li><strong>Income:</strong> labor income plus capital income.</li>
+    </ul>
+    <p>Anchor numbers: US GDP is about <strong>$30 trillion</strong> for <strong>340 million</strong> people, so GDP per person is roughly <strong>$88,000</strong>. Shares of GDP: C is 65–70%, I is 15–20%, G is 15–20%, NX is about −3%.</p>
+
+    <h4 class="sub">Real versus nominal</h4>
+    <p><strong>Nominal</strong> means measured in current dollars. <strong>Real</strong> means adjusted for price changes — measured in goods and services rather than dollars.</p>
+    <div class="eq">Nominal GDP<sub>2022</sub> = Σ P<sub>i,2022</sub> · Q<sub>i,2022</sub><br>Real GDP<sub>2022</sub> (2012 base) = Σ P<sub>i,2012</sub> · Q<sub>i,2022</sub><span class="cm">Real GDP answers: what would this year's output have been worth at base-year prices? Fix prices, let quantities move.</span></div>
+    <p>Growth rate of real GDP is the percentage change from one year to the next: (X<sub>t</sub> − X<sub>t−1</sub>)/X<sub>t−1</sub> × 100.</p>
+
+    <h4 class="sub">Comparing across countries</h4>
+    <p>Currency units break down across space as well as time. China's 2024 nominal GDP was ¥134,908 billion and the US's was $29,298 billion — not directly comparable. Converting at market exchange rates also misleads, because non-traded goods are cheaper in poorer countries. So the IMF uses <strong>purchasing power parity</strong> "international dollars," which put China at about $38.2 trillion and the US at $29.3 trillion for 2024. <strong>On a PPP basis China's economy is larger; at market exchange rates it is not.</strong> Knowing why those two statements coexist is the point.</p>
+
+    <h4 class="sub">The long run versus the short run</h4>
+    <p><strong>Potential output Y*</strong> is what the economy produces using its resources at normal rates. Edwards notes a better name would be "normal output" — it is not a ceiling, since Y can exceed it temporarily. Decompose it:</p>
+    <div class="eq">Y*/POP = (N*/POP) × (Y*/N*)<span class="cm">Normal output per person = normal employment-to-population ratio × normal output per worker (average labor productivity). And productivity depends on capital per worker K*/N* and technology T.</span></div>
+    <p>The three determinants are therefore <strong>labor, capital and technology</strong>, where capital includes physical capital, infrastructure and human capital, and technology means production techniques, management techniques, economic institutions and culture.</p>
+  </div>
+
+  <div class="moves"><div class="hd">The moves</div><ol>
+    <li>Write Y = C + I + G + NX before answering anything about GDP composition.</li>
+    <li>If prices are involved, say explicitly whether you are working in real or nominal terms.</li>
+    <li>For cross-country comparisons, name PPP and say why market exchange rates mislead.</li>
+    <li>For long-run questions, decompose into employment ratio, capital per worker, and technology.</li>
+  </ol></div>
+
+  <div class="traps"><div class="hd">Traps</div><ul>
+    <li>Counting intermediate goods or resales in GDP.</li>
+    <li>Using current-year prices for real GDP. Real GDP holds prices fixed at the base year.</li>
+    <li>Treating potential output as a hard maximum. Y can exceed Y* in a boom.</li>
+  </ul></div>
+
+  <div class="drills"><div class="hd">Drills · Unit 17</div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u17q1"><div class="qtext">
+      <span class="qkind">concept</span>Why is China's economy bigger than the US's on one measure and smaller on another?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>Because the two measures convert currencies differently. At <strong>market exchange rates</strong>, US nominal GDP (about $29.3 trillion in 2024) exceeds China's converted yuan figure.</p>
+        <p>At <strong>purchasing power parity</strong>, which prices output in "international dollars" reflecting what money actually buys locally, China comes out at roughly $38.2 trillion against the US at $29.3 trillion.</p>
+        <p>The reason PPP is higher for China: <strong>non-traded goods and services are much cheaper there</strong>, so a dollar converted at market rates buys more real output than the exchange rate suggests. PPP is the better measure for comparing living standards and real output; market rates are better for comparing purchasing power on world markets.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u17q2"><div class="qtext">
+      <span class="qkind calc">calc</span>Write the formulas for nominal and real GDP and explain the difference in one sentence.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <div class="eq">Nominal GDP<sub>2022</sub> = Σ<sub>i</sub> P<sub>i,2022</sub> · Q<sub>i,2022</sub></div>
+        <div class="eq">Real GDP<sub>2022</sub> = Σ<sub>i</sub> P<sub>i,base</sub> · Q<sub>i,2022</sub></div>
+        <p><strong>Nominal uses this year's prices; real uses base-year prices, so only quantities move.</strong> Real GDP answers: what would this year's output have been worth at base-year prices? That isolates the quantity change from the price change.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u17q3"><div class="qtext">
+      <span class="qkind">concept</span>Decompose potential output per person and name what determines each piece.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <div class="eq">Y*/POP = (N*/POP) × (Y*/N*)</div>
+        <ul>
+          <li><strong>N*/POP</strong>, the normal employment-to-population ratio — demographics and labor force participation.</li>
+          <li><strong>Y*/N*</strong>, normal average labor productivity — which depends on <strong>capital per worker K*/N*</strong> (physical capital, infrastructure, human capital) and on <strong>technology T</strong>.</li>
+        </ul>
+        <p>Technology here is broad: production techniques, management techniques, <strong>economic institutions</strong>, and culture — everything affecting output per worker given capital per worker.</p>
+      </div></details>
+    </div></div></div>
+
+  </div>
+</section>
+<nav class="pager">
+<a class="pg prev" href="u16.html"><span class="pglbl">&larr; Previous</span><span class="pgt">16 &middot; Trade Policy &amp; Tariffs</span></a>
+<a class="pg next" href="u18.html"><span class="pglbl">Next &rarr;</span><span class="pgt">18 &middot; Inflation &amp; Price Indexes</span></a>
+</nav></div>
+</main>
+</div>
+<div class="searchwrap" id="searchwrap" hidden><div class="searchbox"><input id="searchin" type="search" placeholder="Search all 28 units&hellip;" autocomplete="off" aria-label="Search the packet"><div class="searchres" id="searchres"></div></div></div>
+<script src="assets/manifest.js"></script>
+<script src="assets/search.js"></script>
+<script src="assets/graphs.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

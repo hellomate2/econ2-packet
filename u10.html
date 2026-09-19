@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Monopoly &amp; Market Power &middot; Econ 2 Packet</title>
+<meta name="description" content="Unit 10 of the Econ 2 master packet: Monopoly &amp; Market Power.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Spectral:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232B4C8C'/%3E%3Cpath d='M8 23 L14 15 L19 19 L25 9' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="topbar"><button class="btn" id="menu" aria-label="Open unit navigator">Units</button><span class="nm">Monopoly &amp; Market Power</span><button class="btn" id="theme" aria-label="Toggle colour theme">Theme</button></div>
+<div class="wrap">
+<nav class="rail" id="rail" aria-label="Unit navigator">
+<div class="railhead">
+<a class="homelink" href="index.html"><span class="mark">ECON 2 &middot; Berkeley</span><span class="nm">Master Packet</span></a>
+</div>
+<div class="progwrap"><div class="progbar"><i id="pbar"></i></div>
+<div class="progtxt"><span id="ptxt">&nbsp;</span><button class="btn mini" id="reset">Reset</button></div></div>
+<button class="btn wide-btn" id="searchbtn">Search <kbd>/</kbd></button>
+<div class="navgrp"><span class="lbl">Part I &middot; Microeconomics</span>
+<a href="u01.html" data-unit="1"><span class="n">1</span>Scarcity, Choice &amp; Opportunity Cost</a>
+<a href="u02.html" data-unit="2"><span class="n">2</span>Comparative Advantage</a>
+<a href="u03.html" data-unit="3"><span class="n">3</span>Supply &amp; Demand</a>
+<a href="u04.html" data-unit="4"><span class="n">4</span>Surplus &amp; Deadweight Loss</a>
+<a href="u05.html" data-unit="5"><span class="n">5</span>Price Controls</a>
+<a href="u06.html" data-unit="6"><span class="n">6</span>Elasticity</a>
+<a href="u07.html" data-unit="7"><span class="n">7</span>Taxes &amp; Subsidies</a>
+<a href="u08.html" data-unit="8"><span class="n">8</span>Households &amp; Utility</a>
+<a href="u09.html" data-unit="9"><span class="n">9</span>Firms, Costs &amp; Profit</a>
+<a href="u10.html" class="cur" data-unit="10"><span class="n">10</span>Monopoly &amp; Market Power</a>
+<a href="u11.html" data-unit="11"><span class="n">11</span>Externalities</a>
+</div>
+<div class="navgrp"><span class="lbl">Part II &middot; Factors &amp; Trade</span>
+<a href="u12.html" data-unit="12"><span class="n">12</span>Labor Markets &amp; Wages</a>
+<a href="u13.html" data-unit="13"><span class="n">13</span>Inequality</a>
+<a href="u14.html" data-unit="14"><span class="n">14</span>Capital, Interest &amp; Present Value</a>
+<a href="u15.html" data-unit="15"><span class="n">15</span>International Trade</a>
+<a href="u16.html" data-unit="16"><span class="n">16</span>Trade Policy &amp; Tariffs</a>
+</div>
+<div class="navgrp"><span class="lbl">Part III &middot; Macroeconomics</span>
+<a href="u17.html" data-unit="17"><span class="n">17</span>GDP &amp; Measurement</a>
+<a href="u18.html" data-unit="18"><span class="n">18</span>Inflation &amp; Price Indexes</a>
+<a href="u19.html" data-unit="19"><span class="n">19</span>Long-Run Growth</a>
+<a href="u20.html" data-unit="20"><span class="n">20</span>The Keynesian Cross</a>
+<a href="u21.html" data-unit="21"><span class="n">21</span>Fiscal Policy</a>
+<a href="u22.html" data-unit="22"><span class="n">22</span>Monetary Policy &amp; Financial Crises</a>
+<a href="u23.html" data-unit="23"><span class="n">23</span>Inflation &amp; the Return to Potential</a>
+<a href="u24.html" data-unit="24"><span class="n">24</span>International Macroeconomics</a>
+</div>
+<div class="navgrp"><span class="lbl">Part IV &middot; Exam Lab</span>
+<a href="u25.html" data-unit="25"><span class="n">25</span>The Graph Vault</a>
+<a href="u26.html" data-unit="26"><span class="n">26</span>The Midterm, Worked</a>
+<a href="u27.html" data-unit="27"><span class="n">27</span>The Final, Worked</a>
+<a href="u28.html" data-unit="28"><span class="n">28</span>Cheat Sheet Blueprint</a>
+</div>
+</nav>
+<main class="main">
+<div class="col">
+<div class="crumb"><a href="index.html">Packet</a> <span>/</span> <span>Part I &middot; Microeconomics</span></div>
+<section class="unit solo" id="u10">
+  <div class="uhead"><span class="unum">10</span><div>
+    <h3>Monopoly &amp; Market Power</h3>
+    <div class="meta">Class 10 · Chapter 8 <span class="tag both">Midterm + Final</span></div>
+  </div></div>
+
+  <div class="body">
+    <p>Edwards flagged this one in lecture as likely to be on the exam, and it was — the Taylor Swift question on the midterm and a multiple choice on the final.</p>
+    <p>A monopolist faces <strong>the whole market demand curve</strong>, so to sell one more unit it must cut the price — and it must cut it on <em>every</em> unit it sells, not just the new one. That is why marginal revenue falls below price and keeps falling.</p>
+    <div class="eq">If P = α − βQ, then TR = αQ − βQ²  and  MR = α − 2βQ<span class="cm">Same intercept as demand, <strong>twice as steep</strong>. That is the fact you draw with.</span></div>
+    <p>The profit rule is unchanged — MR = MC. What changes is the reading:</p>
+  </div>
+
+  <figure class="fig"><div class="plot" data-graph="monopoly"></div>
+    <figcaption><b>Two steps, in this order.</b> ① Find Q<sub>m</sub> where MR = MC. ② Go <em>up</em> to the demand curve to read P<sub>m</sub>. Compared with competition at Q<sub>c</sub> where MB = MC, the monopolist <b>raises price and cuts quantity</b>, converting part of consumer surplus into profit and destroying the gold triangle.</figcaption></figure>
+
+  <div class="body">
+    <h4 class="sub">The welfare accounting</h4>
+    <p>Using the lettered regions from lecture: under competition consumer surplus is a+b+c+d+e and producer surplus is f+g+h. Under monopoly consumer surplus shrinks to a+b, producer surplus becomes c+d+f+g, and <strong>e+h is deadweight loss.</strong> Region c+d is the distributional story — it was consumer surplus under competition and becomes producer surplus under monopoly.</p>
+    <p>Three things Edwards stresses that students get wrong:</p>
+    <ul>
+      <li><strong>A monopolist has no supply curve.</strong> For a given demand curve there is exactly one quantity it wants to supply; it does not trace out a price-quantity relationship.</li>
+      <li><strong>A monopolist does not produce where MC = P</strong>, and therefore not where MB = MC. That gap <em>is</em> the inefficiency.</li>
+      <li><strong>Monopoly does not guarantee profit.</strong> If ATC is high enough at Q<sub>m</sub>, the monopolist can break even or lose money. But unlike a competitive firm it <em>can</em> sustain positive profit forever — by definition, since barriers to entry are what make it a monopoly.</li>
+    </ul>
+
+    <h4 class="sub">Where market power comes from</h4>
+    <p><strong>Barriers to entry:</strong> high fixed costs (railways), patents and legal protections (pharmaceuticals), licensing and gatekeeping. A <strong>natural monopoly</strong> is where one firm can serve the whole market at lower average cost than several — utilities like PG&amp;E, railways, and anything with near-zero marginal cost such as software and digital media. Network effects make Facebook and rideshare platforms behave similarly, since value rises with the user base.</p>
+
+    <h4 class="sub">The patent tradeoff</h4>
+    <p>If monopoly is bad, why do we grant patents? Because <strong>innovation is costly and easy to copy.</strong> Drug development has huge fixed costs and low marginal costs; without protection, competitors reverse-engineer the product and the innovator never recoups. Patents buy innovation with a time-limited monopoly.</p>
+    <p>The evidence is genuinely mixed. It is hard to show that more generous patents produce more innovation; it is easy to show firms patent more strategically when protection expands; and there is evidence patents <em>hinder</em> follow-on innovation. Much long-run growth may come from innovations in the public domain.</p>
+
+    <h4 class="sub">Antitrust, then and now</h4>
+    <p>The Gilded Age consolidated railroads, shipping and oil into monopolies — Standard Oil was broken up in 1911. Early-1900s antitrust dismantled them and utilities were regulated. Deregulation from the late 1970s let concentration return in cable, broadband and tech.</p>
+    <p>The modern debate turns on the <strong>consumer welfare standard</strong>, dominant since the late 1970s: if prices are low and consumers are not visibly harmed, concentration alone is not a problem. That standard let firms like Amazon, Google and Facebook grow by pricing low and acquiring potential competitors — Instagram and WhatsApp being the standard examples. The EU, and the US under Lina Khan's FTC, pushed back. Recent milestones: a 2024 judgment that Google holds an illegal monopoly in search, and a 2024 suit alleging Visa stifled debit-card competition.</p>
+  </div>
+
+  <div class="moves"><div class="hd">The moves</div><ol>
+    <li>Draw D, then MR with the same intercept and twice the slope, then MC.</li>
+    <li>Quantity from MR = MC. <em>Price from the demand curve above it.</em> Never read price off MR.</li>
+    <li>Mark the competitive benchmark where MC crosses D, and put the deadweight loss triangle between the two quantities.</li>
+    <li>If asked about profit, add ATC and use (P − ATC) × Q.</li>
+  </ol></div>
+
+  <div class="traps"><div class="hd">Traps</div><ul>
+    <li>Reading the monopoly price off the MR curve. It is a very common and very costly error.</li>
+    <li>Drawing MR with the same slope as demand. Twice as steep.</li>
+    <li>Assuming monopolists always profit. It depends on ATC.</li>
+    <li>Saying the monopolist "restricts supply." It chooses a point on demand; it has no supply curve.</li>
+  </ul></div>
+
+  <div class="drills"><div class="hd">Drills · Unit 10</div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u10q1"><div class="qtext">
+      <span class="qkind exam">exam</span>Compared to perfect competition, a monopolist does what to price and quantity?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p><strong>Raises price and reduces quantity.</strong> It sets MR = MC rather than P = MC, and since MR lies below demand, the quantity where they cross is to the left of the competitive quantity — and the price read off demand above it is higher.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u10q2"><div class="qtext">
+      <span class="qkind exam">exam</span>The Eras Tour sold 10 million tickets and grossed $2 billion. Does Taylor Swift have market power? Draw the market, and say whether the efficient number of tickets was sold.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>Average price = $2bn / 10m = <strong>$200</strong>.</p>
+        <p><strong>She has market power</strong>, emphatically. With perfect product differentiation there is exactly one producer of a Taylor Swift concert. Some fans may see other artists as substitutes, but nobody else can supply the good itself.</p>
+        <p><strong>The diagram:</strong> downward-sloping demand, MR below it and twice as steep, upward-sloping MC. Q<sub>m</sub> = 10m where MR = MC; P = $200 read up on demand.</p>
+        <p><strong>Not efficient.</strong> Where demand meets MC — the competitive benchmark — about 15 million tickets would trade. Monopoly pricing cut that by a third. On those 5 million missing tickets, willingness to pay exceeded marginal cost. A lot of unfulfilled Swifties.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u10q3"><div class="qtext">
+      <span class="qkind calc">calc</span>Same tour. Fixed costs are zero and MC rises linearly from 0 to $100 at 10 million tickets. Are profits zero? If not, what are they?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>Edwards notes on the answer key that he got this wrong at first — it is a genuine trap.</p>
+        <p>With zero fixed costs, <strong>total cost is the area under the marginal cost curve</strong>, which here is a right triangle with base 10 million and height $100:</p>
+        <div class="eq">TC = ½ × 10m × $100 = <strong>$500 million</strong></div>
+        <p>Total revenue = $200 × 10m = <strong>$2 billion</strong>. So:</p>
+        <div class="eq">Profit = $2bn − $0.5bn = <strong>$1.5 billion</strong></div>
+        <p>The trap is treating total cost as the <em>rectangle</em> $100 × 10m = $1bn, which would give $1 billion. Cost is the area <em>under</em> MC, and MC is a line, so it is a triangle.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u10q4"><div class="qtext">
+      <span class="qkind">concept</span>What is a natural monopoly, and give three examples.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>A situation where <strong>one producer can supply the entire market at lower average cost than several firms could</strong> — typically because fixed costs are enormous and marginal cost is very low, so average cost keeps falling over the whole relevant range.</p>
+        <p>Examples: <strong>utilities</strong> (PG&amp;E for gas and electricity), <strong>railways</strong>, and <strong>software and digital media</strong>, where marginal cost is essentially zero. Platforms like Facebook and Uber behave similarly through network effects — the service gets more valuable as the user base grows.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u10q5"><div class="qtext">
+      <span class="qkind">concept</span>If monopoly causes deadweight loss, why does the US grant pharmaceutical patents?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>Because inventing is expensive and copying is cheap. Drug development carries <strong>huge fixed costs and low marginal costs</strong>, so a competitor who reverse-engineers the molecule can undercut the innovator, who then never recovers R&amp;D. A time-limited patent monopoly lets future profits fund the invention.</p>
+        <p>The honest caveats: it is empirically hard to show that <em>more generous</em> patents produce more innovation; it is easy to show firms patent more strategically when protection widens; there is evidence patents impede <strong>follow-on innovation</strong>; and much long-run growth may come from public-domain ideas and publicly funded research.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u10q6"><div class="qtext">
+      <span class="qkind">concept</span>What is the consumer welfare standard, and how did it enable today's large tech firms?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>It is the doctrine dominating US antitrust since the late 1970s: <strong>if prices stay low and consumers are not demonstrably harmed, industry concentration is not itself a problem.</strong></p>
+        <p>That let a generation of firms build dominance by <strong>pricing low and buying potential competitors</strong> — Facebook acquiring Instagram and WhatsApp is the canonical case. Google and Facebook do not even charge users; they monetize advertisers, so a price-focused test barely registers them. Amazon squeezes suppliers rather than consumers.</p>
+        <p>The EU and the US under Lina Khan's FTC pushed back, producing the 2024 judgment that Google illegally monopolized search and the 2024 Visa debit-card suit.</p>
+      </div></details>
+    </div></div></div>
+
+  </div>
+</section>
+<nav class="pager">
+<a class="pg prev" href="u09.html"><span class="pglbl">&larr; Previous</span><span class="pgt">09 &middot; Firms, Costs &amp; Profit</span></a>
+<a class="pg next" href="u11.html"><span class="pglbl">Next &rarr;</span><span class="pgt">11 &middot; Externalities</span></a>
+</nav></div>
+</main>
+</div>
+<div class="searchwrap" id="searchwrap" hidden><div class="searchbox"><input id="searchin" type="search" placeholder="Search all 28 units&hellip;" autocomplete="off" aria-label="Search the packet"><div class="searchres" id="searchres"></div></div></div>
+<script src="assets/manifest.js"></script>
+<script src="assets/search.js"></script>
+<script src="assets/graphs.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

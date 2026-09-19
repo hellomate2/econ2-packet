@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Price Controls &middot; Econ 2 Packet</title>
+<meta name="description" content="Unit 5 of the Econ 2 master packet: Price Controls.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Spectral:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232B4C8C'/%3E%3Cpath d='M8 23 L14 15 L19 19 L25 9' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="topbar"><button class="btn" id="menu" aria-label="Open unit navigator">Units</button><span class="nm">Price Controls</span><button class="btn" id="theme" aria-label="Toggle colour theme">Theme</button></div>
+<div class="wrap">
+<nav class="rail" id="rail" aria-label="Unit navigator">
+<div class="railhead">
+<a class="homelink" href="index.html"><span class="mark">ECON 2 &middot; Berkeley</span><span class="nm">Master Packet</span></a>
+</div>
+<div class="progwrap"><div class="progbar"><i id="pbar"></i></div>
+<div class="progtxt"><span id="ptxt">&nbsp;</span><button class="btn mini" id="reset">Reset</button></div></div>
+<button class="btn wide-btn" id="searchbtn">Search <kbd>/</kbd></button>
+<div class="navgrp"><span class="lbl">Part I &middot; Microeconomics</span>
+<a href="u01.html" data-unit="1"><span class="n">1</span>Scarcity, Choice &amp; Opportunity Cost</a>
+<a href="u02.html" data-unit="2"><span class="n">2</span>Comparative Advantage</a>
+<a href="u03.html" data-unit="3"><span class="n">3</span>Supply &amp; Demand</a>
+<a href="u04.html" data-unit="4"><span class="n">4</span>Surplus &amp; Deadweight Loss</a>
+<a href="u05.html" class="cur" data-unit="5"><span class="n">5</span>Price Controls</a>
+<a href="u06.html" data-unit="6"><span class="n">6</span>Elasticity</a>
+<a href="u07.html" data-unit="7"><span class="n">7</span>Taxes &amp; Subsidies</a>
+<a href="u08.html" data-unit="8"><span class="n">8</span>Households &amp; Utility</a>
+<a href="u09.html" data-unit="9"><span class="n">9</span>Firms, Costs &amp; Profit</a>
+<a href="u10.html" data-unit="10"><span class="n">10</span>Monopoly &amp; Market Power</a>
+<a href="u11.html" data-unit="11"><span class="n">11</span>Externalities</a>
+</div>
+<div class="navgrp"><span class="lbl">Part II &middot; Factors &amp; Trade</span>
+<a href="u12.html" data-unit="12"><span class="n">12</span>Labor Markets &amp; Wages</a>
+<a href="u13.html" data-unit="13"><span class="n">13</span>Inequality</a>
+<a href="u14.html" data-unit="14"><span class="n">14</span>Capital, Interest &amp; Present Value</a>
+<a href="u15.html" data-unit="15"><span class="n">15</span>International Trade</a>
+<a href="u16.html" data-unit="16"><span class="n">16</span>Trade Policy &amp; Tariffs</a>
+</div>
+<div class="navgrp"><span class="lbl">Part III &middot; Macroeconomics</span>
+<a href="u17.html" data-unit="17"><span class="n">17</span>GDP &amp; Measurement</a>
+<a href="u18.html" data-unit="18"><span class="n">18</span>Inflation &amp; Price Indexes</a>
+<a href="u19.html" data-unit="19"><span class="n">19</span>Long-Run Growth</a>
+<a href="u20.html" data-unit="20"><span class="n">20</span>The Keynesian Cross</a>
+<a href="u21.html" data-unit="21"><span class="n">21</span>Fiscal Policy</a>
+<a href="u22.html" data-unit="22"><span class="n">22</span>Monetary Policy &amp; Financial Crises</a>
+<a href="u23.html" data-unit="23"><span class="n">23</span>Inflation &amp; the Return to Potential</a>
+<a href="u24.html" data-unit="24"><span class="n">24</span>International Macroeconomics</a>
+</div>
+<div class="navgrp"><span class="lbl">Part IV &middot; Exam Lab</span>
+<a href="u25.html" data-unit="25"><span class="n">25</span>The Graph Vault</a>
+<a href="u26.html" data-unit="26"><span class="n">26</span>The Midterm, Worked</a>
+<a href="u27.html" data-unit="27"><span class="n">27</span>The Final, Worked</a>
+<a href="u28.html" data-unit="28"><span class="n">28</span>Cheat Sheet Blueprint</a>
+</div>
+</nav>
+<main class="main">
+<div class="col">
+<div class="crumb"><a href="index.html">Packet</a> <span>/</span> <span>Part I &middot; Microeconomics</span></div>
+<section class="unit solo" id="u5">
+  <div class="uhead"><span class="unum">05</span><div>
+    <h3>Price Controls</h3>
+    <div class="meta">Classes 5–6 · Chapter 6 <span class="tag mt">Midterm</span></div>
+  </div></div>
+
+  <div class="body">
+    <p>A <strong>price ceiling</strong> is a legal maximum, binding only if set <em>below</em> equilibrium. A <strong>price floor</strong> is a legal minimum, binding only if set <em>above</em>. Berkeley's own rent control, in force until 1998 and since 1999 applying as "stabilization" only after a lease starts, is the running example.</p>
+    <p>A binding ceiling creates a <strong>shortage</strong>: quantity demanded exceeds quantity supplied. The good then has to be rationed some way other than price — queuing, lotteries, government rationing as with COVID vaccines in 2021, or connections.</p>
+  </div>
+
+  <figure class="fig"><div class="plot" data-graph="ceiling"></div>
+    <figcaption><b>A binding price ceiling.</b> Trade collapses to Q<sub>S</sub>, the short side of the market. Consumers who still get the good pay less and gain; producers lose; and the gold triangle is destroyed outright. Consumer surplus can rise or fall — the rectangle transferred from producers may or may not outweigh the triangle consumers lose.</figcaption></figure>
+
+  <div class="body">
+    <h4 class="sub">The second loss nobody mentions</h4>
+    <p>The diagram quietly assumes the units that do get traded go to the buyers who value them most. <strong>With a shortage there is no mechanism enforcing that.</strong> So on top of the deadweight loss triangle there is <strong>misallocation</strong>: an elderly tenant may hold a rent-controlled apartment that a wealthier student would pay far more for and cannot get. Naming misallocation separately from deadweight loss is worth real credit.</p>
+
+    <h4 class="sub">The honest case for rent control</h4>
+    <p>Edwards does not leave it at "controls are bad":</p>
+    <ul>
+      <li>It does benefit the consumers who successfully get a unit.</li>
+      <li>It protects tenants from price swings driven by demand and supply shocks — insurance the model does not price.</li>
+      <li>The main alternative is <strong>subsidized public housing</strong>, where the government controls both price and quantity, widely used across the world and not subject to the same shortage mechanism.</li>
+    </ul>
+    <p>Shortages and queues also appear <em>without</em> any government control, because prices are sticky: Saturday-night restaurants, street parking on game days, and Uber surge pricing that customers punish firms for using. In recessions the labor market queues too — unemployed workers cannot instantly bid wages down.</p>
+  </div>
+
+  <div class="moves"><div class="hd">The moves</div><ol>
+    <li>State whether the control binds. A ceiling above equilibrium does nothing at all.</li>
+    <li>Mark quantity traded at the <strong>short side</strong> — Q<sub>S</sub> under a ceiling, Q<sub>D</sub> under a floor.</li>
+    <li>Label the shortage or surplus as a horizontal gap, not a vertical one.</li>
+    <li>Say "deadweight loss <em>plus</em> possible misallocation among consumers."</li>
+  </ol></div>
+
+  <div class="traps"><div class="hd">Traps</div><ul>
+    <li>Reading quantity off the demand curve under a ceiling. Nothing forces suppliers to produce more than Q<sub>S</sub>.</li>
+    <li>Asserting consumer surplus falls. It can rise — the transfer from producers may exceed the triangle lost.</li>
+    <li>Drawing a ceiling above the equilibrium price and then finding a shortage.</li>
+  </ul></div>
+
+  <div class="drills"><div class="hd">Drills · Unit 5</div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u5q1"><div class="qtext">
+      <span class="qkind graph">graph</span>Draw a binding price ceiling. Label the shortage, the new consumer and producer surplus, and the deadweight loss. Does consumer surplus rise or fall?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>Horizontal line at P<sub>C</sub> below P₁. Quantity traded is Q<sub>S</sub>, read off <strong>supply</strong>. The shortage is the horizontal gap Q<sub>D</sub> − Q<sub>S</sub> at that price.</p>
+        <p>Consumer surplus is the area under demand and above P<sub>C</sub> out to Q<sub>S</sub>; producer surplus is the small triangle under P<sub>C</sub> and above supply; the deadweight loss is the triangle between supply and demand from Q<sub>S</sub> to Q₁.</p>
+        <p><strong>Consumer surplus is ambiguous.</strong> Consumers gain a rectangle transferred from producers but lose a triangle from units no longer traded. Which dominates depends on the elasticities. Total surplus unambiguously falls.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u5q2"><div class="qtext">
+      <span class="qkind">concept</span>Why is the true welfare cost of a price ceiling larger than the deadweight loss triangle?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>Because of <strong>misallocation</strong>. The triangle assumes the units still traded go to the consumers with the highest willingness to pay, but in a shortage nothing enforces that — allocation happens by queuing, luck or connections.</p>
+        <p>The standard example: an elderly tenant holds a rent-controlled apartment while a student who would pay far more cannot find one. That lost value sits on top of the triangle.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u5q3"><div class="qtext">
+      <span class="qkind">concept</span>Give two arguments for rent control that the simple diagram leaves out, and name the main policy alternative.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <ul>
+          <li>It <strong>genuinely benefits tenants who secure a unit</strong>, which is a real distributional gain the efficiency calculation ignores.</li>
+          <li>It provides <strong>insurance against price volatility</strong> from demand and supply shocks — valuable to risk-averse households and absent from the static model.</li>
+        </ul>
+        <p>The alternative is <strong>subsidized public housing</strong>, where government sets both price and quantity, so supply does not contract in response to the controlled price. It is used widely around the world.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u5q4"><div class="qtext">
+      <span class="qkind">concept</span>Give two examples of shortages and queuing in markets with no price controls at all.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p><strong>Price rigidity</strong> does it on its own. Restaurants on a Saturday night and street parking during a football game are both in excess demand at the posted price, and neither adjusts in real time — sellers who do adjust, like Uber's surge pricing, get punished by customers for it.</p>
+        <p>The <strong>labor market</strong> queues the same way: in a recession the unemployed cannot instantly bid wages down, and in a boom employers cannot bid wages up for new hires only.</p>
+      </div></details>
+    </div></div></div>
+
+  </div>
+</section>
+<nav class="pager">
+<a class="pg prev" href="u04.html"><span class="pglbl">&larr; Previous</span><span class="pgt">04 &middot; Surplus &amp; Deadweight Loss</span></a>
+<a class="pg next" href="u06.html"><span class="pglbl">Next &rarr;</span><span class="pgt">06 &middot; Elasticity</span></a>
+</nav></div>
+</main>
+</div>
+<div class="searchwrap" id="searchwrap" hidden><div class="searchbox"><input id="searchin" type="search" placeholder="Search all 28 units&hellip;" autocomplete="off" aria-label="Search the packet"><div class="searchres" id="searchres"></div></div></div>
+<script src="assets/manifest.js"></script>
+<script src="assets/search.js"></script>
+<script src="assets/graphs.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

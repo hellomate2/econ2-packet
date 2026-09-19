@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Households &amp; Utility &middot; Econ 2 Packet</title>
+<meta name="description" content="Unit 8 of the Econ 2 master packet: Households &amp; Utility.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Spectral:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232B4C8C'/%3E%3Cpath d='M8 23 L14 15 L19 19 L25 9' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="topbar"><button class="btn" id="menu" aria-label="Open unit navigator">Units</button><span class="nm">Households &amp; Utility</span><button class="btn" id="theme" aria-label="Toggle colour theme">Theme</button></div>
+<div class="wrap">
+<nav class="rail" id="rail" aria-label="Unit navigator">
+<div class="railhead">
+<a class="homelink" href="index.html"><span class="mark">ECON 2 &middot; Berkeley</span><span class="nm">Master Packet</span></a>
+</div>
+<div class="progwrap"><div class="progbar"><i id="pbar"></i></div>
+<div class="progtxt"><span id="ptxt">&nbsp;</span><button class="btn mini" id="reset">Reset</button></div></div>
+<button class="btn wide-btn" id="searchbtn">Search <kbd>/</kbd></button>
+<div class="navgrp"><span class="lbl">Part I &middot; Microeconomics</span>
+<a href="u01.html" data-unit="1"><span class="n">1</span>Scarcity, Choice &amp; Opportunity Cost</a>
+<a href="u02.html" data-unit="2"><span class="n">2</span>Comparative Advantage</a>
+<a href="u03.html" data-unit="3"><span class="n">3</span>Supply &amp; Demand</a>
+<a href="u04.html" data-unit="4"><span class="n">4</span>Surplus &amp; Deadweight Loss</a>
+<a href="u05.html" data-unit="5"><span class="n">5</span>Price Controls</a>
+<a href="u06.html" data-unit="6"><span class="n">6</span>Elasticity</a>
+<a href="u07.html" data-unit="7"><span class="n">7</span>Taxes &amp; Subsidies</a>
+<a href="u08.html" class="cur" data-unit="8"><span class="n">8</span>Households &amp; Utility</a>
+<a href="u09.html" data-unit="9"><span class="n">9</span>Firms, Costs &amp; Profit</a>
+<a href="u10.html" data-unit="10"><span class="n">10</span>Monopoly &amp; Market Power</a>
+<a href="u11.html" data-unit="11"><span class="n">11</span>Externalities</a>
+</div>
+<div class="navgrp"><span class="lbl">Part II &middot; Factors &amp; Trade</span>
+<a href="u12.html" data-unit="12"><span class="n">12</span>Labor Markets &amp; Wages</a>
+<a href="u13.html" data-unit="13"><span class="n">13</span>Inequality</a>
+<a href="u14.html" data-unit="14"><span class="n">14</span>Capital, Interest &amp; Present Value</a>
+<a href="u15.html" data-unit="15"><span class="n">15</span>International Trade</a>
+<a href="u16.html" data-unit="16"><span class="n">16</span>Trade Policy &amp; Tariffs</a>
+</div>
+<div class="navgrp"><span class="lbl">Part III &middot; Macroeconomics</span>
+<a href="u17.html" data-unit="17"><span class="n">17</span>GDP &amp; Measurement</a>
+<a href="u18.html" data-unit="18"><span class="n">18</span>Inflation &amp; Price Indexes</a>
+<a href="u19.html" data-unit="19"><span class="n">19</span>Long-Run Growth</a>
+<a href="u20.html" data-unit="20"><span class="n">20</span>The Keynesian Cross</a>
+<a href="u21.html" data-unit="21"><span class="n">21</span>Fiscal Policy</a>
+<a href="u22.html" data-unit="22"><span class="n">22</span>Monetary Policy &amp; Financial Crises</a>
+<a href="u23.html" data-unit="23"><span class="n">23</span>Inflation &amp; the Return to Potential</a>
+<a href="u24.html" data-unit="24"><span class="n">24</span>International Macroeconomics</a>
+</div>
+<div class="navgrp"><span class="lbl">Part IV &middot; Exam Lab</span>
+<a href="u25.html" data-unit="25"><span class="n">25</span>The Graph Vault</a>
+<a href="u26.html" data-unit="26"><span class="n">26</span>The Midterm, Worked</a>
+<a href="u27.html" data-unit="27"><span class="n">27</span>The Final, Worked</a>
+<a href="u28.html" data-unit="28"><span class="n">28</span>Cheat Sheet Blueprint</a>
+</div>
+</nav>
+<main class="main">
+<div class="col">
+<div class="crumb"><a href="index.html">Packet</a> <span>/</span> <span>Part I &middot; Microeconomics</span></div>
+<section class="unit solo" id="u8">
+  <div class="uhead"><span class="unum">08</span><div>
+    <h3>Households &amp; Utility</h3>
+    <div class="meta">Classes 7–8 · Chapter 5 <span class="tag both">Midterm + Final</span></div>
+  </div></div>
+
+  <div class="body">
+    <p>This unit derives where demand comes from. Households face a <strong>budget constraint</strong> and have <strong>preferences</strong>, and demand falls out of the optimization.</p>
+    <div class="eq">P<sub>f</sub>·q<sub>f</sub> + P<sub>c</sub>·q<sub>c</sub> = Income<span class="cm">Intercepts: Income/P on each axis. Slope with clothing on the horizontal axis = −P<sub>c</sub>/P<sub>f</sub>.</span></div>
+    <p>A rise in income shifts the constraint <strong>outward in parallel</strong>. A rise in one good's price <strong>pivots</strong> it around the other good's intercept — steeper or flatter, same starting point.</p>
+  </div>
+
+  <figure class="fig"><div class="plot" data-graph="budget-constraint"></div>
+    <figcaption><b>Income shifts, prices pivot.</b> With weekly income $100, food at $20 and clothing at $50, the intercepts are 5 meals and 2 garments and the slope is −2.5. A rise in the price of clothing pivots the line clockwise around the food intercept.</figcaption></figure>
+
+  <div class="body">
+    <h4 class="sub">Marginal utility and the rational spending rule</h4>
+    <p>Total utility rises with quantity but at a decreasing rate; <strong>marginal utility is the slope of total utility</strong>, and it declines. Different goods have differently-shaped marginal utility curves.</p>
+    <p>The optimum is where <strong>the marginal utility of the last dollar spent is the same across all goods</strong>. Divide marginal utility by price to get marginal utility <em>per dollar</em>:</p>
+    <div class="eq">mu<sub>a</sub>/P<sub>a</sub> = mu<sub>b</sub>/P<sub>b</sub> = … = mu<sub>z</sub>/P<sub>z</sub><span class="cm">The Rational Spending Rule. If one ratio is higher, shift spending toward that good until declining marginal utility restores equality.</span></div>
+  </div>
+
+  <figure class="fig"><div class="plot" data-graph="utility-mu"></div>
+    <figcaption><b>Total versus marginal utility.</b> Total utility is increasing and concave; marginal utility is its slope, and falls. Chapter 5's ice cream reaches negative marginal utility by the sixth serving.</figcaption></figure>
+
+  <div class="body">
+    <h4 class="sub">The comparative static they ask for</h4>
+    <p>Suppose P<sub>c</sub> rises 10%. If you do not change your purchases, the left side falls and the rule breaks:</p>
+    <div class="eq">mu<sub>c</sub>/(1.1·P<sub>c</sub>) &lt; mu<sub>f</sub>/P<sub>f</sub></div>
+    <p>To restore equality you <strong>buy less clothing</strong>, which raises mu<sub>c</sub> (declining marginal utility running backwards), and possibly <strong>more food</strong>, which lowers mu<sub>f</sub>. With numbers: if a garment gives 10 utils at $50 and food gives 2 utils at $10, both ratios are 0.2. If clothing goes to $55, its ratio falls to 10/55 ≈ 0.18. Cut clothing until mu<sub>c</sub> reaches 11, and 11/55 = 0.2 again. Or split the adjustment across both goods.</p>
+    <p>Underneath sit two forces, which is an ECON 100A preview but does appear as a concept question:</p>
+    <ul>
+      <li><strong>Substitution effect:</strong> the good is now relatively expensive, so buy something else instead.</li>
+      <li><strong>Income effect:</strong> your real purchasing power fell, so you can afford less of everything.</li>
+    </ul>
+  </div>
+
+  <div class="moves"><div class="hd">The moves</div><ol>
+    <li>Write the rule before doing anything: mu<sub>x</sub>/P<sub>x</sub> = mu<sub>y</sub>/P<sub>y</sub>.</li>
+    <li>Say which side of the equation the shock hits and which way it moves.</li>
+    <li>State the quantity adjustment <em>and</em> the marginal utility it triggers — "buy less clothing, which raises mu<sub>c</sub>."</li>
+    <li>For the graph: income shifts parallel, price pivots.</li>
+  </ol></div>
+
+  <div class="traps"><div class="hd">Traps</div><ul>
+    <li>Equating marginal utilities instead of marginal utilities <em>per dollar</em>.</li>
+    <li>Shifting the whole budget line when only one price changed. Pivot it.</li>
+    <li>Saying "buy less clothing" and stopping. The mechanism is that buying less <em>raises</em> its marginal utility, which restores the equality.</li>
+  </ul></div>
+
+  <div class="drills"><div class="hd">Drills · Unit 8</div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u8q1"><div class="qtext">
+      <span class="qkind exam">exam</span>Under the Rational Spending Rule with clothing and food, suppose the price of clothing falls. How could you change your purchases to restore equality?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>If P<sub>c</sub> falls, the left-hand side mu<sub>c</sub>/P<sub>c</sub> <strong>increases</strong>, because the denominator shrank. Clothing now delivers more utility per dollar than food.</p>
+        <p>To restore equality, <strong>increase your purchases of clothing</strong>. Buying more clothing <em>reduces</em> mu<sub>c</sub> through diminishing marginal utility, pulling the ratio back down until it matches mu<sub>f</sub>/P<sub>f</sub> again.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u8q2"><div class="qtext">
+      <span class="qkind calc">calc</span>Coffee at Strada costs $4; frozen yogurt at Yogurt Park costs $6. mu<sub>c</sub>(1) = 10, mu<sub>c</sub>(2) = 8, mu<sub>f</sub>(1) = 12, mu<sub>f</sub>(2) = 8. What is the optimal daily bundle?
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>Compute marginal utility per dollar for each unit:</p>
+        <ul>
+          <li>Coffee #1: 10/4 = <span class="num">2.5</span> · Coffee #2: 8/4 = <span class="num">2.0</span></li>
+          <li>Yogurt #1: 12/6 = <span class="num">2.0</span> · Yogurt #2: 8/6 ≈ <span class="num">1.33</span></li>
+        </ul>
+        <p>The rule is satisfied at <strong>2 coffees and 1 frozen yogurt</strong>, where 8/$4 = 12/$6 = 2.0. Both margins deliver the same utility per dollar, and no reallocation improves things.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u8q3"><div class="qtext">
+      <span class="qkind graph">graph</span>Weekly income is $100, food is $20, clothing is $50. Draw the budget constraint with intercepts and slope. Then show a rise in the price of clothing and a rise in income.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p>Food intercept: 100/20 = <strong>5 meals</strong>. Clothing intercept: 100/50 = <strong>2 garments</strong>. With clothing on the horizontal axis, slope = −P<sub>c</sub>/P<sub>f</sub> = −50/20 = <strong>−2.5</strong> — one garment costs 2.5 meals.</p>
+        <p><strong>Price of clothing rises:</strong> the line <em>pivots clockwise</em> around the unchanged food intercept, pulling the clothing intercept inward.</p>
+        <p><strong>Income rises:</strong> the line shifts <em>outward in parallel</em>, since relative prices and therefore the slope are unchanged.</p>
+      </div></details>
+    </div></div></div>
+
+    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u8q4"><div class="qtext">
+      <span class="qkind">concept</span>Distinguish the substitution effect from the income effect when a price rises.
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <ul>
+          <li><strong>Substitution effect:</strong> the good is now relatively more expensive, so the household wants less of it and more of others. "If the price goes up, I'll buy something else."</li>
+          <li><strong>Income effect:</strong> the household's real purchasing power has fallen, so it must spend less overall. "If the price goes up, I can't buy as much."</li>
+        </ul>
+        <p>They can push the same way or opposite ways. Full treatment with indifference curves is ECON 100A.</p>
+      </div></details>
+    </div></div></div>
+
+  </div>
+</section>
+<nav class="pager">
+<a class="pg prev" href="u07.html"><span class="pglbl">&larr; Previous</span><span class="pgt">07 &middot; Taxes &amp; Subsidies</span></a>
+<a class="pg next" href="u09.html"><span class="pglbl">Next &rarr;</span><span class="pgt">09 &middot; Firms, Costs &amp; Profit</span></a>
+</nav></div>
+</main>
+</div>
+<div class="searchwrap" id="searchwrap" hidden><div class="searchbox"><input id="searchin" type="search" placeholder="Search all 28 units&hellip;" autocomplete="off" aria-label="Search the packet"><div class="searchres" id="searchres"></div></div></div>
+<script src="assets/manifest.js"></script>
+<script src="assets/search.js"></script>
+<script src="assets/graphs.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
