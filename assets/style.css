@@ -336,3 +336,5 @@ kbd{font-family:var(--mono);font-size:10px;border:1px solid var(--rule-2);border
   .ucards{grid-template-columns:1fr}
 }
 @media print{.pager,.crumb,.searchwrap{display:none}}
+
+.topbar .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
