@@ -67,98 +67,152 @@
     <div class="meta">Classes 8–9 · Chapters 6–7 <span class="tag both">Midterm + Final</span></div>
   </div></div>
 
-  <div class="body">
-    <p>The supply side, derived properly. Firms maximize <strong>economic profit</strong> = total revenue − total cost, where total cost means the opportunity cost of all inputs.</p>
-    <p>Under <strong>perfect competition</strong> each firm is small enough that its own output does not move the market price. So while market demand slopes down, the demand curve <em>an individual firm faces</em> is <strong>horizontal at the market price</strong> — and therefore marginal revenue is flat and equal to P.</p>
-    <div class="eq">π = P·q − C(q)   ⟹   ∂π/∂q = P − MC = 0   ⟹   <strong>P = MC</strong><span class="cm">Generally MR = MC. For a competitive firm MR = P, so the rule collapses to P = MC.</span></div>
+  <div class="tldr"><span class="lb">If you remember one thing</span>
+    <p>Quantity comes from <b>MR = MC</b>; for a competitive firm MR = P, so <b>P = MC</b>. Then compare <b>P to ATC at that quantity</b> — profit is a <b>rectangle</b>, never a triangle.</p>
   </div>
+
+  <h4 class="sub">Why the competitive firm is a price taker</h4>
+  <p>Each firm is too small for its own output to move the price, so the demand curve <b>facing one firm is horizontal at the market price</b> and MR is flat and equal to P. A North Dakota oil rig takes the world oil price as given.</p>
+  <div class="eq">&pi; = P&middot;q &minus; C(q)   ⟹   &part;&pi;/&part;q = P &minus; MC = 0   ⟹   <strong>P = MC</strong><span class="cm">Generally MR = MC. For a competitive firm MR = P, so the rule collapses to P = MC.</span></div>
 
   <figure class="fig"><div class="plot" data-graph="firm-profit-max"></div>
     <figcaption><b>The competitive firm.</b> Marginal revenue is flat at the market price. Profit is maximized where MC crosses MR. Raise the price and the firm slides up its own MC curve — which is exactly why <b>the firm's supply curve is its marginal cost curve.</b></figcaption></figure>
 
-  <div class="body">
-    <h4 class="sub">Costs, carefully</h4>
-    <ul>
-      <li><strong>Fixed cost</strong> C<sub>f</sub>: does not vary with output — drilling the well, the facility, the equipment.</li>
-      <li><strong>Variable cost</strong> C<sub>v</sub>(q): varies with output — the labor and materials used up.</li>
-      <li><strong>Marginal cost</strong> MC = C′(q) = C<sub>v</sub>′(q). Fixed costs drop out, since they do not change when you make one more.</li>
-      <li><strong>Average total cost</strong> ATC = C(q)/q = C<sub>f</sub>/q + C<sub>v</sub>(q)/q.</li>
-    </ul>
-    <p>ATC starts high because fixed costs are spread over few units, falls, then rises. <strong>MC crosses ATC at exactly the minimum of ATC</strong> — because when MC is below ATC it drags the average down, and when MC is above it pushes the average up.</p>
-    <p>And the profit formula you actually use on exams:</p>
-    <div class="eq">Profit = (P − ATC) × q<span class="cm">Profits are positive, zero or negative depending on whether the price is above, at, or below average total cost at the chosen quantity.</span></div>
-  </div>
+  <h4 class="sub">Costs, carefully</h4>
+  <dl class="defs">
+    <dt>Fixed cost C<sub>f</sub></dt><dd>Does not vary with output — drilling the well, the facility, the equipment.</dd>
+    <dt>Variable cost C<sub>v</sub>(q)</dt><dd>Varies with output — labor and materials used up.</dd>
+    <dt>Marginal cost</dt><dd>MC = C&prime;(q) = C<sub>v</sub>&prime;(q). <b>Fixed costs drop out.</b></dd>
+    <dt>Average total cost</dt><dd>ATC = C(q)/q = C<sub>f</sub>/q + C<sub>v</sub>(q)/q. Starts high, falls, then rises.</dd>
+    <dt>MC cuts ATC at its minimum</dt><dd>MC below ATC drags the average down; above, it pulls it up. Calculus: &part;(C(q)/q)/&part;q = 0 gives C&prime;(q) = C(q)/q.</dd>
+  </dl>
+  <div class="eq">Profit = (P &minus; ATC) &times; q<span class="cm">Positive, zero or negative as the price is above, at, or below average total cost at the chosen quantity.</span></div>
 
   <figure class="fig"><div class="plot" data-graph="atc-mc"></div>
     <figcaption><b>Reading profit off the diagram.</b> Quantity comes from MC = MR. Then the <em>profit rectangle</em> has height (P₁ − ATC₁) and width q₁. MC always cuts ATC at ATC's minimum.</figcaption></figure>
 
-  <div class="body">
-    <h4 class="sub">Entry, exit and the long run</h4>
-    <p>Profits are signals. Positive profits attract entry, which shifts market supply out and drives the price down. Negative profits cause exit, which shifts supply in and drives the price up. Zero profit is the resting point — no force pushing either way. This is Adam Smith's invisible hand, and it explains why economists dislike barriers to entry.</p>
-    <p><strong>If all firms are identical</strong>, the long-run industry supply curve is <strong>perfectly elastic — a horizontal line at minimum ATC</strong>, where P = MC = ATC and profit is zero for everyone.</p>
-    <p><strong>If firms differ in productivity</strong> — better and worse oil wells — the long-run supply curve <strong>slopes up</strong>. Every producing firm still sets P = MC, the <em>marginal</em> (least productive) firm earns zero profit, and the more productive firms earn positive profits. Those profits are really returns to their better wells.</p>
-  </div>
+  <h4 class="sub">Entry, exit and the long run</h4>
+  <p>Positive profits attract entry, supply shifts out, the price falls. Negative profits cause exit, supply shifts in, the price rises. Zero profit is the resting point — Adam Smith's invisible hand, and why economists dislike barriers to entry.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Firms are…</th><th>Long-run supply</th><th>Who earns what</th></tr></thead>
+    <tbody>
+      <tr><td><b>Identical</b></td><td><b>Perfectly elastic</b> — horizontal at minimum ATC</td><td>P = MC = ATC; <b>zero profit for everyone</b></td></tr>
+      <tr><td><b>Different productivity</b><br><span style="color:var(--muted)">better and worse oil wells</span></td><td><b>Slopes up</b></td><td>All set P = MC; the <b>marginal (least productive) firm</b> earns zero; better firms earn returns to their better wells</td></tr>
+    </tbody>
+  </table></div>
 
   <figure class="fig"><div class="plot" data-graph="lr-supply"></div>
     <figcaption><b>Long-run supply with identical firms.</b> Entry and exit push the price to the bottom of the ATC curve, so the industry supplies any quantity at that price. With heterogeneous firms the curve instead slopes upward and only the marginal firm makes zero.</figcaption></figure>
 
-  <div class="moves"><div class="hd">The moves</div><ol>
-    <li>Find quantity from MR = MC. For a competitive firm that is P = MC.</li>
+  <h4 class="sub">Rules that earn points</h4>
+  <ol class="rules">
+    <li>Find quantity from <b>MR = MC</b>. For a competitive firm, P = MC.</li>
     <li>Compare P to ATC <em>at that quantity</em> to sign the profit.</li>
-    <li>Draw profit as a rectangle, never a triangle. Height (P − ATC), width q.</li>
-    <li>For the long run, ask whether entry is free. Free entry ⇒ zero profit for the marginal firm.</li>
-  </ol></div>
+    <li>Draw profit as a <b>rectangle</b>: height (P &minus; ATC), width q.</li>
+    <li>In the long run, ask whether <b>entry is free</b>. Free entry ⇒ zero profit for the marginal firm.</li>
+  </ol>
 
   <div class="traps"><div class="hd">Traps</div><ul>
     <li>Confusing producer surplus with profit. Producer surplus ignores fixed costs; profit subtracts them.</li>
     <li>Letting fixed costs into marginal cost. They are not there.</li>
-    <li>Shutting down because profit is negative in the short run. If price covers variable cost, keep producing.</li>
-    <li>Saying zero profit means the firm is doing badly. Economic profit is zero when all opportunity costs, including the owner's, are covered.</li>
+    <li>Shutting down over negative short-run profit. If price covers variable cost, keep producing.</li>
+    <li>Reading zero profit as failure. It means all opportunity costs, including the owner's, are covered.</li>
   </ul></div>
 
-  <div class="drills"><div class="hd">Drills · Unit 9</div>
+  <div class="quiz">
+    <div class="qhd"><b>Unit 9 quiz</b><span>4 MCQ · 2 FRQ · ~12 min</span></div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u9q1"><div class="qtext">
-      <span class="qkind">concept</span>Why is the demand curve facing a single competitive firm horizontal when market demand slopes down?
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u9q1"><i>MCQ 1</i><span class="pts">2 pts</span></div>
+      <p class="qstem">Market demand for wheat slopes down, yet the demand curve facing one wheat farm is horizontal. Why?</p>
+      <ul class="opts">
+        <li><span>A</span>Because wheat has no substitutes</li>
+        <li><span>B</span>Because the farm is small relative to the market, so its output does not move the price</li>
+        <li><span>C</span>Because the farm's marginal cost is constant</li>
+        <li><span>D</span>Because consumers buy wheat in fixed quantities regardless of price</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p>Because the firm is <strong>small relative to the market</strong>. Its own output choice has no perceptible effect on the market price, so it can sell as much as it wants at the going price and nothing at all above it. A North Dakota oil rig takes the world oil price as given.</p>
-        <p>The consequence: <strong>marginal revenue is flat and equal to P</strong>, so profit maximization reduces from MR = MC to P = MC.</p>
+        <p><span class="correct">B — the firm is small relative to the market.</span></p>
+        <p>It can sell as much as it wants at the going price and nothing at all above it. The consequence is that <b>MR is flat and equal to P</b>, so MR = MC collapses to P = MC.</p>
+        <p><b>C</b> is the trap: it confuses a property of <em>cost</em> with a property of <em>revenue</em>. The firm's MC still rises — that is what makes its supply curve slope up.</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u9q2"><div class="qtext">
-      <span class="qkind exam">exam</span>Once a farmer owns a chicken farm, what determines the marginal cost of an egg, and is it high or low? What does that imply about the supply curve?
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u9q2"><i>MCQ 2</i><span class="pts">2 pts</span></div>
+      <p class="qstem">The marginal cost curve crosses the average total cost curve:</p>
+      <ul class="opts">
+        <li><span>A</span>At the minimum of MC</li>
+        <li><span>B</span>At the minimum of ATC</li>
+        <li><span>C</span>Where ATC is still falling</li>
+        <li><span>D</span>Wherever fixed costs equal variable costs</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p>Marginal cost is just the cost of keeping one more laying hen — feed, water, henhouse space, some fencing or a guard dog. A hen lays about one egg a day. <strong>These costs are low</strong>, so the marginal cost of an egg is low.</p>
-        <p>The supply curve therefore <strong>slopes upward but sits low</strong>: marginal cost still rises with production, as it does for most physical goods, but starts from a low base. Note the farm itself is a <em>fixed</em> cost and does not enter marginal cost at all.</p>
+        <p><span class="correct">B — at the minimum of ATC.</span></p>
+        <p>Arithmetic of averages: when MC &lt; ATC the next unit drags the average down, when MC &gt; ATC it pulls the average up. The average stops falling and starts rising exactly where MC passes through it.</p>
+        <p><b>A</b> is the trap: MC has its own minimum, well to the left, and it is not where the two curves meet.</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u9q3"><div class="qtext">
-      <span class="qkind">concept</span>Why does the MC curve always cross the ATC curve at ATC's minimum?
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u9q3"><i>MCQ 3</i><span class="pts">2 pts</span></div>
+      <p class="qstem">A competitive firm faces P = $12. At its profit-maximizing output of 100 units, ATC = $10 and average variable cost = $7. Economic profit is:</p>
+      <ul class="opts">
+        <li><span>A</span>$200</li>
+        <li><span>B</span>$500</li>
+        <li><span>C</span>$1,200</li>
+        <li><span>D</span>Zero, because competitive firms make zero profit</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p>Pure arithmetic of averages. <strong>When MC &lt; ATC, producing one more unit drags the average down.</strong> When MC &gt; ATC, it pulls the average up. The average therefore stops falling and starts rising exactly where MC passes through it — its minimum.</p>
-        <p>With calculus: setting ∂(C(q)/q)/∂q = 0 gives C′(q) = C(q)/q, which is MC = ATC.</p>
+        <p><span class="correct">A — $200.</span></p>
+        <p>Profit = (P − ATC) × q = ($12 − $10) × 100 = $200. The rectangle's height is the gap between price and <b>average total</b> cost.</p>
+        <p><b>B</b> is the trap: ($12 − $7) × 100 uses <em>variable</em> cost, which gives producer surplus, not profit. Producer surplus ignores fixed costs; profit subtracts them.</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u9q4"><div class="qtext">
-      <span class="qkind graph">graph</span>Draw a competitive firm making positive economic profit. Then show what happens to the market and the firm in the long run.
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u9q4"><i>MCQ 4</i><span class="pts">2 pts</span></div>
+      <p class="qstem">In long-run competitive equilibrium with identical firms, economic profit is zero. This means:</p>
+      <ul class="opts">
+        <li><span>A</span>Firms are losing money and will soon exit</li>
+        <li><span>B</span>Every input, including the owner's time and capital, earns exactly its next-best return</li>
+        <li><span>C</span>Accounting profit is also zero</li>
+        <li><span>D</span>Price has fallen below average variable cost</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p><strong>Short run:</strong> flat MR at P₁ above the ATC curve. Quantity q₁ at MC = MR. Profit is the rectangle (P₁ − ATC₁) × q₁.</p>
-        <p><strong>Long run:</strong> those profits attract entry. Market supply shifts out, the market price falls, and the firm's flat MR line slides down. Entry stops only when P equals minimum ATC, at which point <strong>P = MC = ATC and economic profit is zero</strong>.</p>
-        <p>With identical firms the long-run industry supply curve is a horizontal line at that minimum ATC.</p>
+        <p><span class="correct">B — every input earns its opportunity cost.</span></p>
+        <p>Total cost is the opportunity cost of <em>all</em> inputs. At P = MC = ATC there is simply no force pushing entry or exit.</p>
+        <p><b>C</b> is the trap: accounting profit is typically <b>positive</b> here, because accountants do not charge the firm for the owner's time or the return its capital could earn elsewhere.</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u9q5"><div class="qtext">
-      <span class="qkind">concept</span>If long-run profit is zero for the marginal firm, why does anyone stay in business?
-      <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p>Because <strong>economic profit is not accounting profit</strong>. Total cost is the opportunity cost of <em>all</em> inputs, including the owner's time and the return their capital could earn elsewhere. Zero economic profit means every input — owner included — is earning exactly what it could earn in its next best use.</p>
-        <p>Also, only the <em>marginal</em> firm earns zero. When firms differ in productivity, the better ones earn genuine positive profits, which are really returns to their superior wells, land or technology.</p>
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u9q5"><i>FRQ 1</i><span class="pts">6 pts</span></div>
+      <p class="qstem">Draw a competitive firm making positive economic profit in the short run. Then show what happens to the market and to the firm in the long run, assuming firms are identical.</p>
+      <div class="frqbox">Two panels — the market and the single firm. Label MC, ATC, MR, the quantity and the profit rectangle. Three or four sentences of explanation.</div>
+      <details class="ans"><summary>Model answer</summary><div class="ansbody">
+        <p><b>Short run:</b> flat MR at P₁ above the ATC curve. Quantity q₁ where MC = MR. Profit is the <b>rectangle</b> (P₁ − ATC₁) × q₁.</p>
+        <p><b>Long run:</b> those profits attract entry. Market supply shifts out, the market price falls, and the firm's flat MR line slides down. Entry stops only when P equals minimum ATC, where <b>P = MC = ATC and economic profit is zero</b>.</p>
+        <p>With identical firms the long-run industry supply curve is a <b>horizontal line at that minimum ATC</b>.</p>
+        <div class="mark"><span class="mh">What earns the points</span><ul>
+          <li>MR drawn flat, and quantity taken from MC = MR, not from the ATC minimum.</li>
+          <li>Profit drawn as a rectangle with height (P₁ − ATC₁) and width q₁.</li>
+          <li>Entry shown shifting <b>market supply</b>, with the firm's MR sliding down as a consequence.</li>
+          <li>The end point named precisely: P = MC = ATC at minimum ATC.</li>
+          <li>Long-run industry supply identified as perfectly elastic.</li>
+        </ul></div>
       </div></details>
-    </div></div></div>
+    </div>
 
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u9q6"><i>FRQ 2</i><span class="pts">4 pts</span></div>
+      <p class="qstem">Once a farmer already owns a chicken farm, what determines the marginal cost of an egg, and is it high or low? What does that imply about the shape and position of the supply curve?</p>
+      <div class="frqbox">Three or four sentences. Name the costs that count as marginal and the one that does not.</div>
+      <details class="ans"><summary>Model answer</summary><div class="ansbody">
+        <p>Marginal cost is the cost of keeping one more laying hen — feed, water, henhouse space, some fencing or a guard dog. A hen lays about one egg a day. <b>These costs are low</b>, so the marginal cost of an egg is low.</p>
+        <p>The supply curve therefore <b>slopes upward but sits low</b>: marginal cost still rises with production, as for most physical goods, but from a low base. The farm itself is a <b>fixed cost</b> and does not enter marginal cost at all.</p>
+        <div class="mark"><span class="mh">What earns the points</span><ul>
+          <li>Listing actual marginal inputs (feed, water, space), not "the cost of the farm".</li>
+          <li>Explicitly excluding the farm as a fixed cost.</li>
+          <li>Both features of the curve: upward-sloping <em>and</em> low.</li>
+          <li>Connecting MC to supply — the firm's supply curve <em>is</em> its MC curve.</li>
+        </ul></div>
+      </div></details>
+    </div>
   </div>
 </section>
 <nav class="pager">

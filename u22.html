@@ -67,44 +67,58 @@
     <div class="meta">Class 21 · Chapter 26 <span class="tag fin">Final</span></div>
   </div></div>
 
-  <div class="body">
-    <p>The Federal Reserve is the US central bank, with a dual mandate: <strong>low, stable inflation and full employment</strong>. Its key policy lever is the real interest rate.</p>
-    <p><strong>How the Fed moves rates.</strong> It is the only institution allowed to put dollars into circulation, which it does by creating money and trading it for financial assets — usually short-term government debt. These are <strong>open-market operations</strong>. Its two conventional tools are changing the interest rate paid on bank reserves and changing the supply of reserves. Note that this is <em>not</em> fiscal policy: the Fed is not spending or transferring, it is swapping assets.</p>
-    <p><strong>How that reaches the real economy.</strong> The Fed sets a nominal rate i. Because of inflation inertia, π moves slowly, so by r = i − π <strong>changing i changes r in the short run.</strong> And from Unit 20, all three of C, I and NX fall when r rises. So:</p>
-    <div class="eq">Fed raises i ⟹ r rises ⟹ C, I, NX fall ⟹ PAE shifts down ⟹ Y falls (multiplied)<span class="cm">Contractionary monetary policy. Expansionary runs the same chain in reverse. The rate-sensitive components are residential housing and new car purchases.</span></div>
-    <p>The crucial limit: <strong>the Fed controls r in the short run, not the long run.</strong> In the long run r must equal r*, the rate that equilibrates saving and investment. The Fed cannot hold r away from r* indefinitely — Unit 23 explains what stops it.</p>
-
-    <h4 class="sub">Three reasons a central bank acts</h4>
-    <ul>
-      <li><strong>Countercyclical policy</strong> — offsetting a shock to PAE. The Fed cutting the funds rate through 2007–08 is the example.</li>
-      <li><strong>Another objective</strong> — chiefly controlling inflation, which is Unit 23.</li>
-      <li><strong>A mistake</strong> — monetary policy in the Great Depression, where the money stock and bank reserves contracted and the real interest rate soared, compounding the collapse in autonomous consumption. Two downward shifts of PAE, one of them self-inflicted.</li>
-    </ul>
-    <p>This is why central bank independence matters. Erdoğan fired Turkey's central bank chief in March 2021 for raising rates, claiming that <em>lowering</em> rates would reduce inflation by cutting borrowing costs. Turkey hit <strong>72% annual inflation in 2022.</strong></p>
-
-    <h4 class="sub">Financial crises</h4>
-    <p><strong>Financial intermediation</strong> is the process of getting saving into productive investment — banks, investment banks, money market funds, pension funds. A <strong>financial crisis</strong> is when many institutions are in danger of failing, people lose confidence in them, and intermediation is widely disrupted.</p>
-    <p><strong>How one institution fails.</strong> A bank's assets are loans, reserves and bonds; its liabilities are short-term borrowing and equity. If asset values fall below obligations, it is insolvent — and merely <em>believing</em> an institution may become insolvent can cause depositors to withdraw and lenders to stop lending, <strong>making the insolvency happen.</strong></p>
-    <p><strong>Silicon Valley Bank, 2023</strong> is the course's worked example, and it is really a present value question. SVB held many long-term Treasury bonds. When interest rates rose, the present value of those fixed future payments <em>fell</em>, so the assets were worth far less than their book value. A bank run on 9 March, involving Founders Fund and other venture investors, depleted its cash — a bank lends out deposits rather than keeping them in a vault. SVB was allowed to fail, but the FDIC covered <em>all</em> deposits, beyond the $250,000 limit, and other banks acquired it cheaply.</p>
-    <p><strong>Four contagion channels</strong> — worth memorizing as a list:</p>
-    <ol>
-      <li><strong>Confidence:</strong> trouble at one institution creates doubt about others, even with no connection between them. First Republic's shares dived on contagion fear days after SVB.</li>
-      <li><strong>Linkage:</strong> direct exposure through loans, insurance contracts and counterparty relationships.</li>
-      <li><strong>Fire sale:</strong> a troubled institution dumps assets, driving down prices of assets everyone else holds.</li>
-      <li><strong>Macroeconomic:</strong> trouble reduces PAE and hence Y, which harms everyone.</li>
-    </ol>
-    <p>A crisis hits PAE by <strong>raising credit spreads</strong>, <strong>tightening lending standards</strong>, and <strong>damaging confidence</strong>. Prevention: higher capital requirements, deposit insurance, regulating risk-taking and interlinkage, and keeping the macroeconomy stable.</p>
-
-    <h4 class="sub">When rates hit zero</h4>
-    <p>Nominal rates cannot go much below zero, because currency offers a guaranteed zero nominal return. Hence <strong>unconventional</strong> tools: <strong>forward guidance</strong>, statements shaping expectations about future rates — the Fed's December 2008 and March 2009 language about "exceptionally low levels ... for an extended period" — and <strong>quantitative easing</strong>, buying bonds other than short-term government debt using reserves.</p>
+  <div class="tldr"><span class="lb">If you remember one thing</span>
+    <p>The Fed moves the <b>nominal</b> rate; <b>inflation inertia</b> means π barely budges, so r = i − π moves too. Then C, I and NX all fall and Y falls by the multiplier. But the Fed controls r <b>only in the short run</b> — in the long run r must equal r*.</p>
   </div>
 
-  <div class="moves"><div class="hd">The moves</div><ol>
-    <li>Run the full chain explicitly: i → r (via inflation inertia) → C, I, NX → PAE → Y.</li>
-    <li>Always say <em>why</em> changing i changes r: inflation moves slowly, so r = i − π shifts with i.</li>
-    <li>For bank failures, reach for present value. Rates up ⇒ bond prices down ⇒ assets impaired.</li>
-    <li>For crisis spread, name which of the four contagion channels applies.</li>
-  </ol></div>
+  <h4 class="sub">The Fed and its tools</h4>
+  <dl class="defs">
+    <dt>Dual mandate</dt><dd><b>Low, stable inflation and full employment.</b> The key lever is the real interest rate.</dd>
+    <dt>Open-market operations</dt><dd>The Fed is the only institution allowed to put dollars into circulation; it creates money and trades it for financial assets, usually short-term government debt. <b>Not fiscal policy</b> — an asset swap, not spending or transfers.</dd>
+    <dt>Two conventional tools</dt><dd>The interest rate paid on <b>bank reserves</b>, and the <b>supply of reserves</b>.</dd>
+  </dl>
+
+  <h4 class="sub">The transmission chain</h4>
+  <div class="eq">r = i − π<span class="cm">π moves slowly, so changing i changes r in the short run. This step is the whole reason monetary policy works, and it is the step students skip.</span></div>
+  <div class="eq">Fed raises i ⟹ r rises ⟹ C, I<sup>P</sup>, NX fall ⟹ PAE shifts down ⟹ Y falls (multiplied)<span class="cm">Contractionary; expansionary runs in reverse. Most rate-sensitive: residential housing and new car purchases.</span></div>
+  <p><b>The Fed controls r in the short run, not the long run.</b> In the long run r must equal r*, the rate that equilibrates saving and investment. Unit 23 explains what forces it back.</p>
+
+  <h4 class="sub">Three reasons a central bank acts</h4>
+  <dl class="defs">
+    <dt>Countercyclical</dt><dd>Offsetting a shock to PAE — the Fed cutting the funds rate through 2007–08.</dd>
+    <dt>Another objective</dt><dd>Chiefly controlling inflation, which is Unit 23.</dd>
+    <dt>A mistake</dt><dd>The Great Depression: the money stock and bank reserves contracted and the real rate <b>soared</b>, on top of the collapse in autonomous consumption. Two downward shifts of PAE, one self-inflicted.</dd>
+  </dl>
+  <p>Hence independence. Erdoğan fired Turkey's central bank chief in <b>March 2021</b> for raising rates, claiming that <em>lowering</em> rates would reduce inflation by cutting borrowing costs. Turkey hit <b>72% annual inflation in 2022.</b></p>
+
+  <h4 class="sub">Financial crises</h4>
+  <dl class="defs">
+    <dt>Financial intermediation</dt><dd>Getting saving into productive investment — banks, investment banks, money market funds, pension funds.</dd>
+    <dt>Financial crisis</dt><dd>Many institutions in danger of failing, confidence lost, intermediation widely disrupted.</dd>
+    <dt>Insolvency</dt><dd>Assets are loans, reserves and bonds; liabilities are short-term borrowing and equity. If assets fall below obligations the bank is insolvent — and merely <b>believing</b> it might be makes depositors withdraw and lenders stop, <b>causing the insolvency.</b></dd>
+  </dl>
+  <p><b>Silicon Valley Bank, 2023</b> is a present value question. It held many long-term Treasury bonds; when rates rose, the present value of those fixed payments <em>fell</em>, so assets were worth far less than book value. A run on <b>9 March</b> by Founders Fund and other venture investors depleted its cash — a bank lends deposits out rather than vaulting them. SVB was allowed to fail, but the FDIC covered <em>all</em> deposits beyond the <b>$250,000</b> limit, and other banks acquired it cheaply.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Contagion channel</th><th>Mechanism</th></tr></thead>
+    <tbody>
+      <tr><td><b>Confidence</b></td><td>Doubt spreads to institutions with no connection at all — First Republic's shares dived days after SVB</td></tr>
+      <tr><td><b>Linkage</b></td><td>Direct exposure: loans, insurance contracts, counterparties</td></tr>
+      <tr><td><b>Fire sale</b></td><td>Dumped assets drive down prices of assets everyone else holds</td></tr>
+      <tr><td><b>Macroeconomic</b></td><td>Trouble reduces PAE and hence Y, which harms everyone</td></tr>
+    </tbody>
+  </table></div>
+  <p>A crisis hits PAE by <b>raising credit spreads</b>, <b>tightening lending standards</b> and <b>damaging confidence</b>. Prevention: higher capital requirements, deposit insurance, regulating risk-taking and interlinkage, keeping the macroeconomy stable.</p>
+
+  <h4 class="sub">When rates hit zero</h4>
+  <p>Nominal rates cannot go much below zero: currency offers a guaranteed zero nominal return. Hence <b>forward guidance</b> — statements shaping expectations about future rates, as in the Fed's December 2008 and March 2009 language about "exceptionally low levels ... for an extended period" — and <b>quantitative easing</b>, buying bonds other than short-term government debt using reserves.</p>
+
+  <h4 class="sub">Rules that earn points</h4>
+  <ol class="rules">
+    <li>Run the chain explicitly: <b>i → r → C, I, NX → PAE → Y</b>, multiplied.</li>
+    <li>Always say <em>why</em> changing i changes r: <b>inflation moves slowly</b>, so r = i − π shifts with i.</li>
+    <li>For bank failures, reach for <b>present value</b>. Rates up ⇒ bond prices down ⇒ assets impaired.</li>
+    <li>For crisis spread, name <b>which</b> of the four contagion channels applies.</li>
+  </ol>
 
   <div class="traps"><div class="hd">Traps</div><ul>
     <li>Calling Fed actions government spending. Open-market operations are asset swaps.</li>
@@ -112,64 +126,115 @@
     <li>Forgetting inflation inertia as the reason the Fed has short-run traction at all.</li>
   </ul></div>
 
-  <div class="drills"><div class="hd">Drills · Unit 22</div>
+  <div class="quiz">
+    <div class="qhd"><b>Unit 22 quiz</b><span>4 MCQ · 2 FRQ · ~12 min</span></div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u22q1"><div class="qtext">
-      <span class="qkind">concept</span>Trace the full chain from a Fed rate cut to higher GDP.
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u22q1"><i>MCQ 1</i><span class="pts">2 pts</span></div>
+      <p class="qstem">Why does a change in the Fed's nominal interest rate change the <em>real</em> interest rate in the short run?</p>
+      <ul class="opts">
+        <li><span>A</span>The Fed sets the real rate directly through open-market operations</li>
+        <li><span>B</span>Inflation is inertial, so π barely moves and r = i − π moves with i</li>
+        <li><span>C</span>Expected inflation adjusts instantly to the new nominal rate</li>
+        <li><span>D</span>In the short run the real and nominal rates are the same thing</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <ol>
-          <li>The Fed lowers the <strong>nominal</strong> rate i via open-market operations and the rate paid on reserves.</li>
-          <li>Because of <strong>inflation inertia</strong>, π barely moves in the short run, so by r = i − π the <strong>real</strong> rate falls too.</li>
-          <li>A lower r raises <strong>I<sup>P</sup></strong> (present values of future MRP<sub>K</sub> rise), raises <strong>C</strong> (saving is less attractive — think new car purchases), and raises <strong>NX</strong> (the dollar depreciates, Unit 24).</li>
-          <li>PAE shifts <strong>up</strong> at every level of Y.</li>
-          <li>Y rises by <strong>more</strong> than the shift, because of the multiplier.</li>
-        </ol>
-        <p>Step 2 is the one students skip and it is the whole reason monetary policy works.</p>
+        <p><span class="correct">B — inflation inertia.</span></p>
+        <p>Prices are sticky, so π is roughly fixed over the horizon in which the Fed acts. With π fixed, moving i moves r one-for-one. Everything else in the chapter hangs off this.</p>
+        <p><b>A</b> is the trap: the Fed only ever trades in <b>nominal</b> instruments. Its grip on r is indirect and temporary, which is exactly why it disappears in the long run.</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u22q2"><div class="qtext">
-      <span class="qkind">concept</span>Why did Silicon Valley Bank fail, and which earlier concept explains it?
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u22q2"><i>MCQ 2</i><span class="pts">2 pts</span></div>
+      <p class="qstem">In the long run, the real interest rate is determined by:</p>
+      <ul class="opts">
+        <li><span>A</span>The Fed's reaction function</li>
+        <li><span>B</span>The Fed's inflation target</li>
+        <li><span>C</span>Saving and investment, at r*</li>
+        <li><span>D</span>The nominal rate, since long-run inflation is zero</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p><strong>Present value</strong> — Unit 14. SVB held many <strong>long-term US Treasury bonds</strong>. When market interest rates rose, the present value of those fixed future payments fell:</p>
+        <p><span class="correct">C — saving and investment, at r*.</span></p>
+        <p>The Fed cannot hold r away from r* indefinitely. Any persistent gap between r and r* keeps Y away from Y*, which keeps inflation drifting, which forces the Fed to respond.</p>
+        <p><b>A</b> is the trap and it is half-right in a way that makes it dangerous: the reaction function determines long-run <b>inflation</b> (Unit 23), not the long-run real rate.</p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u22q3"><i>MCQ 3</i><span class="pts">2 pts</span></div>
+      <p class="qstem">Why were Silicon Valley Bank's assets worth far less than their book value in 2023?</p>
+      <ul class="opts">
+        <li><span>A</span>It had lent heavily to startups that defaulted</li>
+        <li><span>B</span>Interest rates rose, so the present value of its long-term Treasury bonds fell</li>
+        <li><span>C</span>The US Treasury defaulted on the bonds it held</li>
+        <li><span>D</span>The FDIC's $250,000 limit left most of its deposits uninsured</li>
+      </ul>
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p><span class="correct">B — present value, Unit 14.</span></p>
         <div class="eq">Price = F₁/(1+i) + F₂/(1+i)² + … + F<sub>T</sub>/(1+i)<sup>T</sup></div>
-        <p>The F's are fixed, so a higher i shrinks the price. SVB's assets were worth far less than book value.</p>
-        <p>Then the run: on 9 March 2023, Founders Fund and other venture investors pulled deposits en masse. <strong>A bank lends out its deposits rather than holding them in a vault</strong>, so it could not meet withdrawals. SVB failed, the FDIC covered <em>all</em> deposits beyond the $250,000 limit, and other banks acquired it cheaply.</p>
+        <p>The F's are fixed, so a higher i shrinks the price. SVB held long-term Treasuries and rates rose.</p>
+        <p><b>A</b> is the trap: it is the intuitive "bank made bad loans" story, and it is wrong here. SVB held the <em>safest</em> credit in the world — its problem was interest-rate risk, not credit risk. (<b>D</b> describes why the run happened, not why the assets were impaired.)</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u22q3"><div class="qtext">
-      <span class="qkind">concept</span>Name the four channels by which a crisis spreads between institutions.
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u22q4"><i>MCQ 4</i><span class="pts">2 pts</span></div>
+      <p class="qstem">Days after SVB failed, First Republic's shares dived even though it had no direct exposure to SVB. This is which contagion channel?</p>
+      <ul class="opts">
+        <li><span>A</span>Linkage</li>
+        <li><span>B</span>Fire sale</li>
+        <li><span>C</span>Confidence</li>
+        <li><span>D</span>Macroeconomic</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p><span class="correct">C — confidence.</span></p>
+        <p>Trouble at one institution creates doubt about others <b>even with no connection between them</b>. The phrase "no direct exposure" in the stem is the giveaway.</p>
+        <p><b>A</b> is the trap: linkage is the channel that requires exactly the direct exposure the stem rules out — loans, insurance contracts, counterparty relationships.</p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u22q5"><i>FRQ 1</i><span class="pts">6 pts</span></div>
+      <p class="qstem"><b>(a)</b> Trace the full chain from a Fed rate cut to higher GDP, naming every link. <b>(b)</b> Give the three reasons a central bank changes rates, with a historical example for two of them. <b>(c)</b> What stops the Fed running this indefinitely?</p>
+      <div class="frqbox">Number the links in (a) — five steps. Draw a Keynesian Cross with PAE shifting up if the question says "show". About two-thirds of a page.</div>
+      <details class="ans"><summary>Model answer</summary><div class="ansbody">
+        <p><b>(a)</b></p>
         <ol>
-          <li><strong>Confidence</strong> — trouble at one institution creates doubts about others even with no connection. First Republic's shares dived on contagion fear right after SVB.</li>
-          <li><strong>Linkage</strong> — direct exposure through loans, insurance contracts and counterparty relationships.</li>
-          <li><strong>Fire sale</strong> — a troubled institution sells assets to raise cash, pushing down prices of assets other institutions hold, impairing them too.</li>
-          <li><strong>Macroeconomic</strong> — the trouble reduces PAE and hence Y, which harms every institution's borrowers.</li>
+          <li>The Fed lowers the <b>nominal</b> rate i via open-market operations and the rate paid on reserves.</li>
+          <li>Because of <b>inflation inertia</b>, π barely moves, so by r = i − π the <b>real</b> rate falls too.</li>
+          <li>A lower r raises <b>I<sup>P</sup></b> (present values of future MRP<sub>K</sub> rise), raises <b>C</b> (saving is less attractive — think new car purchases and housing), and raises <b>NX</b> (the dollar depreciates, Unit 24).</li>
+          <li><b>PAE shifts up</b> at every level of Y.</li>
+          <li>Y rises by <b>more</b> than the shift, because of the multiplier.</li>
         </ol>
+        <p><b>(b)</b> <b>Countercyclical policy</b> — offsetting a PAE shock, as when the Fed cut the funds rate through 2007–08. <b>Another objective</b>, chiefly controlling inflation. <b>A mistake</b> — the Great Depression, when the money stock and bank reserves contracted, the real rate soared, and PAE shifted down a second time on top of the collapse in autonomous consumption.</p>
+        <p><b>(c)</b> The Fed controls r only in the <b>short run</b>. In the long run r must equal <b>r*</b>, the rate that equilibrates saving and investment, so the stimulus cannot be held in place forever. Separately, at the zero lower bound the Fed runs out of conventional room, because currency offers a guaranteed zero nominal return — hence forward guidance and quantitative easing.</p>
+        <div class="mark"><span class="mh">What earns the points</span><ul>
+          <li>Step 2 stated explicitly. <b>Inflation inertia is the link students skip</b> and it is the reason the policy works at all.</li>
+          <li>All three of C, I<sup>P</sup> and NX moving, not just investment.</li>
+          <li>Saying Y moves by <b>more</b> than the PAE shift, and naming the multiplier.</li>
+          <li>All three reasons in (b), with the Depression named as an error rather than a choice.</li>
+          <li>r returning to r* in the long run, with r* set by saving and investment.</li>
+        </ul></div>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u22q4"><div class="qtext">
-      <span class="qkind">concept</span>Why does central bank independence matter? Give the recent example.
-      <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p>Because political incentives favor low rates in the short run, while price stability requires a willingness to raise them and accept a recession — Unit 23's mechanism.</p>
-        <p><strong>Turkey.</strong> In March 2021 Erdoğan fired the central bank chief for raising rates, asserting that <em>lowering</em> rates would reduce inflation by cutting corporate borrowing costs. That contradicts the standard view that low rates push prices up by spurring activity. Turkey reached <strong>72% annual inflation in 2022.</strong></p>
-        <p>The Great Depression is the other side of the coin — not capture, but error: monetary contraction raised the real rate and deepened the collapse.</p>
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u22q6"><i>FRQ 2</i><span class="pts">6 pts</span></div>
+      <p class="qstem">One large bank fails. Explain how a single failure becomes a <em>financial crisis</em>, how that crisis reduces PAE, and name two measures that reduce the risk.</p>
+      <div class="frqbox">Name all four contagion channels — one line each — then three PAE effects and two preventions. About half a page.</div>
+      <details class="ans"><summary>Model answer</summary><div class="ansbody">
+        <p>A <b>financial crisis</b> is many institutions in danger of failing at once, confidence collapsing, and <b>financial intermediation</b> — the process of getting saving into productive investment — being widely disrupted. One failure becomes many through four channels:</p>
+        <ol>
+          <li><b>Confidence</b> — trouble at one institution creates doubt about others with no connection at all. First Republic's shares dived on contagion fear days after SVB.</li>
+          <li><b>Linkage</b> — direct exposure through loans, insurance contracts and counterparty relationships.</li>
+          <li><b>Fire sale</b> — a troubled institution dumps assets to raise cash, driving down the price of assets everyone else holds and impairing them too.</li>
+          <li><b>Macroeconomic</b> — the trouble reduces PAE and hence Y, which harms every institution's borrowers.</li>
+        </ol>
+        <p>The crisis reaches PAE by <b>raising credit spreads</b>, <b>tightening lending standards</b> and <b>damaging confidence</b>, all of which cut C and I<sup>P</sup>. PAE shifts down and Y falls by a multiplied amount.</p>
+        <p>Prevention: <b>higher capital requirements</b> so assets can fall further before a bank is insolvent, and <b>deposit insurance</b> so depositors have no reason to run. The course also lists regulating risk-taking and interlinkage, and keeping the macroeconomy stable.</p>
+        <div class="mark"><span class="mh">What earns the points</span><ul>
+          <li>All four channels named, with <b>confidence</b> distinguished from <b>linkage</b> by the absence of direct exposure.</li>
+          <li>The self-fulfilling point: believing an institution <em>may</em> become insolvent can <b>cause</b> the insolvency.</li>
+          <li>Three distinct PAE effects, not just "confidence fell".</li>
+          <li>Preventions tied to the mechanism — capital buffers absorb asset losses, insurance removes the run incentive.</li>
+        </ul></div>
       </div></details>
-    </div></div></div>
-
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u22q5"><div class="qtext">
-      <span class="qkind">concept</span>What are forward guidance and quantitative easing, and why are they needed?
-      <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p>They are <strong>unconventional</strong> tools, needed because <strong>nominal interest rates cannot go much below zero</strong> — currency always offers a guaranteed zero nominal return, so nobody accepts meaningfully negative rates.</p>
-        <ul>
-          <li><strong>Forward guidance:</strong> statements or actions shaping expectations about <em>future</em> nominal rates. The Fed in December 2008 said weak conditions were "likely to warrant exceptionally low levels of the federal funds rate for some time," and in March 2009 upgraded that to "for an extended period."</li>
-          <li><strong>Quantitative easing:</strong> buying bonds <em>other than</em> short-term government debt using reserves, to push down longer-term and riskier rates directly.</li>
-        </ul>
-      </div></details>
-    </div></div></div>
-
+    </div>
   </div>
 </section>
 <nav class="pager">

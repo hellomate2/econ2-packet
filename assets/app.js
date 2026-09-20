@@ -2,7 +2,7 @@
 (function () {
 "use strict";
 
-var KEY = "econ2packet.v2";
+var KEY = "econ2packet.v3";
 var THEME = "econ2packet.theme";
 var M = window.MANIFEST || {};
 
@@ -41,7 +41,9 @@ boxes.forEach(function (b) {
   if (state[b.id]) b.checked = true;
   b.addEventListener("change", function () {
     if (b.checked) state[b.id] = 1; else delete state[b.id];
-    save(state); paintNav(); paintDash();
+    save(state); var sq=document.getElementById("s-q");
+if(sq){var tt=0; for(var k in M) tt+=(M[k].q||[]).length; sq.textContent=tt;}
+paintNav(); paintDash();
   });
 });
 

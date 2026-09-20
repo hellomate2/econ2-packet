@@ -67,15 +67,22 @@
     <div class="meta">Class 11 · Chapter 11 <span class="tag both">Midterm + Final</span></div>
   </div></div>
 
-  <div class="body">
-    <p>An externality is a cost or benefit falling on someone <strong>outside the transaction</strong>. The market prices only the private costs and benefits, so it gets the quantity wrong.</p>
-    <div class="eq">SMC = PMC + external marginal cost    SMB = PMB + external marginal benefit<span class="cm">"Private" = the buyers and sellers in the market. "Social" = everyone, inside and outside.</span></div>
-    <ul>
-      <li><strong>Negative externality</strong> (pollution): SMC lies <em>above</em> PMC. The market <strong>overproduces</strong>.</li>
-      <li><strong>Positive externality</strong> (vaccines, education): SMB lies <em>above</em> PMB. The market <strong>underproduces</strong>.</li>
-    </ul>
-    <p>In both cases the market settles where PMC = PMB, but the social optimum is where SMC = SMB, and the gap generates a deadweight loss triangle that — as always — <strong>points toward the social optimum.</strong></p>
+  <div class="tldr"><span class="lb">If you remember one thing</span>
+    <p>The market settles where <b>PMC = PMB</b>; the optimum is where <b>SMC = SMB</b>. Negative externality ⇒ <b>overproduction</b>, tax it. Positive ⇒ <b>underproduction</b>, subsidize it.</p>
   </div>
+
+  <h4 class="sub">Formula</h4>
+  <div class="eq">SMC = PMC + external marginal cost    SMB = PMB + external marginal benefit<span class="cm">"Private" = the buyers and sellers in the market. "Social" = everyone, inside and outside.</span></div>
+
+  <h4 class="sub">The two cases</h4>
+  <div class="tw"><table>
+    <thead><tr><th>Type</th><th>Curve that moves</th><th>Result</th><th>Fix</th></tr></thead>
+    <tbody>
+      <tr><td><b>Negative</b><br><span style="color:var(--muted)">pollution</span></td><td>SMC <b>above</b> PMC</td><td>Q* &lt; Q&#8321; — <b>overproduces</b></td><td>Tax = external MC</td></tr>
+      <tr><td><b>Positive</b><br><span style="color:var(--muted)">vaccines, education</span></td><td>SMB <b>above</b> PMB</td><td>Q* &gt; Q&#8321; — <b>underproduces</b></td><td>Subsidy = external MB</td></tr>
+    </tbody>
+  </table></div>
+  <p>The deadweight loss triangle always <b>points toward the social optimum</b>.</p>
 
   <div class="figrow">
     <figure class="fig"><div class="plot" data-graph="neg-ext"></div>
@@ -84,85 +91,134 @@
       <figcaption><b>Positive.</b> Vaccines. SMB above PMB, so Q* &gt; Q₁. Fix with a subsidy equal to the external MB.</figcaption></figure>
   </div>
 
-  <div class="body">
-    <h4 class="sub">The answer that surprises people</h4>
-    <p>A past midterm asked whether the optimal level of pollution is always zero. <strong>It is not.</strong> If a polluting activity raises social marginal cost by some quantifiable amount, the socially optimal quantity is found where SMC meets SMB — and that is typically <strong>nonzero and finite</strong>. It <em>could</em> land at zero, but there is no reason to expect it must. This sounds preposterous to a biologist and it is the economist's answer.</p>
+  <h4 class="sub">Optimal pollution is not zero</h4>
+  <p>A past midterm asked this. If the activity raises social marginal cost by a <b>quantifiable</b> amount, the optimal quantity sits where SMC meets SMB — typically <b>nonzero and finite</b>. It could land at zero; nothing says it must. Preposterous to a biologist, and it is the economist's answer.</p>
 
-    <h4 class="sub">Fixing it</h4>
-    <p><strong>Pigouvian taxes and subsidies.</strong> Named for Arthur Pigou. Charge a per-unit tax equal to the external harm, or pay a per-unit subsidy equal to the external benefit, and private incentives line up with social ones. The right size is the marginal external effect <em>at the socially efficient point</em>. Real examples: gasoline taxes earmarked for road maintenance (which handles wear and tear, not global warming), London's congestion charge — £5 in 2003, now £15 — New York's $9 Manhattan congestion charge below 61st Street from 2025, and R&amp;D tax credits as a positive-externality subsidy.</p>
-    <p><strong>Coase.</strong> If property rights are clearly defined, private parties can negotiate their way to the efficient outcome without government. Negotiation is costly, though, so it matters that rights are assigned well. Nobel 1991.</p>
-    <p><strong>Ostrom.</strong> Elinor Ostrom's fieldwork showed communities managing common resources sustainably without either privatization or central control. Her ingredients were long-term interest, monitoring, and — the five-letter word from her Nobel lecture — <strong>trust</strong>. Her lesson: it is wrong to insist everything must be either privately owned or state-administered. People are not mindlessly trapped in the tragedy of the commons. Nobel 2009.</p>
-    <p><strong>Regulation</strong> is what actually happens most of the time: outright bans, emission limits, smog checks. Fines are economically a tax but psychologically very different. The fairness problem is that abatement costs vary enormously — electric cars exist, electric planes do not, so a uniform CO₂ rule could wipe out aviation.</p>
-    <p><strong>Cap and trade</strong> splits the difference: hand out permits, let firms trade them, and every emitter faces the same price. Set the cap so the permit price equals social marginal cost and the system is efficient. It worked for SO₂ (acid rain) and CFCs (ozone), where immediate bans were infeasible and allowances shrank over years.</p>
+  <h4 class="sub">The policy toolkit</h4>
+  <dl class="defs">
+    <dt>Pigouvian tax / subsidy</dt><dd>Named for Arthur Pigou. Per-unit charge equal to the external harm, or payment equal to the external benefit, sized <b>at the efficient point</b>. Cases: gas taxes earmarked for road maintenance (wear and tear, not global warming), <b>London's congestion charge</b> — £5 in 2003, now £15 — New York's <b>$9</b> Manhattan charge below 61st Street from 2025, R&amp;D tax credits.</dd>
+    <dt>Coase <span style="color:var(--muted)">(Nobel 1991)</span></dt><dd><b>Clearly defined property rights</b> let private parties negotiate to the efficient outcome without government. Negotiation is costly, so rights must be assigned well.</dd>
+    <dt>Ostrom <span style="color:var(--muted)">(Nobel 2009)</span></dt><dd>Communities manage common resources sustainably without privatization <em>or</em> central control. Ingredients: long-term interest, monitoring, <b>trust</b>. People are not mindlessly trapped in the tragedy of the commons.</dd>
+    <dt>Regulation</dt><dd>Bans, emission limits, smog checks — what usually happens. A fine is economically a tax. But <b>abatement costs vary enormously</b>: electric cars exist, electric planes do not, so a uniform CO&#8322; rule could wipe out aviation.</dd>
+    <dt>Cap and trade</dt><dd>Tradable permits, so <b>every emitter faces the same price</b> and cuts happen where they are cheapest. Set the cap so the permit price equals SMC. Worked for <b>SO&#8322;</b> (acid rain) and <b>CFCs</b> (ozone), where bans were infeasible and allowances shrank over years.</dd>
+  </dl>
 
-    <h4 class="sub">Climate change</h4>
-    <p>The costs: extreme weather making populated places less livable, potentially driving disruptive mass migration; agricultural disruption, which bites hard because <strong>food demand is inelastic in the short run</strong>, so output shortfalls become price spikes and famines in low-income countries; and biodiversity loss. The pace of change is what makes adaptation so hard.</p>
-    <p>The economists' solution is a carbon tax equal to the marginal damage of CO₂. The unresolved problem is that the damage depends enormously on <strong>how you discount the future</strong>, since most damage lies ahead. Discount heavily — assume we are impatient — and the implied cost is small and warming is tolerable. Discount lightly and a large, politically unpopular carbon tax is optimal. The economics does not settle the discount rate; ethics does.</p>
-  </div>
+  <h4 class="sub">Climate change</h4>
+  <p>Costs: extreme weather making places less livable and potentially driving mass migration; agricultural disruption, which bites because <b>food demand is inelastic in the short run</b>, so shortfalls become price spikes and famines in low-income countries; biodiversity loss. The pace of change makes adaptation hard.</p>
+  <p>The fix is a carbon tax equal to the marginal damage of CO&#8322;. The unsettled part is <b>the discount rate</b>, since most damage lies ahead: discount heavily and the tax is small, lightly and it is large and politically unpopular. Economics cannot settle it — ethics must. Hence the 2019 economists' carbon tax letter agreed on the <em>instrument</em>, not the number.</p>
 
-  <div class="moves"><div class="hd">The moves</div><ol>
-    <li>Draw the private equilibrium first — PMC and PMB crossing at Q₁.</li>
-    <li>Add the social curve above the private one on the correct side. Negative externality ⇒ SMC above PMC. Positive ⇒ SMB above PMB.</li>
-    <li>Mark Q* where SMC = SMB, and state whether the market over- or underproduces.</li>
-    <li>Put the deadweight loss triangle between Q* and Q₁ with its point at Q*.</li>
-    <li>Prescribe: tax for negative, subsidy for positive, sized to the external effect at Q*.</li>
-  </ol></div>
+  <h4 class="sub">Rules that earn points</h4>
+  <ol class="rules">
+    <li>Draw the <b>private equilibrium first</b> — PMC and PMB crossing at Q&#8321;.</li>
+    <li>Add the social curve above the private one <b>on the correct side</b>.</li>
+    <li>Mark Q* where SMC = SMB, and say <b>over- or underproduces</b>.</li>
+    <li>Put the triangle between Q* and Q&#8321;, <b>point at Q*</b>.</li>
+    <li>Prescribe a tax or subsidy <b>sized to the external effect at Q*</b>.</li>
+  </ol>
 
   <div class="traps"><div class="hd">Traps</div><ul>
     <li>Shifting the wrong curve. Pollution is a cost, so it moves the cost curve.</li>
     <li>Saying the optimal level of pollution is zero.</li>
-    <li>Forgetting that Coase needs clearly defined property rights <em>and</em> low negotiation costs.</li>
+    <li>Forgetting Coase needs property rights <em>and</em> low negotiation costs.</li>
     <li>Treating the carbon tax as a settled number. The discount rate is the whole argument.</li>
   </ul></div>
 
-  <div class="drills"><div class="hd">Drills · Unit 11</div>
+  <div class="quiz">
+    <div class="qhd"><b>Unit 11 quiz</b><span>4 MCQ · 2 FRQ · ~12 min</span></div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u11q1"><div class="qtext">
-      <span class="qkind exam">exam</span>Can there be an "optimal" level of polluting, or is the optimal level always zero? Refer to social marginal cost and social marginal benefit.
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u11q1"><i>MCQ 1</i><span class="pts">2 pts</span></div>
+      <p class="qstem">Burning gasoline imposes pollution costs on people outside the market. Relative to the social optimum, the unregulated market:</p>
+      <ul class="opts">
+        <li><span>A</span>Produces too much, because SMC lies above PMC</li>
+        <li><span>B</span>Produces too little, because SMB lies above PMB</li>
+        <li><span>C</span>Produces too much, because demand shifts down</li>
+        <li><span>D</span>Produces the efficient quantity, since buyers and sellers are both better off</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p>It may sound preposterous to biologists, but economists hold that if a polluting activity raises social marginal cost by some <strong>quantifiable</strong> amount, then the socially optimal quantity and price in that market are typically <strong>nonzero and finite</strong>.</p>
-        <p>They are found at the intersection of <strong>social marginal cost and social marginal benefit</strong> — the latter being demand, or willingness to pay. That intersection <em>could</em> occur at zero quantity and therefore zero pollution, but there is no reason to expect that it must.</p>
+        <p><span class="correct">A — too much, because SMC lies above PMC.</span></p>
+        <p>The market equates PMC and PMB at Q₁; the optimum is where SMC meets SMB at Q* &lt; Q₁. The gap between Q* and Q₁ is the deadweight loss triangle.</p>
+        <p><b>C</b> is the trap: it reaches the right conclusion through the <b>wrong curve</b>. Pollution is a cost, so it moves the cost curve. Willingness to pay for gasoline is unchanged.</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u11q2"><div class="qtext">
-      <span class="qkind graph">graph</span>Draw the market for gasoline with a pollution externality. Show the market equilibrium, the social optimum, the deadweight loss, and the corrective policy.
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u11q2"><i>MCQ 2</i><span class="pts">2 pts</span></div>
+      <p class="qstem">A Pigouvian tax that corrects a negative externality should equal:</p>
+      <ul class="opts">
+        <li><span>A</span>The total external cost imposed by the industry</li>
+        <li><span>B</span>The external marginal cost at the socially efficient quantity Q*</li>
+        <li><span>C</span>The external marginal cost at the unregulated quantity Q₁</li>
+        <li><span>D</span>The full vertical gap between SMC and SMB at Q₁</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p><span class="correct">B — the marginal external effect at Q*.</span></p>
+        <p>A per-unit tax of that size shifts private supply up until it coincides with SMC, so the market delivers Q* on its own.</p>
+        <p><b>A</b> is the trap: it confuses a <b>total</b> with a <b>marginal</b>. Firms respond to per-unit incentives, and total external cost would be an enormous, quantity-independent number.</p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u11q3"><i>MCQ 3</i><span class="pts">2 pts</span></div>
+      <p class="qstem">Economists prefer cap and trade to a uniform emissions regulation mainly because:</p>
+      <ul class="opts">
+        <li><span>A</span>It eliminates emissions entirely, while regulation only limits them</li>
+        <li><span>B</span>Abatement costs differ across emitters, and trading equalizes the price every emitter faces so cuts happen where they are cheapest</li>
+        <li><span>C</span>It raises more government revenue than a tax</li>
+        <li><span>D</span>It avoids the need to decide how much pollution is acceptable</li>
+      </ul>
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p><span class="correct">B — it puts one price on emissions and lets cheap cuts happen first.</span></p>
+        <p>Electric cars exist, electric planes do not, so a flat CO₂ requirement could destroy high-value aviation. It worked for SO₂ under acid-rain rules and for ozone-depleting CFCs.</p>
+        <p><b>D</b> is the trap: choosing the cap <em>is</em> deciding how much pollution is acceptable. Cap and trade fixes the quantity and lets the market find the price.</p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u11q4"><i>MCQ 4</i><span class="pts">2 pts</span></div>
+      <p class="qstem">Economists disagree sharply about the size of the optimal carbon tax mainly because they disagree about:</p>
+      <ul class="opts">
+        <li><span>A</span>Whether climate change is happening</li>
+        <li><span>B</span>The discount rate applied to damages that occur far in the future</li>
+        <li><span>C</span>Whether a tax or a subsidy is the right instrument</li>
+        <li><span>D</span>The price elasticity of demand for gasoline</li>
+      </ul>
+      <details class="ans"><summary>Answer</summary><div class="ansbody">
+        <p><span class="correct">B — the discount rate.</span></p>
+        <p>The tax should equal the marginal damage of CO₂, but almost all damage lands in the future. Discount heavily and the present value is small; discount lightly and it is enormous. The economics cannot settle it — it is a question about how much weight to give future generations.</p>
+        <p><b>C</b> is the trap: there is broad agreement on the instrument. The 2019 economists' carbon tax letter united signatories on the tax and not on the number.</p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u11q5"><i>FRQ 1</i><span class="pts">6 pts</span></div>
+      <p class="qstem">Draw the market for gasoline with a pollution externality. Show the market equilibrium, the social optimum, the deadweight loss, and the corrective policy.</p>
+      <div class="frqbox">One diagram, axes P and Q. Label PMC, SMC, demand, Q₁, Q* and shade the triangle. Four or five sentences.</div>
+      <details class="ans"><summary>Model answer</summary><div class="ansbody">
         <p>Demand is PMB = SMB, since the externality is on the cost side. Supply is PMC. They cross at Q₁, the market equilibrium.</p>
-        <p>Draw <strong>SMC above PMC</strong>, separated vertically by the external marginal cost. SMC crosses demand at <strong>Q* &lt; Q₁</strong> — the market overproduces.</p>
-        <p>The deadweight loss triangle sits between Q* and Q₁, bounded by SMC above and demand below, with its point at Q*. At Q₁, social marginal cost exceeds social marginal benefit.</p>
-        <p><strong>The fix:</strong> a Pigouvian tax equal to the external marginal cost at Q*, which shifts the supply curve up until it coincides with SMC and the market delivers Q* on its own.</p>
+        <p>Draw <b>SMC above PMC</b>, separated vertically by the external marginal cost. SMC crosses demand at <b>Q* &lt; Q₁</b> — the market overproduces.</p>
+        <p>The deadweight loss triangle sits between Q* and Q₁, bounded by SMC above and demand below, with its <b>point at Q*</b>. At Q₁, social marginal cost exceeds social marginal benefit.</p>
+        <p><b>The fix:</b> a Pigouvian tax equal to the external marginal cost at Q*, which shifts supply up until it coincides with SMC and the market delivers Q* on its own.</p>
+        <div class="mark"><span class="mh">What earns the points</span><ul>
+          <li>Stating that demand is unaffected — PMB = SMB — before drawing anything.</li>
+          <li>SMC drawn above PMC, separated by the <b>external marginal cost</b>, not an arbitrary gap.</li>
+          <li>Q* to the left of Q₁, with the word <b>overproduces</b>.</li>
+          <li>The triangle bounded correctly and pointing at Q*.</li>
+          <li>The tax sized to the external MC <b>at Q*</b>, with the mechanism (supply shifts onto SMC).</li>
+        </ul></div>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u11q3"><div class="qtext">
-      <span class="qkind">concept</span>Contrast Coase's and Ostrom's answers to externalities.
-      <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p><strong>Coase (Nobel 1991):</strong> with <em>clearly defined property rights</em>, private parties can negotiate to the efficient outcome without government. Since negotiation is costly, it matters that rights are assigned in the right way.</p>
-        <p><strong>Ostrom (Nobel 2009):</strong> field evidence that communities manage common-pool resources sustainably without either privatization or central control. The conditions are long-term interest in the resource, investment in monitoring, and <strong>trust</strong>. Her broader claim is that it is wrong to assume everything must be either privately owned or state-administered — actors invested for the long run find ways forward rather than being mindlessly trapped.</p>
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u11q6"><i>FRQ 2</i><span class="pts">5 pts</span></div>
+      <p class="qstem">Can there be an "optimal" level of polluting, or is the optimal level always zero? Refer to social marginal cost and social marginal benefit.</p>
+      <div class="frqbox">Four sentences. Name both curves, state where the optimum sits, and say what it would take for the answer to be zero.</div>
+      <details class="ans"><summary>Model answer</summary><div class="ansbody">
+        <p>It may sound preposterous to biologists, but economists hold that if a polluting activity raises social marginal cost by some <b>quantifiable</b> amount, then the socially optimal quantity and price in that market are typically <b>nonzero and finite</b>.</p>
+        <p>They are found at the intersection of <b>social marginal cost and social marginal benefit</b> — the latter being demand, or willingness to pay. That intersection <em>could</em> occur at zero quantity and therefore zero pollution, but there is no reason to expect that it must.</p>
+        <div class="mark"><span class="mh">What earns the points</span><ul>
+          <li>Answering the question directly: <b>no, not always zero</b>.</li>
+          <li>Locating the optimum at SMC = SMB, naming both curves.</li>
+          <li>Identifying SMB with demand / willingness to pay.</li>
+          <li>Conceding that zero is possible but not to be expected — the nuance is worth a point.</li>
+          <li>Treating the external cost as <b>quantifiable and marginal</b>, not infinite.</li>
+        </ul></div>
       </div></details>
-    </div></div></div>
-
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u11q4"><div class="qtext">
-      <span class="qkind">concept</span>Why do economists favor cap and trade over a uniform emissions regulation?
-      <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p>Because <strong>abatement costs differ enormously across emitters</strong>. A uniform rule forces expensive reductions where they are hard and cheap ones where they are easy — electric cars exist, electric planes do not, so a flat CO₂ requirement could destroy high-value aviation.</p>
-        <p>Cap and trade hands out permits and lets firms trade, so <strong>every emitter faces the same permit price</strong> and reductions happen wherever they are cheapest. Set the cap so the price equals social marginal cost and the system is efficient. It worked for SO₂ under acid-rain rules and for ozone-depleting CFCs, where immediate bans were infeasible and allowances were phased down over years.</p>
-      </div></details>
-    </div></div></div>
-
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u11q5"><div class="qtext">
-      <span class="qkind">concept</span>Why can't economists agree on the size of the optimal carbon tax?
-      <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p>The tax should equal the <strong>marginal damage of CO₂</strong>, but almost all of that damage lands in the future, so the number depends overwhelmingly on the <strong>discount rate</strong>.</p>
-        <ul>
-          <li>Discount the future heavily — assume humans are impatient — and the present value of damage is small, implying a low tax and tolerating a lot of warming.</li>
-          <li>Discount lightly and the damage is enormous, implying a large and politically unpopular carbon tax.</li>
-        </ul>
-        <p>The economics cannot settle the discount rate; it is a question about how much weight to give future generations. That is why the 2019 economists' carbon tax letter could unite signatories on the <em>instrument</em> and not on the number.</p>
-      </div></details>
-    </div></div></div>
-
+    </div>
   </div>
 </section>
 <nav class="pager">

@@ -67,51 +67,60 @@
     <div class="meta">Class 19 · Chapter 24 <span class="tag fin">Final — high value</span></div>
   </div></div>
 
-  <div class="body">
-    <p>The single highest-value diagram on the final. The past exam gave it a 24-point question. Learn to produce it numerically and graphically.</p>
-    <p><strong>Why demand determines output in the short run:</strong> prices do not adjust quickly or completely, because of limited information, long-term contracts, menu costs, consumer dislike of "unfair" price changes and worker resistance to wage cuts. Edwards's restaurant analogy: a mom-and-pop place does not reprice by the hour, so on a busy night it simply produces more and on a quiet night less. <strong>Output is demand-driven.</strong> In the long run prices adjust and output returns to Y*.</p>
-    <div class="eq">PAE = C + I<sup>P</sup> + G + NX<span class="cm">Planned aggregate expenditure. "Planned" investment excludes unintended inventory changes.</span></div>
-    <div class="eq">C = C̄ + c·(Y − T)<span class="cm">C̄ is autonomous consumption; c is the marginal propensity to consume, between 0 and 1; Y − T is disposable income.</span></div>
-    <p>Substituting gives the expenditure line:</p>
-    <div class="eq">PAE = (C̄ − cT + I<sup>P</sup> + G + NX) + cY<span class="cm"><strong>Intercept = autonomous spending. Slope = the mpc.</strong> That is all you need to draw it.</span></div>
-    <p>The 45° line is where Y = PAE. Equilibrium is the crossing.</p>
+  <div class="tldr"><span class="lb">If you remember one thing</span>
+    <p>Write PAE as <b>autonomous spending + cY</b>, set it equal to Y, and solve. Then never report ΔY = ΔPAE: they differ by the <b>multiplier 1/(1 − c)</b>. The past final gave this a <b>24-point question</b>.</p>
   </div>
+
+  <h4 class="sub">Why demand determines output in the short run</h4>
+  <p>Prices do not adjust quickly or completely — limited information, long-term contracts, menu costs, consumers who punish "unfair" price changes, workers who resist wage cuts. Edwards's restaurant: a mom-and-pop place does not reprice by the hour, so on a busy night it produces more and on a quiet night less. <b>Output is demand-driven.</b> In the long run prices adjust and output returns to Y*.</p>
+
+  <h4 class="sub">The three equations</h4>
+  <div class="eq">PAE = C + I<sup>P</sup> + G + NX<span class="cm">Planned aggregate expenditure. "Planned" investment excludes unintended inventory changes.</span></div>
+  <div class="eq">C = C̄ + c·(Y − T)<span class="cm">C̄ autonomous consumption; c the marginal propensity to consume, between 0 and 1; Y − T disposable income.</span></div>
+  <div class="eq">PAE = (C̄ − cT + I<sup>P</sup> + G + NX) + cY<span class="cm"><b>Intercept = autonomous spending. Slope = the mpc.</b> Equilibrium is where this line crosses the 45° line, Y = PAE.</span></div>
 
   <figure class="fig"><div class="plot" data-graph="keynesian-cross"></div>
     <figcaption><b>The Keynesian Cross.</b> Equilibrium where the PAE line crosses the 45° line. Above equilibrium, firms accumulate unintended inventory and cut production. Below it, inventory depletes and they raise production. The mpc is the slope, which is exactly why shocks get multiplied.</figcaption></figure>
 
-  <div class="body">
-    <h4 class="sub">The multiplier, derived</h4>
-    <div class="eq">Y = (C̄ − cT + I<sup>P</sup> + G + NX) + cY<br>Y(1 − c) = autonomous spending<br><strong>Y = autonomous spending / (1 − c)</strong></div>
-    <p>So a $1 rise in autonomous spending raises Y by <strong>1/(1 − c)</strong>. The intuition is a chain: round one, spending rises by 1, so income rises by 1. Round two, that income raises consumption by c. Round three, by c². Summing 1 + c + c² + … gives 1/(1 − c).</p>
-    <p>With c = 1/3, the multiplier is 1/(1 − 1/3) = <strong>1.5</strong>. With c = 0.8 it is 5. <strong>This is why the change in GDP always exceeds the change in PAE.</strong></p>
-    <p>A detail worth knowing: the macro mpc is an average across households, and <strong>poorer households have mpc near 1 while rich ones are closer to 0</strong> — which is why the composition of a stimulus matters, not just its size.</p>
+  <h4 class="sub">The multiplier, derived</h4>
+  <div class="eq">Y = (autonomous) + cY<br>Y(1 − c) = autonomous<br><b>Y = autonomous / (1 − c)</b><span class="cm">The rounds: spending rises 1, income rises 1; consumption rises c; then c²; and 1 + c + c² + … = 1/(1 − c). My spending is your income. c = 1/3 gives 1.5; c = 0.8 gives 5.</span></div>
+  <p>The macro mpc is an average across households, and <b>poorer households have mpc near 1 while rich ones are closer to 0</b> — so the composition of a stimulus matters, not just its size.</p>
 
-    <h4 class="sub">What shifts the PAE line</h4>
-    <div class="tw"><table>
-      <thead><tr><th>Component</th><th>Moved by</th></tr></thead>
-      <tbody>
-        <tr><td><b>C</b></td><td>Real interest rate r (↑r ⇒ ↓C); expectations about future income (consumer confidence); wealth (stock market, house prices); disposable income</td></tr>
-        <tr><td><b>I<sup>P</sup></b></td><td>Real interest rate r (↑r ⇒ ↓I, via present value from Unit 14); expectations about future demand — "animal spirits"</td></tr>
-        <tr><td><b>G</b></td><td>Politics, wars, natural disasters. Taken as given.</td></tr>
-        <tr><td><b>NX</b></td><td>Taken as given for now; Unit 24 shows ↑r ⇒ ↓NX</td></tr>
-      </tbody>
-    </table></div>
-    <p><strong>All three of C, I and NX fall when r rises.</strong> That single fact is the entire transmission mechanism of monetary policy.</p>
+  <h4 class="sub">The worked example — learn this one cold</h4>
+  <p>C = 10 + (1/3)Y, I<sup>P</sup> = 6, G = 5, NX = −1, in trillions.</p>
+  <div class="eq">PAE = 10 + (1/3)Y + 6 + 5 − 1 = <b>20 + (1/3)Y</b><span class="cm">Intercept 20: set Y = 0.</span></div>
+  <div class="eq">20 + (1/3)Y = Y  ⟹  20 = (2/3)Y  ⟹  <b>Y = 30</b><span class="cm">$30 trillion — roughly actual US GDP. The numbers were chosen that way.</span></div>
+  <p>Now the shock: C′ = 8 + (1/3)Y, I′ = 5, G = 5, NX′ = 0. Autonomous consumption fell 2, investment fell 1, net exports <em>rose</em> 1.</p>
+  <div class="eq">PAE′ = 8 + (1/3)Y + 5 + 5 + 0 = <b>18 + (1/3)Y</b>  ⟹  18 = (2/3)Y  ⟹  <b>Y = 27</b></div>
+  <div class="eq"><b>ΔPAE = −2. ΔY = −3.</b> Multiplier = 1/(1 − 1/3) = <b>1.5</b>, and 2 × 1.5 = 3.<span class="cm">The line drops in parallel by 2, but because it slopes upward its crossing with the 45° line moves left by 3. Falling income drags consumption down, which drags income down again.</span></div>
+  <div class="eq">Offset: <b>raise G by 2.</b><span class="cm">G enters autonomous spending one-for-one, so the intercept returns to 20 and Y to 30. Match the <b>shift in PAE</b>, not the output gap. A $2 trillion <em>tax</em> cut would raise PAE by only c × 2 = $0.67 trillion, because taxes enter as −cT.</span></div>
 
-    <h4 class="sub">The Great Depression as a worked example</h4>
-    <p>The October 1929 crash reduced wealth, crushed consumer confidence and created "wait and see" uncertainty. Christina Romer's data show consumer spending collapsed immediately — and specifically in <strong>durable goods</strong> like autos and furniture, not groceries. That is a fall in autonomous consumption C̄: the PAE line shifts <em>down in parallel</em>, and the multiplier turns it into a much larger fall in Y.</p>
-  </div>
+  <h4 class="sub">What shifts the PAE line</h4>
+  <div class="tw"><table>
+    <thead><tr><th>Component</th><th>Moved by</th></tr></thead>
+    <tbody>
+      <tr><td><b>C</b></td><td>Real rate r (↑r ⇒ ↓C); expectations about future income (consumer confidence); wealth (stocks, house prices); disposable income</td></tr>
+      <tr><td><b>I<sup>P</sup></b></td><td>Real rate r (↑r ⇒ ↓I, via present value from Unit 14); expectations about future demand — "animal spirits"</td></tr>
+      <tr><td><b>G</b></td><td>Politics, wars, natural disasters. Taken as given.</td></tr>
+      <tr><td><b>NX</b></td><td>Taken as given for now; Unit 24 shows ↑r ⇒ ↓NX</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>All three of C, I and NX fall when r rises.</b> That single fact is the entire transmission mechanism of monetary policy.</p>
+
+  <h4 class="sub">The Great Depression, on this diagram</h4>
+  <p>The October 1929 crash reduced wealth, crushed consumer confidence and created "wait and see" uncertainty. Christina Romer's data show spending collapsed immediately and specifically in <b>durable goods</b> — autos, furniture — not groceries. A fall in C̄: PAE shifts <em>down in parallel</em>, and the multiplier turns it into a much larger fall in Y.</p>
 
   <figure class="fig"><div class="plot" data-graph="keynesian-shift"></div>
     <figcaption><b>The multiplier at work.</b> A drop in autonomous spending shifts PAE down by the size of the shock. Output falls by <em>more</em> than that, because falling income drags consumption down with it. With mpc = 1/3, a $2 trillion shock costs $3 trillion of GDP.</figcaption></figure>
 
-  <div class="moves"><div class="hd">The moves</div><ol>
-    <li>Combine all components into PAE = (autonomous) + cY. Compute the intercept by setting Y = 0.</li>
-    <li>Set PAE = Y and solve. Show the line "20 = (2/3)Y ⟹ Y = 30."</li>
-    <li>For a shock, recompute the intercept, re-solve, and state both changes.</li>
-    <li>Explain the gap between ΔPAE and ΔY with the multiplier 1/(1 − c). That sentence is worth points on its own.</li>
-  </ol></div>
+  <h4 class="sub">Rules that earn points</h4>
+  <ol class="rules">
+    <li>Collect everything into <b>PAE = (autonomous) + cY</b>. Get the intercept by setting Y = 0.</li>
+    <li>Set PAE = Y and show the algebra line: "20 = (2/3)Y ⟹ Y = 30."</li>
+    <li>For a shock, recompute the intercept, re-solve, and state <b>both</b> ΔPAE and ΔY.</li>
+    <li>Explain the gap between them with 1/(1 − c). That sentence scores on its own.</li>
+    <li>To offset, match the <b>shift</b>: ΔG = −ΔPAE, or a tax cut of −ΔPAE/c.</li>
+  </ol>
 
   <div class="traps"><div class="hd">Traps</div><ul>
     <li>Reporting ΔY = ΔPAE. They differ by the multiplier — that is the whole point.</li>
@@ -119,67 +128,114 @@
     <li>Drawing PAE with slope 1. Its slope is the mpc, which is less than 1 — otherwise it never crosses the 45° line.</li>
   </ul></div>
 
-  <div class="drills"><div class="hd">Drills · Unit 20</div>
+  <div class="quiz">
+    <div class="qhd"><b>Unit 20 quiz</b><span>4 MCQ · 2 FRQ · ~12 min</span></div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u20q1"><div class="qtext">
-      <span class="qkind calc">calc</span>C = 10 + (1/3)Y, I = 6, G = 5, NX = −1, in trillions. Find the PAE intercept and short-run equilibrium Y.
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u20q1"><i>MCQ 1</i><span class="pts">2 pts</span></div>
+      <p class="qstem">C = 12 + 0.75(Y − T), T = 8, I<sup>P</sup> = 10, G = 14, NX = −2 (all in $ trillions). Short-run equilibrium output is:</p>
+      <ul class="opts">
+        <li><span>A</span>112</li>
+        <li><span>B</span>136</li>
+        <li><span>C</span>28</li>
+        <li><span>D</span>37.3</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <div class="eq">PAE = 10 + (1/3)Y + 6 + 5 − 1 = <strong>20 + (1/3)Y</strong></div>
-        <p>At Y = 0, PAE = <strong>20</strong> — the vertical intercept.</p>
-        <p>Set PAE = Y:</p>
-        <div class="eq">20 + (1/3)Y = Y  ⟹  20 = (2/3)Y  ⟹  <strong>Y = 30</strong></div>
-        <p>Short-run equilibrium output is <strong>$30 trillion</strong>, which matches actual US GDP — the numbers were chosen that way.</p>
+        <p><span class="correct">A — Y = 112.</span></p>
+        <p>Autonomous = 12 − 0.75(8) + 10 + 14 − 2 = 12 − 6 + 22 = <b>28</b>. Multiplier = 1/(1 − 0.75) = 4. So Y = 28 × 4 = 112.</p>
+        <p><b>B</b> is the trap: dropping the −cT term gives autonomous = 34 and Y = 136. Taxes always enter scaled by the mpc. (<b>C</b> reports the intercept; <b>D</b> divides by c instead of 1 − c.)</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u20q2"><div class="qtext">
-      <span class="qkind calc">calc</span>Now C′ = 8 + (1/3)Y, I′ = 5, G = 5, NX′ = 0. Find the new intercept and Y. By how much did PAE change? By how much did GDP change? Why are they different?
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u20q2"><i>MCQ 2</i><span class="pts">2 pts</span></div>
+      <p class="qstem">Autonomous spending falls by $3 billion and the mpc is 0.8. Equilibrium GDP changes by:</p>
+      <ul class="opts">
+        <li><span>A</span>−$3 billion</li>
+        <li><span>B</span>−$3.75 billion</li>
+        <li><span>C</span>−$15 billion</li>
+        <li><span>D</span>−$2.4 billion</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <div class="eq">PAE′ = 8 + (1/3)Y + 5 + 5 + 0 = <strong>18 + (1/3)Y</strong></div>
-        <p>Intercept <strong>18</strong>. Setting PAE′ = Y: 18 = (2/3)Y, so <strong>Y = 27</strong>.</p>
-        <p><strong>ΔPAE = −2 trillion.</strong> Autonomous consumption fell 2 and investment fell 1, while net exports <em>rose</em> 1, netting −2. It appears as a parallel vertical drop in the PAE line.</p>
-        <p><strong>ΔY = −3 trillion.</strong> Bigger, because the PAE line slopes upward, so its intersection with the 45° line moves left by more than the vertical drop.</p>
-        <p><strong>Why:</strong> the nonzero marginal propensity to consume creates a multiplier of 1/(1 − c) = 1/(1 − 1/3) = <strong>1.5</strong>. And 2 × 1.5 = 3. Falling income drags consumption down further, which drags income down further.</p>
+        <p><span class="correct">C — −$15 billion.</span></p>
+        <p>The multiplier is 1/(1 − 0.8) = 5, so ΔY = 5 × (−3) = −15.</p>
+        <p><b>A</b> is the trap and the single most common error in the course: reporting ΔY = ΔPAE. The gap between them <em>is</em> the multiplier. (<b>B</b> uses 1/c; <b>D</b> multiplies by c.)</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u20q3"><div class="qtext">
-      <span class="qkind calc">calc</span>Congress wants to offset that shock entirely by changing G. How big a change, and in which direction?
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u20q3"><i>MCQ 3</i><span class="pts">2 pts</span></div>
+      <p class="qstem">With mpc = 0.5, a $200 billion tax cut raises equilibrium GDP by:</p>
+      <ul class="opts">
+        <li><span>A</span>$400 billion</li>
+        <li><span>B</span>$200 billion</li>
+        <li><span>C</span>$100 billion</li>
+        <li><span>D</span>$50 billion</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p><strong>Increase G by $2 trillion.</strong></p>
-        <p>The shock reduced PAE by $2 trillion. Government purchases enter autonomous spending <strong>one-for-one</strong>, so raising G by 2 restores the intercept to 20 and therefore restores Y to 30.</p>
-        <p>The key reasoning sentence: as long as the mpc is unchanged across the two shocks, the same multiplier applies to both, so an equal and opposite change in autonomous spending exactly offsets it. <strong>Match the shift, not the output gap.</strong></p>
-        <p>Note the contrast with a tax cut: a $2 trillion tax cut would only raise PAE by c × 2 = $0.67 trillion, because taxes enter as −cT.</p>
+        <p><span class="correct">B — $200 billion.</span></p>
+        <p>Taxes enter as −cT, so a 200 cut raises autonomous spending by only 0.5 × 200 = <b>100</b>. The multiplier is 1/(1 − 0.5) = 2, so ΔY = 100 × 2 = 200.</p>
+        <p><b>A</b> is the trap: treating the tax cut like government purchases, which enter one-for-one, and multiplying the full 200 by 2. (<b>C</b> stops at ΔPAE.)</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u20q4"><div class="qtext">
-      <span class="qkind">concept</span>Why is output demand-determined in the short run but not the long run?
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u20q4"><i>MCQ 4</i><span class="pts">2 pts</span></div>
+      <p class="qstem">Output is determined by demand in the short run but not the long run because:</p>
+      <ul class="opts">
+        <li><span>A</span>Firms in the short run do not maximize profit</li>
+        <li><span>B</span>Prices and wages adjust slowly and incompletely, so firms respond with quantity</li>
+        <li><span>C</span>Potential output Y* is itself set by planned spending</li>
+        <li><span>D</span>The multiplier only operates in the short run</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p><strong>Nominal rigidity.</strong> Prices and wages do not adjust quickly or completely — limited information, long-term contracts, menu costs, customers who punish "unfair" price changes, workers who resist wage cuts. So when planned spending changes, firms respond by changing <strong>quantity</strong> rather than price.</p>
-        <p>Edwards's restaurant: a mom-and-pop place does not reprice by the hour, so on a busy night it just serves more and on a quiet night it sits idle. Over the <strong>long run</strong> prices do adjust, and output returns to potential Y* determined by labor, capital and technology.</p>
-        <p>This was Keynes's core contribution after the Great Depression: <strong>the short run needs a different analysis from the long run</strong>. From a classical viewpoint where prices clear markets, the Keynesian diagram looks absurd — which is why it was a genuine paradigm shift.</p>
+        <p><span class="correct">B — nominal rigidity.</span></p>
+        <p>Limited information, long-term contracts, menu costs, customers who punish "unfair" price changes and workers who resist wage cuts all mean prices are sticky, so firms meet a change in demand by changing <b>quantity</b>. In the long run prices adjust and output returns to Y*, set by labor, capital and technology.</p>
+        <p><b>C</b> is the trap: it inverts the whole framework. Y* is a supply-side object; demand determines Y around it, not Y* itself.</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u20q5"><div class="qtext">
-      <span class="qkind">concept</span>Derive the multiplier and explain it as a chain of spending rounds.
-      <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p>From Y = (autonomous) + cY, collect terms: Y(1 − c) = autonomous, so <strong>Y = autonomous / (1 − c)</strong>. A one-unit rise in autonomous spending raises Y by <strong>1/(1 − c)</strong>.</p>
-        <p><strong>The rounds:</strong> spending rises by 1, so income rises by 1. That income raises consumption by c, so income rises by another c. That raises consumption by c², and so on. Total: 1 + c + c² + … = 1/(1 − c).</p>
-        <p>The economic content: <strong>my spending is your income.</strong> With c = 1/3 the multiplier is 1.5; with c = 0.8 it is 5.</p>
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u20q5"><i>FRQ 1</i><span class="pts">8 pts</span></div>
+      <p class="qstem">An economy has C = 8 + 0.6(Y − T), T = 10, I<sup>P</sup> = 9, G = 12, NX = 1, all in $ trillions.<br>
+      <b>(a)</b> Write PAE as a function of Y and give its vertical intercept.<br>
+      <b>(b)</b> Find short-run equilibrium output.<br>
+      <b>(c)</b> Investment falls from 9 to 6. Find the new equilibrium, and state ΔPAE, ΔY and the multiplier.<br>
+      <b>(d)</b> Potential output is 60. Find the increase in G that restores it, and the tax cut that would do the same job.</p>
+      <div class="frqbox">Show every algebra line — the grader is buying the steps, not the final number. Draw one Keynesian Cross with the 45° line, PAE₁, PAE₂ and both equilibria labelled. Roughly a page.</div>
+      <details class="ans"><summary>Model answer</summary><div class="ansbody">
+        <p><b>(a)</b> Autonomous = C̄ − cT + I<sup>P</sup> + G + NX = 8 − 0.6(10) + 9 + 12 + 1 = 8 − 6 + 22 = <b>24</b>.</p>
+        <div class="eq">PAE = 24 + 0.6Y<span class="cm">Intercept 24, slope 0.6 = the mpc.</span></div>
+        <p><b>(b)</b> Set PAE = Y:</p>
+        <div class="eq">24 + 0.6Y = Y  ⟹  24 = 0.4Y  ⟹  <b>Y = 60</b></div>
+        <p><b>(c)</b> New autonomous = 24 − 3 = 21, so PAE′ = 21 + 0.6Y.</p>
+        <div class="eq">21 = 0.4Y  ⟹  <b>Y = 52.5</b></div>
+        <p><b>ΔPAE = −3. ΔY = −7.5.</b> The multiplier is 1/(1 − 0.6) = <b>2.5</b>, and 3 × 2.5 = 7.5. Output falls by more than the shift because the PAE line slopes up: lower income cuts consumption, which cuts income again, round after round.</p>
+        <p><b>(d)</b> <b>Raise G by 3.</b> Government purchases enter autonomous spending one-for-one, so the intercept returns to 24 and Y to 60. A <b>tax cut of 5</b> does the same job: taxes enter as −cT, so ΔPAE = −c·ΔT = −0.6(−5) = +3. Check: 8 − 0.6(5) + 6 + 12 + 1 = 24. ✓</p>
+        <p>On the diagram, the shock shifts PAE down in parallel by 3 and the equilibrium slides down the 45° line from 60 to 52.5; the policy shifts it back up by 3.</p>
+        <div class="mark"><span class="mh">What earns the points</span><ul>
+          <li>Subtracting <b>cT</b>, not T, when building autonomous spending.</li>
+          <li>The explicit line "24 = 0.4Y ⟹ Y = 60" — setting PAE equal to Y.</li>
+          <li>Reporting <b>ΔPAE and ΔY separately</b> and naming the multiplier that links them.</li>
+          <li>Sizing the offset to the <b>PAE shift</b> (3), not the output gap (7.5).</li>
+          <li>Scaling the tax cut by 1/c to get 5, and checking it.</li>
+          <li>A parallel downward shift on the diagram, with the 45° line and both equilibria labelled.</li>
+        </ul></div>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u20q6"><div class="qtext">
-      <span class="qkind">concept</span>Why did the 1929 crash cause a depression rather than just a bad year for investors?
-      <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p>Because it shifted <strong>autonomous consumption</strong> down hard, and the multiplier amplified it. Three channels: the crash <strong>destroyed wealth</strong>, it <strong>crushed consumer confidence</strong>, and the volatility produced <strong>"wait and see"</strong> postponement.</p>
-        <p>Christina Romer's evidence is the telling detail: spending collapsed immediately in <strong>durable goods</strong> — autos, furniture — the postponable purchases, while groceries held up. That collapse in demand led to a collapse in production.</p>
-        <p>On the diagram: a parallel downward shift of PAE, with Y falling by considerably more than the shift because of the multiplier. Unit 22 adds the second blow — monetary contraction driving the real interest rate up.</p>
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u20q6"><i>FRQ 2</i><span class="pts">6 pts</span></div>
+      <p class="qstem">Explain why the October 1929 stock market crash produced a depression rather than just a bad year for investors. Identify the component of PAE that moved, the evidence, and what happened on the Keynesian Cross.</p>
+      <div class="frqbox">Five or six sentences plus a sketch. Name the specific channels and the specific evidence — vague "confidence fell" answers cap out at half marks.</div>
+      <details class="ans"><summary>Model answer</summary><div class="ansbody">
+        <p>The crash shifted <b>autonomous consumption C̄</b> down hard, through three channels: it <b>destroyed wealth</b>, it <b>crushed consumer confidence</b>, and the volatility produced <b>"wait and see"</b> postponement of purchases.</p>
+        <p>The evidence is <b>Christina Romer's</b>: consumer spending collapsed immediately, and specifically in <b>durable goods</b> — autos and furniture, the postponable purchases — while groceries held up. That pattern is what a confidence-and-uncertainty shock looks like.</p>
+        <p>On the diagram, the PAE line shifts <b>down in parallel</b> by the size of the shock, and the equilibrium slides down the 45° line. Output falls by <b>considerably more</b> than the shift, because the multiplier 1/(1 − c) turns lost income into lost consumption into lost income again. A fall in demand became a fall in production.</p>
+        <p>Unit 22 adds the second blow: monetary contraction drove the real interest rate up, shifting PAE down a second time.</p>
+        <div class="mark"><span class="mh">What earns the points</span><ul>
+          <li>Naming <b>C̄</b> as the component, not "demand" in general.</li>
+          <li>All three channels: wealth, confidence, wait-and-see.</li>
+          <li><b>Romer's durable-goods</b> evidence, with the contrast against non-durables.</li>
+          <li>A <b>parallel downward shift</b> of PAE, with ΔY &gt; ΔPAE and the multiplier named.</li>
+          <li>Mentioning the monetary contraction as a second, separate downward shift.</li>
+        </ul></div>
       </div></details>
-    </div></div></div>
-
+    </div>
   </div>
 </section>
 <nav class="pager">

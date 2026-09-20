@@ -67,92 +67,159 @@
     <div class="meta">Classes 7–8 · Chapter 5 <span class="tag both">Midterm + Final</span></div>
   </div></div>
 
-  <div class="body">
-    <p>This unit derives where demand comes from. Households face a <strong>budget constraint</strong> and have <strong>preferences</strong>, and demand falls out of the optimization.</p>
-    <div class="eq">P<sub>f</sub>·q<sub>f</sub> + P<sub>c</sub>·q<sub>c</sub> = Income<span class="cm">Intercepts: Income/P on each axis. Slope with clothing on the horizontal axis = −P<sub>c</sub>/P<sub>f</sub>.</span></div>
-    <p>A rise in income shifts the constraint <strong>outward in parallel</strong>. A rise in one good's price <strong>pivots</strong> it around the other good's intercept — steeper or flatter, same starting point.</p>
+  <div class="tldr"><span class="lb">If you remember one thing</span>
+    <p>Spend so that the <b>marginal utility of the last dollar is equal across every good</b>. Every question is: which side of <b>mu<sub>x</sub>/P<sub>x</sub> = mu<sub>y</sub>/P<sub>y</sub></b> did the shock hit, and <b>which quantity moves</b> to restore it.</p>
   </div>
+
+  <h4 class="sub">Budget constraint</h4>
+  <div class="eq">P<sub>f</sub>&middot;q<sub>f</sub> + P<sub>c</sub>&middot;q<sub>c</sub> = Income<span class="cm">Intercepts: Income/P on each axis. Slope with clothing on the horizontal axis = &minus;P<sub>c</sub>/P<sub>f</sub>.</span></div>
+  <dl class="defs">
+    <dt>Income rises</dt><dd>The line shifts <b>outward in parallel</b> — relative prices, so the slope, are unchanged.</dd>
+    <dt>One price rises</dt><dd>The line <b>pivots</b> around the other good's intercept.</dd>
+  </dl>
 
   <figure class="fig"><div class="plot" data-graph="budget-constraint"></div>
     <figcaption><b>Income shifts, prices pivot.</b> With weekly income $100, food at $20 and clothing at $50, the intercepts are 5 meals and 2 garments and the slope is −2.5. A rise in the price of clothing pivots the line clockwise around the food intercept.</figcaption></figure>
 
-  <div class="body">
-    <h4 class="sub">Marginal utility and the rational spending rule</h4>
-    <p>Total utility rises with quantity but at a decreasing rate; <strong>marginal utility is the slope of total utility</strong>, and it declines. Different goods have differently-shaped marginal utility curves.</p>
-    <p>The optimum is where <strong>the marginal utility of the last dollar spent is the same across all goods</strong>. Divide marginal utility by price to get marginal utility <em>per dollar</em>:</p>
-    <div class="eq">mu<sub>a</sub>/P<sub>a</sub> = mu<sub>b</sub>/P<sub>b</sub> = … = mu<sub>z</sub>/P<sub>z</sub><span class="cm">The Rational Spending Rule. If one ratio is higher, shift spending toward that good until declining marginal utility restores equality.</span></div>
-  </div>
+  <h4 class="sub">Utility</h4>
+  <dl class="defs">
+    <dt>Total utility</dt><dd>Rises with quantity, at a <b>decreasing rate</b>.</dd>
+    <dt>Marginal utility</dt><dd>The <b>slope of total utility</b>, and it declines. Different goods have differently-shaped mu curves.</dd>
+  </dl>
+  <div class="eq">mu<sub>a</sub>/P<sub>a</sub> = mu<sub>b</sub>/P<sub>b</sub> = … = mu<sub>z</sub>/P<sub>z</sub><span class="cm">The Rational Spending Rule. If one ratio is higher, shift spending toward that good until declining marginal utility restores equality.</span></div>
 
   <figure class="fig"><div class="plot" data-graph="utility-mu"></div>
     <figcaption><b>Total versus marginal utility.</b> Total utility is increasing and concave; marginal utility is its slope, and falls. Chapter 5's ice cream reaches negative marginal utility by the sixth serving.</figcaption></figure>
 
-  <div class="body">
-    <h4 class="sub">The comparative static they ask for</h4>
-    <p>Suppose P<sub>c</sub> rises 10%. If you do not change your purchases, the left side falls and the rule breaks:</p>
-    <div class="eq">mu<sub>c</sub>/(1.1·P<sub>c</sub>) &lt; mu<sub>f</sub>/P<sub>f</sub></div>
-    <p>To restore equality you <strong>buy less clothing</strong>, which raises mu<sub>c</sub> (declining marginal utility running backwards), and possibly <strong>more food</strong>, which lowers mu<sub>f</sub>. With numbers: if a garment gives 10 utils at $50 and food gives 2 utils at $10, both ratios are 0.2. If clothing goes to $55, its ratio falls to 10/55 ≈ 0.18. Cut clothing until mu<sub>c</sub> reaches 11, and 11/55 = 0.2 again. Or split the adjustment across both goods.</p>
-    <p>Underneath sit two forces, which is an ECON 100A preview but does appear as a concept question:</p>
-    <ul>
-      <li><strong>Substitution effect:</strong> the good is now relatively expensive, so buy something else instead.</li>
-      <li><strong>Income effect:</strong> your real purchasing power fell, so you can afford less of everything.</li>
-    </ul>
-  </div>
+  <h4 class="sub">The comparative static they ask for</h4>
+  <p>P<sub>c</sub> rises 10% and you change nothing. The rule breaks:</p>
+  <div class="eq">mu<sub>c</sub>/(1.1&middot;P<sub>c</sub>) &lt; mu<sub>f</sub>/P<sub>f</sub></div>
+  <div class="tw"><table>
+    <thead><tr><th>Step</th><th>Numbers</th></tr></thead>
+    <tbody>
+      <tr><td>Both ratios equal</td><td class="num">garment 10 utils / $50 = 0.2 &middot; food 2 utils / $10 = 0.2</td></tr>
+      <tr><td>Clothing goes to $55</td><td class="num">10/55 &asymp; 0.18 — less utility per dollar</td></tr>
+      <tr><td><b>Buy less clothing</b>, raising mu<sub>c</sub></td><td class="num">mu<sub>c</sub> reaches 11 → 11/55 = 0.2 ✓</td></tr>
+    </tbody>
+  </table></div>
+  <p>Or split it: buy <b>more food</b> too, which lowers mu<sub>f</sub>.</p>
 
-  <div class="moves"><div class="hd">The moves</div><ol>
-    <li>Write the rule before doing anything: mu<sub>x</sub>/P<sub>x</sub> = mu<sub>y</sub>/P<sub>y</sub>.</li>
-    <li>Say which side of the equation the shock hits and which way it moves.</li>
-    <li>State the quantity adjustment <em>and</em> the marginal utility it triggers — "buy less clothing, which raises mu<sub>c</sub>."</li>
-    <li>For the graph: income shifts parallel, price pivots.</li>
-  </ol></div>
+  <h4 class="sub">The two forces underneath</h4>
+  <dl class="defs">
+    <dt>Substitution effect</dt><dd>The good is now relatively expensive, so buy something else. "If the price goes up, I'll buy something else."</dd>
+    <dt>Income effect</dt><dd>Real purchasing power fell, so you can afford less of everything. "If the price goes up, I can't buy as much."</dd>
+  </dl>
+  <p>They can push the same way or opposite ways. Indifference curves are ECON 100A.</p>
+
+  <h4 class="sub">Rules that earn points</h4>
+  <ol class="rules">
+    <li>Write the rule <b>before</b> anything else: mu<sub>x</sub>/P<sub>x</sub> = mu<sub>y</sub>/P<sub>y</sub>.</li>
+    <li>Say which side the shock hits and <b>which way it moves</b>.</li>
+    <li>State the quantity change <em>and</em> the marginal utility it triggers — "buy less clothing, <b>which raises mu<sub>c</sub></b>."</li>
+    <li>On the graph: <b>income shifts parallel, price pivots</b>.</li>
+  </ol>
 
   <div class="traps"><div class="hd">Traps</div><ul>
     <li>Equating marginal utilities instead of marginal utilities <em>per dollar</em>.</li>
     <li>Shifting the whole budget line when only one price changed. Pivot it.</li>
-    <li>Saying "buy less clothing" and stopping. The mechanism is that buying less <em>raises</em> its marginal utility, which restores the equality.</li>
+    <li>Saying "buy less clothing" and stopping. Buying less <em>raises</em> its marginal utility — that is what restores equality.</li>
   </ul></div>
 
-  <div class="drills"><div class="hd">Drills · Unit 8</div>
+  <div class="quiz">
+    <div class="qhd"><b>Unit 8 quiz</b><span>4 MCQ · 2 FRQ · ~12 min</span></div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u8q1"><div class="qtext">
-      <span class="qkind exam">exam</span>Under the Rational Spending Rule with clothing and food, suppose the price of clothing falls. How could you change your purchases to restore equality?
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u8q1"><i>MCQ 1</i><span class="pts">2 pts</span></div>
+      <p class="qstem">A household currently satisfies the Rational Spending Rule. The price of clothing then <b>falls</b>. To restore the rule the household should:</p>
+      <ul class="opts">
+        <li><span>A</span>Buy more clothing, which lowers mu<sub>c</sub></li>
+        <li><span>B</span>Buy less clothing, which raises mu<sub>c</sub></li>
+        <li><span>C</span>Buy more clothing, which raises mu<sub>c</sub></li>
+        <li><span>D</span>Change nothing, since the rule only concerns marginal utilities</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p>If P<sub>c</sub> falls, the left-hand side mu<sub>c</sub>/P<sub>c</sub> <strong>increases</strong>, because the denominator shrank. Clothing now delivers more utility per dollar than food.</p>
-        <p>To restore equality, <strong>increase your purchases of clothing</strong>. Buying more clothing <em>reduces</em> mu<sub>c</sub> through diminishing marginal utility, pulling the ratio back down until it matches mu<sub>f</sub>/P<sub>f</sub> again.</p>
+        <p><span class="correct">A — buy more clothing, which lowers mu<sub>c</sub>.</span></p>
+        <p>A smaller denominator makes mu<sub>c</sub>/P<sub>c</sub> too <b>large</b>. Buying more clothing drives mu<sub>c</sub> down through diminishing marginal utility until the ratio matches mu<sub>f</sub>/P<sub>f</sub> again.</p>
+        <p><b>B</b> is the trap: the direction flip. Students memorize "price change → buy less" from the price-<em>rise</em> case and apply it to a fall.</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u8q2"><div class="qtext">
-      <span class="qkind calc">calc</span>Coffee at Strada costs $4; frozen yogurt at Yogurt Park costs $6. mu<sub>c</sub>(1) = 10, mu<sub>c</sub>(2) = 8, mu<sub>f</sub>(1) = 12, mu<sub>f</sub>(2) = 8. What is the optimal daily bundle?
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u8q2"><i>MCQ 2</i><span class="pts">2 pts</span></div>
+      <p class="qstem">Weekly income is $100, food is $20, clothing is $50, clothing on the horizontal axis. The price of clothing rises. The budget line:</p>
+      <ul class="opts">
+        <li><span>A</span>Shifts inward in parallel, since the household is poorer</li>
+        <li><span>B</span>Pivots clockwise around the food intercept of 5 meals</li>
+        <li><span>C</span>Pivots around the clothing intercept of 2 garments</li>
+        <li><span>D</span>Is unchanged, since income did not change</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p>Compute marginal utility per dollar for each unit:</p>
-        <ul>
-          <li>Coffee #1: 10/4 = <span class="num">2.5</span> · Coffee #2: 8/4 = <span class="num">2.0</span></li>
-          <li>Yogurt #1: 12/6 = <span class="num">2.0</span> · Yogurt #2: 8/6 ≈ <span class="num">1.33</span></li>
-        </ul>
-        <p>The rule is satisfied at <strong>2 coffees and 1 frozen yogurt</strong>, where 8/$4 = 12/$6 = 2.0. Both margins deliver the same utility per dollar, and no reallocation improves things.</p>
+        <p><span class="correct">B — pivots around the food intercept.</span></p>
+        <p>Income/P<sub>f</sub> = 100/20 = 5 meals is untouched; Income/P<sub>c</sub> shrinks below 2 garments, so the line rotates clockwise and the slope steepens from −2.5.</p>
+        <p><b>A</b> is the trap: a price rise does make you poorer in real terms, but only an <b>income</b> change moves the line in parallel. One price ⇒ pivot.</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u8q3"><div class="qtext">
-      <span class="qkind graph">graph</span>Weekly income is $100, food is $20, clothing is $50. Draw the budget constraint with intercepts and slope. Then show a rise in the price of clothing and a rise in income.
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u8q3"><i>MCQ 3</i><span class="pts">2 pts</span></div>
+      <p class="qstem">Coffee at Strada costs $4; frozen yogurt at Yogurt Park costs $6. mu<sub>c</sub>(1) = 10, mu<sub>c</sub>(2) = 8, mu<sub>f</sub>(1) = 12, mu<sub>f</sub>(2) = 8. The optimal daily bundle is:</p>
+      <ul class="opts">
+        <li><span>A</span>1 coffee and 1 yogurt</li>
+        <li><span>B</span>2 coffees and 1 yogurt</li>
+        <li><span>C</span>1 coffee and 2 yogurts</li>
+        <li><span>D</span>2 coffees and 2 yogurts</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p>Food intercept: 100/20 = <strong>5 meals</strong>. Clothing intercept: 100/50 = <strong>2 garments</strong>. With clothing on the horizontal axis, slope = −P<sub>c</sub>/P<sub>f</sub> = −50/20 = <strong>−2.5</strong> — one garment costs 2.5 meals.</p>
-        <p><strong>Price of clothing rises:</strong> the line <em>pivots clockwise</em> around the unchanged food intercept, pulling the clothing intercept inward.</p>
-        <p><strong>Income rises:</strong> the line shifts <em>outward in parallel</em>, since relative prices and therefore the slope are unchanged.</p>
+        <p><span class="correct">B — 2 coffees and 1 yogurt.</span></p>
+        <p>Per dollar: coffee #1 = 10/4 = 2.5, coffee #2 = 8/4 = 2.0, yogurt #1 = 12/6 = 2.0, yogurt #2 = 8/6 ≈ 1.33. At 2 coffees and 1 yogurt, 8/$4 = 12/$6 = 2.0 — both margins deliver the same utility per dollar.</p>
+        <p><b>C</b> is the trap: yogurt #1 has the highest raw marginal utility (12), so students who rank by <b>mu</b> instead of <b>mu/P</b> load up on yogurt.</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u8q4"><div class="qtext">
-      <span class="qkind">concept</span>Distinguish the substitution effect from the income effect when a price rises.
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u8q4"><i>MCQ 4</i><span class="pts">2 pts</span></div>
+      <p class="qstem">"Gas got expensive, so I can't afford as much of anything this month." This statement describes:</p>
+      <ul class="opts">
+        <li><span>A</span>The substitution effect</li>
+        <li><span>B</span>The income effect</li>
+        <li><span>C</span>Diminishing marginal utility</li>
+        <li><span>D</span>A parallel outward shift of the budget constraint</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <ul>
-          <li><strong>Substitution effect:</strong> the good is now relatively more expensive, so the household wants less of it and more of others. "If the price goes up, I'll buy something else."</li>
-          <li><strong>Income effect:</strong> the household's real purchasing power has fallen, so it must spend less overall. "If the price goes up, I can't buy as much."</li>
-        </ul>
-        <p>They can push the same way or opposite ways. Full treatment with indifference curves is ECON 100A.</p>
+        <p><span class="correct">B — the income effect.</span></p>
+        <p>Real purchasing power fell, so less of everything is affordable. The substitution effect is the other sentence: "gas is relatively expensive now, so I'll take the bus."</p>
+        <p><b>A</b> is the trap: both effects follow from the same price rise, so students pick whichever they saw first. Test it by asking whether the sentence is about <b>relative price</b> (substitution) or <b>total purchasing power</b> (income).</p>
       </div></details>
-    </div></div></div>
+    </div>
 
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u8q5"><i>FRQ 1</i><span class="pts">6 pts</span></div>
+      <p class="qstem">Weekly income is $100, food is $20 and clothing is $50. <b>(a)</b> Draw the budget constraint with both intercepts and the slope. <b>(b)</b> Show a rise in the price of clothing. <b>(c)</b> Show a rise in income.</p>
+      <div class="frqbox">One diagram with all three lines, clothing on the horizontal axis. Label both intercepts numerically and state the slope in words.</div>
+      <details class="ans"><summary>Model answer</summary><div class="ansbody">
+        <p><b>(a)</b> Food intercept: 100/20 = <b>5 meals</b>. Clothing intercept: 100/50 = <b>2 garments</b>. Slope = −P<sub>c</sub>/P<sub>f</sub> = −50/20 = <b>−2.5</b> — one garment costs 2.5 meals.</p>
+        <p><b>(b)</b> The line <b>pivots clockwise</b> around the unchanged food intercept, pulling the clothing intercept inward.</p>
+        <p><b>(c)</b> The line shifts <b>outward in parallel</b>, since relative prices and therefore the slope are unchanged.</p>
+        <div class="mark"><span class="mh">What earns the points</span><ul>
+          <li>Both intercepts computed as Income/P, with numbers.</li>
+          <li>Slope given as −2.5 <em>and</em> interpreted as a trade-off in meals per garment.</li>
+          <li>Pivot for the price change, around the <b>correct</b> intercept.</li>
+          <li>Parallel shift for income, stated as "slope unchanged".</li>
+        </ul></div>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u8q6"><i>FRQ 2</i><span class="pts">5 pts</span></div>
+      <p class="qstem">A household consumes food and clothing and satisfies the Rational Spending Rule. The price of clothing rises 10%. Explain, using the rule, how the household restores the equality.</p>
+      <div class="frqbox">Four or five sentences. Write the rule, show which side breaks, and name the quantity change <em>and</em> the marginal utility it triggers. A numerical illustration helps.</div>
+      <details class="ans"><summary>Model answer</summary><div class="ansbody">
+        <p>The rule is mu<sub>c</sub>/P<sub>c</sub> = mu<sub>f</sub>/P<sub>f</sub>. If purchases do not change, the left side becomes mu<sub>c</sub>/(1.1·P<sub>c</sub>) &lt; mu<sub>f</sub>/P<sub>f</sub> — clothing now yields less utility per dollar.</p>
+        <p>To restore equality the household <b>buys less clothing</b>, which <b>raises mu<sub>c</sub></b> by diminishing marginal utility running backwards, and possibly <b>more food</b>, which lowers mu<sub>f</sub>.</p>
+        <p>With numbers: a garment gives 10 utils at $50 and food gives 2 utils at $10, so both ratios are 0.2. At $55 clothing falls to 10/55 ≈ 0.18. Cut clothing until mu<sub>c</sub> reaches 11, and 11/55 = 0.2 again.</p>
+        <div class="mark"><span class="mh">What earns the points</span><ul>
+          <li>Writing the rule with <b>prices in the denominators</b> before analyzing anything.</li>
+          <li>Identifying which side falls and why.</li>
+          <li>Naming the quantity change <em>and</em> the marginal utility response — not just "buy less clothing".</li>
+          <li>Noting the adjustment can come from either good, or both.</li>
+          <li>A worked number that lands back on equal ratios.</li>
+        </ul></div>
+      </div></details>
+    </div>
   </div>
 </section>
 <nav class="pager">

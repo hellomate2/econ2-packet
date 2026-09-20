@@ -67,92 +67,156 @@
     <div class="meta">Class 14 · Chapter 21 <span class="tag fin">Final</span></div>
   </div></div>
 
-  <div class="body">
-    <p>The final exam spent a whole question on this, so know it cold.</p>
-    <p>In economics, <strong>capital means productive physical assets</strong> — machines, buildings, trucks, computers, infrastructure. But note that the course uses the word in three senses at once &mdash; physical capital, <strong>financial</strong> capital (the funds used to buy it), and accumulated savings that move across borders. On the Fall 2025 final the keyed answer to &ldquo;in economics, the word capital means&rdquo; was <strong>all of the above</strong>, so do not pick the narrow definition there. <strong>Physical capital</strong> is the stuff; <strong>financial capital</strong> is the funds used to buy it. And <strong>investment is the flow of new capital into the capital stock</strong>, which is also a component of GDP.</p>
-    <p>Renting capital works just like hiring labor:</p>
-    <div class="eq">MRP<sub>K</sub> = MP<sub>K</sub> × MR<span class="cm">Rent machines until the marginal revenue product of the last machine equals the rental price. The demand curve for capital slopes down for the same diminishing-returns reason as labor.</span></div>
-
-    <h4 class="sub">Present value — the engine of the whole unit</h4>
-    <p>Capital is <strong>durable</strong>: you buy it today and it produces revenue for years. People prefer things today to things tomorrow, which is <strong>time preference</strong>, and that is why interest exists. To compare future dollars with today's dollars, discount them.</p>
-    <div class="eq">PV = F / (1 + i)<sup>t</sup><span class="cm">One payment F received t years from now, at interest rate i.</span></div>
-    <div class="eq">PV = F₁/(1+i) + F₂/(1+i)² + F₃/(1+i)³ + …<span class="cm">A stream of payments. This is the price of a bond, and with F<sub>t</sub> = MRP<sub>K</sub>(t) it is the price of a machine.</span></div>
-    <p>Worked: $100 one year out at 3% is 100/1.03 = <strong>$97.09</strong>. At 8% it is 100/1.08 = <strong>$92.59</strong>. Two years out at 3% it is 100/1.03² = <strong>$94.26</strong>. And $1,000 a year for three years at 3% is 970.87 + 942.60 + 915.14 ≈ <strong>$2,827.83</strong>.</p>
-    <p>The two comparative statics that get tested:</p>
-    <ul>
-      <li><strong>Interest rate up ⇒ present value down.</strong> The denominators grow. This is why bond prices fall when rates rise — and why Silicon Valley Bank, holding long-term Treasuries, became insolvent in 2023.</li>
-      <li><strong>Expected future payoffs down ⇒ present value down.</strong> If capital's future marginal product is expected to fall — say because less labor will be available to work alongside it — the price of capital falls today.</li>
-    </ul>
-    <p>Firms buy machines until <strong>PV(stream of MRP<sub>K</sub>) = the purchase price</strong>. Raise the interest rate and PV falls, so firms buy fewer machines, which raises MRP<sub>K</sub> on the remaining ones until the equality is restored. That traces out the investment demand curve.</p>
+  <div class="tldr"><span class="lb">If you remember one thing</span>
+    <p>The price of any asset — bond, share, machine — is the <b>present value of its expected future payments</b>. So <b>interest rate up ⇒ price down</b>, and <b>expected future payoffs down ⇒ price down</b>. The final spent a whole question on this.</p>
   </div>
+
+  <h4 class="sub">What "capital" means</h4>
+  <dl class="defs">
+    <dt>Physical capital</dt><dd>Machines, buildings, trucks, computers, infrastructure. The capital in MRP<sub>K</sub>.</dd>
+    <dt>Financial capital</dt><dd>The <b>funds</b> used to purchase, rent or build it.</dd>
+    <dt>Investment</dt><dd>The <b>flow</b> of new capital into the capital stock. Also a component of GDP.</dd>
+    <dt>Human capital</dt><dd>Education and training. Counts as capital in the growth chapters.</dd>
+    <dt>On the exam</dt><dd>Fall 2025's keyed answer to "in economics, the word capital means" was <b>all of the above</b> — physical assets, financial assets, accumulated savings investable across borders. Do not pick the narrow definition there.</dd>
+  </dl>
+
+  <h4 class="sub">Formulas</h4>
+  <div class="eq">MRP<sub>K</sub> = MP<sub>K</sub> × MR<span class="cm">Rent machines until the last one's marginal revenue product equals the rental price. Capital demand slopes down like labor demand.</span></div>
+  <div class="eq">PV = F / (1 + i)<sup>t</sup><span class="cm">One payment F, t years out, at rate i. Capital is <b>durable</b>; <b>time preference</b> is why interest exists.</span></div>
+  <div class="eq">PV = F₁/(1+i) + F₂/(1+i)² + F₃/(1+i)³ + …<span class="cm">A stream: the price of a bond; with F<sub>t</sub> = MRP<sub>K</sub>(t), of a machine; with expected dividends, of a stock.</span></div>
+  <div class="eq">Buy until PV(MRP<sub>K</sub> stream) = purchase price<span class="cm">Raise i, PV falls, firms buy fewer machines, MRP<sub>K</sub> on the rest rises until equality returns. That traces investment demand. Same logic sank <b>Silicon Valley Bank</b> in <b>2023</b>, holding long-term Treasuries into rising rates.</span></div>
+
+  <h4 class="sub">Worked</h4>
+  <div class="tw"><table>
+    <thead><tr><th>Payment</th><th>Rate</th><th>Years out</th><th>Present value</th></tr></thead>
+    <tbody>
+      <tr><td class="num">$100</td><td class="num">3%</td><td class="num">1</td><td class="num">100/1.03 = <b>$97.09</b></td></tr>
+      <tr><td class="num">$100</td><td class="num">8%</td><td class="num">1</td><td class="num">100/1.08 = <b>$92.59</b></td></tr>
+      <tr><td class="num">$100</td><td class="num">3%</td><td class="num">2</td><td class="num">100/1.03² = <b>$94.26</b></td></tr>
+      <tr><td class="num">$1,000/yr</td><td class="num">3%</td><td class="num">1–3</td><td class="num">970.87 + 942.60 + 915.14 = <b>$2,828.61</b><br><span style="color:var(--muted);font-size:11px">slide says 2,827.83 &mdash; see quiz note</span></td></tr>
+    </tbody>
+  </table></div>
 
   <figure class="fig"><div class="plot" data-graph="investment-demand"></div>
     <figcaption><b>Investment demand.</b> A higher real interest rate erodes the present value of future marginal revenue products, so firms buy fewer machines. An investment tax credit or optimism about future MRP<sub>K</sub> shifts the curve out; pessimism shifts it in. This curve reappears as the <em>I</em> in the Keynesian cross and in the long-run saving–investment diagram.</figcaption></figure>
 
-  <div class="body">
-    <h4 class="sub">Stocks and bonds</h4>
-    <p>Firms raise financial capital two ways: <strong>issue bonds</strong> (borrow, repay with interest) or <strong>issue stock</strong> (sell a share of future profits, paid out as dividends). And the same formula prices equity:</p>
-    <div class="eq">Stock price = PV(stream of expected future dividends)</div>
-    <p>So stock prices move for exactly two reasons. <strong>Interest rates:</strong> lower rates raise present values, and also signal expectations about economic activity. <strong>Expected future dividends:</strong> anything that changes them moves the price — for one firm or for all of them. The pandemic is the clean natural experiment: Zoom's expected dividends jumped while Carnival Cruise's collapsed, and their stock prices did the same.</p>
-  </div>
+  <h4 class="sub">Stocks and bonds</h4>
+  <dl class="defs">
+    <dt>Bond</dt><dd>The firm <b>borrows</b>, repays with interest. Price = PV of the fixed payment stream.</dd>
+    <dt>Stock</dt><dd>The firm sells a <b>share of future profits</b>, paid as dividends. <b>Price = PV(expected dividends)</b>.</dd>
+    <dt>Two reasons prices move</dt><dd><b>Interest rates</b> and <b>expected dividends</b>, for one firm or all. The pandemic is the clean experiment: <b>Zoom's</b> expected dividends jumped, <b>Carnival Cruise's</b> collapsed, prices followed.</dd>
+  </dl>
 
-  <div class="moves"><div class="hd">The moves</div><ol>
-    <li>Write the PV formula before computing anything.</li>
-    <li>For direction questions, ask which way the denominator or the numerator moved. That is the whole answer.</li>
-    <li>If i = 0, every denominator is 1 and PV is just the sum of the payments. This exact question was on the final.</li>
-    <li>For asset prices, say "price = present value of expected future payments," then name which input moved.</li>
-  </ol></div>
+  <h4 class="sub">Rules that earn points</h4>
+  <ol class="rules">
+    <li>Write the <b>PV formula</b> before computing anything.</li>
+    <li>For direction questions, ask which way the <b>denominator</b> or <b>numerator</b> moved. That is the whole answer.</li>
+    <li>If <b>i = 0</b>, every denominator is 1 and PV is the sum of the payments. This exact question was on the final.</li>
+    <li>For asset prices, write "price = PV of expected future payments," then name the input that moved.</li>
+  </ol>
 
   <div class="traps"><div class="hd">Traps</div><ul>
-    <li>Defining capital as money. In economics it is physical productive assets.</li>
+    <li>Defining capital as money. It is physical productive assets — except on that one multiple choice, where the key is "all of the above."</li>
     <li>Forgetting to raise (1+i) to the power t.</li>
-    <li>Saying rising rates make bonds more attractive so prices rise. Existing bonds have fixed payments, so their prices <em>fall</em>.</li>
+    <li>Saying rising rates make bonds more attractive so prices rise. Existing bonds have fixed payments; prices <em>fall</em>.</li>
   </ul></div>
 
-  <div class="drills"><div class="hd">Drills · Unit 14</div>
+  <div class="quiz">
+    <div class="qhd"><b>Unit 14 quiz</b><span>4 MCQ · 2 FRQ · ~12 min</span></div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u14q1"><div class="qtext">
-      <span class="qkind exam">exam</span>In economics, what does "capital" mean? (a) productive physical assets like equipment and structures, (b) financial assets like a bank account, (c) accumulated savings investable across borders, (d) all of the above.
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u14q1"><i>MCQ 1</i><span class="pts">2 pts</span></div>
+      <p class="qstem">In economics, the word "capital" means:</p>
+      <ul class="opts">
+        <li><span>A</span>Productive physical assets like equipment and structures</li>
+        <li><span>B</span>Financial assets such as a bank account</li>
+        <li><span>C</span>Accumulated savings investable across borders</li>
+        <li><span>D</span>All of the above</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p><strong>The keyed answer is (d) &ldquo;all of the above.&rdquo;</strong></p><p>The narrow, and most important, sense is <strong>productive physical assets</strong> &mdash; durable equipment and structures. That is the capital in the production function and in MRP<sub>K</sub>. But the course also uses <strong>financial capital</strong> (funds raised by issuing stocks and bonds) and <strong>accumulated savings investable across borders</strong> (the net capital inflows of Unit 24), so on this multiple choice all three count.</p><p>Keep the distinction straight in written answers: <strong>physical capital is the stuff; financial capital is the funds used to purchase, rent or build it.</strong></p>
-        <p>The distinction the course insists on: <strong>physical capital</strong> is the machines, buildings, trucks, computers and infrastructure; <strong>financial capital</strong> is the funds used to purchase, rent or build them. Human capital — education and training — also counts as capital in the growth chapters.</p>
+        <p><span class="correct">D — all of the above.</span> That is the keyed answer on the Fall 2025 final.</p>
+        <p>The course uses the word in all three senses: physical capital in the production function, financial capital as the funds that buy it, and accumulated savings moving across borders.</p>
+        <p><b>A</b> is the trap, and it is the sense you use everywhere else — it is the capital in MRP<sub>K</sub> = MP<sub>K</sub> × MR. On this multiple choice it is incomplete. Keep the distinction in written answers: <b>physical capital is the stuff; financial capital is the funds used to purchase, rent or build it.</b></p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u14q2"><div class="qtext">
-      <span class="qkind calc">calc</span>A bond pays F₁, F₂, F₃ over three years. (a) The interest rate rises — what happens to its price? (b) Express the price if i = 0.
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u14q2"><i>MCQ 2</i><span class="pts">2 pts</span></div>
+      <p class="qstem">The present value of $100 received <b>two</b> years from now, at an interest rate of 3%, is closest to:</p>
+      <ul class="opts">
+        <li><span>A</span>$94.26</li>
+        <li><span>B</span>$97.09</li>
+        <li><span>C</span>$103.00</li>
+        <li><span>D</span>$106.09</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p><strong>(a) The price falls.</strong> The payments F<sub>t</sub> are fixed, so raising i increases every denominator in PV = F₁/(1+i) + F₂/(1+i)² + F₃/(1+i)³, and the whole right-hand side shrinks.</p>
-        <p><strong>(b)</strong> If i = 0 then 1 + i = 1 and every denominator is 1:</p>
-        <div class="eq">P = PV = F₁ + F₂ + F₃</div>
+        <p><span class="correct">A — $94.26.</span></p>
+        <p>PV = 100/(1.03)² = 100/1.0609 = 94.26.</p>
+        <p><b>B</b> is the trap: 100/1.03 = 97.09 discounts only <em>one</em> year. Forgetting the exponent t is the most common arithmetic slip in this unit. <b>C</b> and <b>D</b> compound forward instead of discounting back.</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u14q3"><div class="qtext">
-      <span class="qkind exam">exam</span>What happens to the price of a unit of capital when its future marginal product falls — for example, because less labor is expected to be available?
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u14q3"><i>MCQ 3</i><span class="pts">2 pts</span></div>
+      <p class="qstem">Firms come to expect that less labor will be available in future to work alongside their machines. The price of a unit of capital today:</p>
+      <ul class="opts">
+        <li><span>A</span>Rises, because capital becomes scarcer relative to labor</li>
+        <li><span>B</span>Falls, because expected future MRP<sub>K</sub> falls</li>
+        <li><span>C</span>Is unchanged, since the interest rate has not moved</li>
+        <li><span>D</span>Rises, because firms substitute capital for labor</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p><strong>The price falls.</strong> A unit of capital is worth the present value of its future marginal revenue products, MRP<sub>K</sub>(t) = MR(t) × MP<sub>K</sub>(t).</p>
-        <p>If we expect less labor to work alongside the capital in future, its <strong>future marginal product falls</strong>, which shrinks every numerator in the present value sum and pulls down the price today. Machines are only valuable in proportion to what they will produce.</p>
+        <p><span class="correct">B — it falls.</span></p>
+        <p>A machine is worth the present value of its future MRP<sub>K</sub> = MR × MP<sub>K</sub>. Less labor alongside it lowers its future marginal product, shrinking every <b>numerator</b> in the sum. Machines are worth only what they will produce.</p>
+        <p><b>C</b> is the trap: present value has two moving parts. The denominator did not move, but the numerators did.</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u14q4"><div class="qtext">
-      <span class="qkind calc">calc</span>Present value of $1,000 in each of the next three years at 3%?
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u14q4"><i>MCQ 4</i><span class="pts">2 pts</span></div>
+      <p class="qstem">In 2020 Zoom's stock price jumped while Carnival Cruise's collapsed. The best one-line explanation is:</p>
+      <ul class="opts">
+        <li><span>A</span>Interest rates fell for tech firms and rose for travel firms</li>
+        <li><span>B</span>A stock price is the present value of expected future dividends, and the pandemic revised those expectations in opposite directions</li>
+        <li><span>C</span>A stock price reflects the firm's past profits, which diverged in 2020</li>
+        <li><span>D</span>Carnival's physical capital was destroyed</li>
+      </ul>
       <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <div class="eq">1000/1.03 + 1000/1.03² + 1000/1.03³</div>
-        <p>= 970.87 + 942.60 + 915.14 = <strong>$2,828.61</strong></p>
-        <p>Sanity check: it must be below $3,000 and not far below, since three years at 3% is modest discounting.</p><p style="border-left:3px solid var(--gold);padding-left:12px;color:var(--ink)"><strong>Note.</strong> The lecture slide gives this total as <strong>$2,827.83</strong>, because it mistypes the first term as 970.09 instead of 970.87. The correct sum is $2,828.61. The difference never matters for credit &mdash; write the formula and your working, and either total will be accepted.</p>
+        <p><span class="correct">B — expected future dividends moved in opposite directions.</span></p>
+        <p>Stock prices move for exactly two reasons: the <b>interest rate</b> used to discount, or <b>expected future dividends</b>. The pandemic hit the second, firm by firm.</p>
+        <p><b>A</b> is the trap. The discount rate is an economy-wide price; it cannot explain two firms moving in opposite directions on the same day.</p>
       </div></details>
-    </div></div></div>
+    </div>
 
-    <div class="q"><div class="qtop"><input class="chk" type="checkbox" id="u14q5"><div class="qtext">
-      <span class="qkind">concept</span>Why did Zoom and Carnival Cruise stock prices move in opposite directions in 2020?
-      <details class="ans"><summary>Answer</summary><div class="ansbody">
-        <p>Because a stock price is the <strong>present value of expected future dividends</strong>, and the pandemic revised those expectations in opposite directions — up for remote-work software, down for cruise operators.</p>
-        <p>It is a clean illustration that stock prices move for exactly two reasons: a change in the <strong>interest rate</strong> used to discount, or a change in <strong>expected future dividends</strong>, for one firm or for firms in general.</p>
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u14q5"><i>FRQ 1</i><span class="pts">4 pts</span></div>
+      <p class="qstem">A bond pays F₁, F₂ and F₃ over the next three years. <b>(a)</b> The interest rate rises. What happens to the bond's price, and why? <b>(b)</b> Write an expression for the price if i = 0.</p>
+      <div class="frqbox">Two or three sentences for (a). For (b) write the formula, do not describe it.</div>
+      <details class="ans"><summary>Model answer</summary><div class="ansbody">
+        <p><b>(a) The price falls.</b> The price is the present value of the payment stream, P = F₁/(1+i) + F₂/(1+i)² + F₃/(1+i)³. The payments F<sub>t</sub> are <b>fixed</b>, so raising i increases every denominator and the whole right-hand side shrinks.</p>
+        <p><b>(b)</b> If i = 0 then 1 + i = 1 and every denominator equals 1:</p>
+        <div class="eq">P = F₁ + F₂ + F₃</div>
+        <div class="mark"><span class="mh">What earns the points</span><ul>
+          <li>Writing the <b>PV formula</b> out before answering.</li>
+          <li>Saying the payments are <b>fixed</b> — that is why the price, not the payment, adjusts.</li>
+          <li>Naming the <b>denominator</b> as the thing that moved.</li>
+          <li>For (b), the sum with no discounting — not "the price is higher."</li>
+        </ul></div>
       </div></details>
-    </div></div></div>
+    </div>
 
+    <div class="qitem"><div class="qnum"><input class="chk" type="checkbox" id="u14q6"><i>FRQ 2</i><span class="pts">6 pts</span></div>
+      <p class="qstem">A machine will generate $1,000 of marginal revenue product at the end of each of the next three years and then be worthless. <b>(a)</b> Compute its present value at an interest rate of 3%. <b>(b)</b> Recompute at 8%. <b>(c)</b> Use the two answers to explain the slope of the investment demand curve.</p>
+      <div class="frqbox">Show the three discounted terms in each case. One or two sentences for (c).</div>
+      <details class="ans"><summary>Model answer</summary><div class="ansbody">
+        <div class="eq">PV = 1000/1.03 + 1000/1.03² + 1000/1.03³ = 970.87 + 942.60 + 915.14 = <b>$2,828.61</b></div>
+        <div class="eq">PV = 1000/1.08 + 1000/1.08² + 1000/1.08³ = 925.93 + 857.34 + 793.83 = <b>$2,577.10</b></div>
+        <p><b>(c)</b> A firm buys the machine only if its price is at or below the present value of its MRP<sub>K</sub> stream. Raising the rate from 3% to 8% cuts that value by about $250, so machines that were worth buying no longer are. <b>Higher interest rate ⇒ less investment</b>, which is why investment demand slopes down.</p>
+        <p><b>Note.</b> The lecture slide gives the 3% total as <b>$2,827.83</b>, because it mistypes the first term as 970.09 instead of 970.87. The correct sum is $2,828.61. The difference never matters for credit — write the formula and your working, and either total will be accepted.</p>
+        <div class="mark"><span class="mh">What earns the points</span><ul>
+          <li>The formula written out with <b>exponents 1, 2, 3</b> before any arithmetic.</li>
+          <li>Three separate discounted terms shown, not just a total.</li>
+          <li>A total <b>below $3,000</b> and not far below — the sanity check for three years of modest discounting.</li>
+          <li>Connecting the fall in PV to <b>fewer machines purchased</b>, not just "investment falls."</li>
+          <li>Naming the rule: firms buy until PV(MRP<sub>K</sub>) = purchase price.</li>
+        </ul></div>
+      </div></details>
+    </div>
   </div>
 </section>
 <nav class="pager">
