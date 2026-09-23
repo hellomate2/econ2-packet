@@ -2,6 +2,7 @@ const pptxgen = require("pptxgenjs");
 const pres = new pptxgen();
 pres.layout = "LAYOUT_WIDE"; // 13.333 x 7.5
 pres.title = "Frontier AI model comparison, Sep 2026";
+pres.theme = { headFontFace: "Arial", bodyFontFace: "Arial" };
 
 const NAVY = "041E42", INK = "1F2A37", MUTED = "5F6B7A", RULE = "C9D0D9", HAIR = "E3E7EC", TINT = "EAF0F7";
 const F = "Arial";
@@ -97,7 +98,7 @@ const rows = [
   ["Frontier math and science", "Research-level math, lab workflows", [3, 4, 2],
     "Terminal-Bench-Science: 58.7% vs. **64.6%**{1}; FrontierMath Tier 4: Astra **97.6%**"],
   ["High-volume, low-cost work", "Classification, extraction, RAG", [3, 1, 4],
-    "In/out $/1M: K3 **$3/$15**, Opus 5.5 $4/$20, Astra $10/$50"],
+    "K3 **$3/$15**, Opus 5.5 $4/$20, Astra $10/$50|List price per 1M tokens, input/output"],
   ["Self-hosting and data control", "On-prem, private cloud", [null, null, 4],
     "Only open-weight model of the three; also on Databricks and Fireworks"],
 ];
@@ -108,7 +109,7 @@ rows.forEach(([task, sub, lv, ev], r) => {
   txt([{ text: task, options: { bold: true, color: INK, fontSize: T.rowHead, breakLine: true } }, { text: sub, options: { color: MUTED, fontSize: T.rowSub } }],
     { x: GX, y, w: cTask - 0.1, h: RH, valign: "middle" });
   lv.forEach((v, i) => ball(bx[i] + cBall / 2, y + RH / 2, v));
-  txt(runs(ev), { x: evX, y, w: evW, h: RH, fontSize: T.body, color: INK, valign: "middle" });
+  txt(ev.split("|").flatMap((part, k, arr) => { const r = runs(part); if (k < arr.length - 1) r[r.length - 1].options.breakLine = true; return r; }), { x: evX, y, w: evW, h: RH, fontSize: T.body, color: INK, valign: "middle" });
   y += RH;
   hline(GX, y, gW, r === rows.length - 1 ? NAVY : HAIR, r === rows.length - 1 ? 0.75 : 0.5);
 });
@@ -146,22 +147,25 @@ specs.forEach(([lab, vals, best], r) => {
 });
 
 // ---------- Right: recommended use ----------
+// Same table treatment as the specs: navy top rule, header band, hairlines, navy bottom rule on the grid baseline
 const RY = sy + 0.26;
 txt("Recommended use", { x: SX, y: RY, w: SW, h: 0.24, fontSize: T.section, bold: true, color: NAVY });
-const boxY = RY + 0.38, boxH = gridBottom - boxY;
-rect(SX, boxY, SW, boxH, NAVY);
+const rHY = RY + 0.38, rHH = 0.32, rNameW = 1.12;
+hline(SX, rHY, SW, NAVY, 0.75);
+txt("Model", { x: SX, y: rHY, w: rNameW, h: rHH, fontSize: T.colHead, bold: true, color: NAVY, valign: "middle" });
+txt("Use for", { x: SX + rNameW, y: rHY, w: SW - rNameW, h: rHH, fontSize: T.colHead, bold: true, color: NAVY, valign: "middle" });
+hline(SX, rHY + rHH, SW, RULE, 0.75);
 const recs = [
-  ["Opus 5.5", "DEFAULT", "Coding, agents and analysis at c.60% below Astra's price"],
-  ["GPT-6 Astra", "SPECIALIST", "3D and creative tools, frontier math and science"],
-  ["Kimi K3", "SELF-HOSTED", "Regulated data and high-volume, low-cost workloads"],
+  ["Opus 5.5", "Default for coding, agents and analyst work; c.60% below Astra at list price"],
+  ["GPT-6 Astra", "3D and creative tools, frontier math and science"],
+  ["Kimi K3", "Regulated data (self-hosted) and high-volume, low-cost work"],
 ];
-const pad = 0.18, entryH = (boxH - 2 * 0.06) / recs.length;
-recs.forEach(([name, role, why], i) => {
-  const ey = boxY + 0.06 + i * entryH;
-  txt(name, { x: SX + pad, y: ey + 0.08, w: 2, h: 0.2, fontSize: 10.5, bold: true, color: "FFFFFF" });
-  txt(role, { x: SX + SW - pad - 1.4, y: ey + 0.1, w: 1.4, h: 0.18, fontSize: 7.5, bold: true, color: "A9BBD3", align: "right", charSpacing: 1 });
-  txt(why, { x: SX + pad, y: ey + 0.3, w: SW - 2 * pad, h: 0.18, fontSize: T.body, color: "DCE4EE" });
-  if (i < recs.length - 1) hline(SX + pad, ey + entryH, SW - 2 * pad, "2A4570", 0.5);
+const rRH = (gridBottom - (rHY + rHH)) / recs.length;
+recs.forEach(([name, use], i) => {
+  const ry = rHY + rHH + i * rRH;
+  txt(name, { x: SX, y: ry, w: rNameW, h: rRH, fontSize: T.body, bold: true, color: INK, valign: "middle" });
+  txt(use, { x: SX + rNameW, y: ry, w: SW - rNameW, h: rRH, fontSize: T.body, color: INK, valign: "middle" });
+  hline(SX, ry + rRH, SW, i === recs.length - 1 ? NAVY : HAIR, i === recs.length - 1 ? 0.75 : 0.5);
 });
 
 // ---------- Footer ----------
