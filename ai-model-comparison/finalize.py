@@ -21,6 +21,15 @@ with zipfile.ZipFile(src) as zin, zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED
                 kind = "TextBox" if 'txBox="1"' in block else names.get(g.group(1) if g else "", "Shape")
                 return re.sub(r'(<p:cNvPr id="(\d+)" name=")[^"]*"', lambda n: f'{n.group(1)}{kind} {int(n.group(2)) - 1}"', block, count=1)
             t = re.sub(r"<p:(sp|cxnSp)>.*?</p:\1>", fix, t, flags=re.S)
+            # Apply PowerPoint's built-in "Medium Style 2 - Accent 1" (the Insert > Table default)
+            # Let the table style drive borders and text color, as in a table inserted by hand
+            def clean_tbl(m):
+                tb = m.group(0)
+                tb = re.sub(r"<a:ln[LRTB] [^>]*>.*?</a:ln[LRTB]>", "", tb, flags=re.S)
+                tb = tb.replace('<a:solidFill><a:srgbClr val="000000"/></a:solidFill>', "")
+                return tb
+            t = re.sub(r"<a:tbl>.*?</a:tbl>", clean_tbl, t, flags=re.S)
+            t = t.replace("<a:tblPr/>", '<a:tblPr firstRow="1" bandRow="1"><a:tableStyleId>{5C22544A-7EE6-4342-B048-85BDC9FD1C3A}</a:tableStyleId></a:tblPr>')
             data = t.encode()
         zout.writestr(item, data)
 shutil.move(tmp, src)
