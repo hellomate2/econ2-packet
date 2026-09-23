@@ -68,7 +68,7 @@ cards.forEach(([name, sub, logo, tile, bullets], i) => {
 });
 
 // ---------- Key Takeaways ----------
-const KY = 5.5, KX = 0.4;
+const KY = 5.62, KX = 0.4;
 s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: KX, y: KY, w: KW, h: KH, rectRadius: 0.18, fill: { color: "FFFFFF", transparency: 94 }, line: { color: "FFFFFF", transparency: 90, width: 0.5 } });
 s.addImage({ data: img("br-kt.png"), x: KX - P, y: KY - P, w: KW + 2 * P, h: KH + 2 * P });
 text("Key Takeaways", { x: KX + 0.3, y: KY + 0.2, w: 4, h: 0.3, fontFace: MED, fontSize: 13, color: HI });
@@ -76,9 +76,5 @@ text(bulletRuns([
   "[[Opus 5.5]] should be the default for most work, given its lead on coding and knowledge-work benchmarks and its [[lower price than Astra]]",
   "[[Astra]] is worth the premium for specialist work, while [[Kimi K3]] fits teams that need to keep data in-house or cut costs",
 ]), { x: KX + 0.3, y: KY + 0.55, w: KW - 0.6, h: KH - 0.7, fontSize: 12.5, paraSpaceAfter: 5 });
-
-// ---------- Sources ----------
-text("Sources: Anthropic, OpenAI, Moonshot AI, Artificial Analysis (Sep 2026). Opus vs. Astra benchmarks as reported by Anthropic.",
-  { x: 0.4, y: 7.03, w: 12.5, h: 0.22, fontSize: 8.5, color: MUTED });
 
 pres.writeFile({ fileName: "AI-Model-Comparison-Sep-2026.pptx" }).then(f => console.log("wrote", f));
