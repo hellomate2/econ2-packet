@@ -14,9 +14,12 @@ const hline = (x, y, w, color, pt) => s.addShape(pres.shapes.LINE, { x, y, w, h:
 
 // "text{1} more" -> runs with superscript footnote markers
 function runs(str, base = {}) {
-  return str.split(/(\{\d\})/).filter(Boolean).map(p => {
+  return str.split(/(\{\d\}|\*\*[^*]+\*\*)/).filter(Boolean).map(p => {
     const m = p.match(/^\{(\d)\}$/);
-    return m ? { text: `(${m[1]})`, options: Object.assign({}, base, { superscript: true }) } : { text: p, options: Object.assign({}, base) };
+    if (m) return { text: `(${m[1]})`, options: Object.assign({}, base, { superscript: true }) };
+    const b = p.match(/^\*\*([^*]+)\*\*$/);
+    if (b) return { text: b[1], options: Object.assign({}, base, { bold: true, color: NAVY }) };
+    return { text: p, options: Object.assign({}, base) };
   });
 }
 
@@ -71,19 +74,19 @@ hline(GX, HY + HH, gW, RULE, 0.75);
 // [task, detail, [opus, astra, k3], evidence]
 const rows = [
   ["Agentic coding and code migration", "Dev agents, refactors, codebase audits", [4, 3, 2],
-    "Terminal-Bench 4.0: 66.4% vs. 57.9%{1}; customer case: 680K-line migration in <1 day"],
+    "Terminal-Bench 4.0: **66.4%** vs. 57.9%{1}; customer case: 680K lines migrated in <1 day"],
   ["Knowledge work and finance", "Research, financial modeling, reports", [4, 2, 2],
-    "GDPval-AA v2.1: 1,846 vs. 1,542 Elo; Humanity's Last Exam: 67.7% vs. 57.2%{1}"],
+    "GDPval-AA v2.1: **1,846** vs. 1,542 Elo; Humanity's Last Exam: **67.7%** vs. 57.2%{1}"],
   ["Computer use and automation", "Desktop, browser, multi-app workflows", [4, 4, 1],
-    "OSWorld 2.0: 81.8% vs. 72.6%{2}; AutomationBench: 40.0% vs. 41.4%{1}"],
+    "OSWorld 2.0: 81.8% vs. 72.6%{2}; AutomationBench: 40.0% vs. **41.4%**{1}"],
   ["3D and creative software", "Blender, Unreal Engine 5", [2, 4, 1],
     "Astra operates Blender and UE5 directly (OpenAI launch demo)"],
   ["Frontier math and science", "Research-level math, lab workflows", [3, 4, 2],
-    "Terminal-Bench-Science: 58.7% vs. 64.6%{1}; FrontierMath Tier 4: Astra 97.6%"],
+    "Terminal-Bench-Science: 58.7% vs. **64.6%**{1}; FrontierMath Tier 4: Astra **97.6%**"],
   ["High-volume, cost-sensitive work", "Classification, extraction, RAG", [3, 1, 4],
-    "List price, $/1M tokens in/out: K3 $3/$15; Opus\u00A05.5 $4/$20; Astra $10/$50"],
+    "List price, $/1M tokens in/out: K3 **$3/$15**; Opus\u00A05.5 $4/$20; Astra $10/$50"],
   ["Self-hosting and data control", "On-prem, private cloud", [null, null, 4],
-    "Only open-weight model of the three{4}; also on Databricks and Fireworks"],
+    "Only open-weight model of the three{3}; also on Databricks and Fireworks"],
 ];
 const RH = 0.6;
 let y = HY + HH;
@@ -100,34 +103,45 @@ rows.forEach(([task, sub, lv, ev], r) => {
 const gridBottom = y;
 
 // ---------- Right: specifications ----------
+// Header and row rules sit on the same baselines as the task-fit grid (0.5" header, rows at half the grid pitch)
 const SX = GX + gW + 0.38, SW = R - SX;
 const sLab = 1.2, sCol = (SW - sLab) / 3;
 txt("Specifications", { x: SX, y: GY, w: SW, h: 0.22, fontSize: 11, bold: true, color: NAVY });
 hline(SX, HY, SW, NAVY, 0.75);
-["Opus 5.5", "GPT-6 Astra", "Kimi K3"].forEach((m, i) => txt(m, { x: SX + sLab + i * sCol, y: HY + 0.08, w: sCol, h: 0.2, fontSize: 9, bold: true, color: NAVY, align: "center" }));
-hline(SX, HY + 0.34, SW, RULE, 0.75);
+[["Opus 5.5", "22 Sep 2026"], ["GPT-6 Astra", "3 Sep 2026"], ["Kimi K3", "16 Jul 2026"]].forEach(([m, d], i) =>
+  txt([{ text: m, options: { bold: true, color: NAVY, fontSize: 9.5, breakLine: true } }, { text: d, options: { color: MUTED, fontSize: 8 } }],
+    { x: SX + sLab + i * sCol, y: HY + 0.08, w: sCol, h: 0.38, align: "center" }));
+txt([{ text: " ", options: { fontSize: 9.5, breakLine: true } }, { text: "Released", options: { fontSize: 8 } }], { x: SX, y: HY + 0.08, w: sLab, h: 0.38, color: MUTED });
+hline(SX, HY + HH, SW, RULE, 0.75);
 
+// [label, values, best index or -1, row height multiple]
 const specs = [
-  ["Released", ["22 Sep 2026", "3 Sep 2026", "16 Jul 2026"]],
-  ["Access", ["API", "API (staged)", "Open weights{4}"]],
-  ["Input ($ / 1M tokens)", ["$4.00", "$10.00", "$3.00"]],
-  ["Output ($ / 1M tokens)", ["$20.00", "$50.00", "$15.00"]],
-  ["Cached input ($ / 1M)", ["$0.20", "$1.00", "$0.30"]],
-  ["Context (tokens)", ["1.0M", "1.05M", "1.0M"]],
-  ["Parameters", ["n/a", "n/a", "2.8T MoE"]],
-  ["AA Intelligence Index{3}", ["58", "53", "44"]],
+  ["Access", ["API", "API (staged)", "Open weights{3}"], -1, 1],
+  ["Input ($ / 1M tokens)", ["$4.00", "$10.00", "$3.00"], 2, 1],
+  ["Output ($ / 1M tokens)", ["$20.00", "$50.00", "$15.00"], 2, 1],
+  ["Cached input ($ / 1M)", ["$0.20", "$1.00", "$0.30"], 0, 1],
+  ["Context (tokens)", ["1.0M", "1.05M", "1.0M"], 1, 1],
+  ["Parameters{5}", [["Undisclosed", "No estimate"], ["Undisclosed", "Est. c.5-10T"], ["2.8T MoE", "104B active"]], -1, 2],
+  ["AA Intelligence Index{4}", ["58", "53", "44"], 0, 1],
 ];
-let sy = HY + 0.34;
-const SRH = 0.295;
-specs.forEach(([lab, vals], r) => {
-  txt(runs(lab), { x: SX, y: sy, w: sLab, h: SRH, fontSize: 8.5, color: MUTED, valign: "middle" });
-  vals.forEach((v, i) => txt(runs(v), { x: SX + sLab + i * sCol + 0.02, y: sy, w: sCol - 0.04, h: SRH, fontSize: 8.5, color: INK, align: "center", valign: "middle", bold: r === specs.length - 1 }));
-  sy += SRH;
+let sy = HY + HH;
+const SRH = RH / 2;
+specs.forEach(([lab, vals, best, k], r) => {
+  const h = SRH * k;
+  if (best >= 0) s.addShape(pres.shapes.RECTANGLE, { x: SX + sLab + best * sCol + 0.1, y: sy + 0.04, w: sCol - 0.2, h: h - 0.08, fill: { color: TINT }, line: { color: TINT, width: 0 } });
+  txt(runs(lab), { x: SX, y: sy, w: sLab, h, fontSize: 8.5, color: MUTED, valign: "middle" });
+  vals.forEach((v, i) => {
+    const body = Array.isArray(v)
+      ? [{ text: v[0], options: { color: INK, fontSize: 8.5, breakLine: true } }, { text: v[1].replace("-", "–"), options: { color: MUTED, fontSize: 7.5 } }]
+      : runs(v, { bold: i === best, color: i === best ? NAVY : INK });
+    txt(body, { x: SX + sLab + i * sCol + 0.02, y: sy, w: sCol - 0.04, h, fontSize: 8.5, align: "center", valign: "middle" });
+  });
+  sy += h;
   hline(SX, sy, SW, r === specs.length - 1 ? NAVY : HAIR, r === specs.length - 1 ? 0.75 : 0.5);
 });
 
 // ---------- Right: recommended use ----------
-const RY = sy + 0.26;
+const RY = sy + 0.24;
 txt("Recommended use", { x: SX, y: RY, w: SW, h: 0.22, fontSize: 11, bold: true, color: NAVY });
 const boxY = RY + 0.34, boxH = gridBottom - boxY;
 s.addShape(pres.shapes.RECTANGLE, { x: SX, y: boxY, w: SW, h: boxH, fill: { color: TINT }, line: { color: TINT, width: 0 } });
@@ -136,7 +150,7 @@ const recs = [
   ["Astra", "Computer use, 3D tools and frontier math. Staged access; OpenAI rates its cyber capability \"Critical\"."],
   ["K3", "Self-hosted and high-volume work. Avoid Moonshot's own API for regulated data."],
 ];
-const recNameW = 0.72, recPad = 0.15, recRowH = (boxH - 2 * recPad) / recs.length;
+const recNameW = 0.72, recPad = 0.14, recRowH = (boxH - 2 * recPad) / recs.length;
 recs.forEach(([n, t], i) => {
   const ry = boxY + recPad + i * recRowH;
   txt(n, { x: SX + recPad, y: ry, w: recNameW, h: recRowH, fontSize: 8.5, bold: true, color: NAVY, valign: "middle" });
@@ -144,17 +158,15 @@ recs.forEach(([n, t], i) => {
 });
 
 // ---------- Footer ----------
-const note = { fontSize: 7, color: MUTED };
+const br = { text: "", options: { breakLine: true } };
 txt([
-  { text: "Note: Ratings are analyst judgment based on the data shown; scores reported by different vendors are not always like-for-like. Prices are list API rates.", options: { breakLine: true } },
-  ...runs("{1} Opus 5.5 vs. Astra figures as reported by Anthropic (22 Sep 2026); not independently replicated.  {2} Anthropic and OpenAI report OSWorld 2.0 under different test settings.", {}),
-  { text: "", options: { breakLine: true } },
-  ...runs("{3} Artificial Analysis Intelligence Index v4.3 (Sep 2026). No like-for-like K3 scores are published for most tasks above, so K3 ratings rely mainly on this index.", {}),
-  { text: "", options: { breakLine: true } },
-  ...runs("{4} 104B active parameters. Weights released 27 Jul 2026 under the Kimi K3 License (modified open license; model-as-a-service businesses above $20M annual revenue need a separate agreement).", {}),
-  { text: "", options: { breakLine: true } },
+  { text: "Note: Ratings are analyst judgment based on the data shown; scores reported by different vendors are not always like-for-like. Shading marks the leader in each row. Prices are list API rates.", options: { breakLine: true } },
+  ...runs("{1} Opus 5.5 vs. Astra figures as reported by Anthropic (22 Sep 2026); not independently replicated.  {2} Anthropic and OpenAI report OSWorld 2.0 under different test settings."), br,
+  ...runs("{3} Weights released 27 Jul 2026 under the Kimi K3 License (modified open license; model-as-a-service businesses above $20M annual revenue need a separate agreement)."), br,
+  ...runs("{4} Artificial Analysis Intelligence Index v4.3 (Sep 2026). No like-for-like K3 scores are published for most tasks above, so K3 ratings rely mainly on this index."), br,
+  ...runs("{5} Anthropic and OpenAI do not disclose model size. Third-party estimates for Astra range from c.5T to 10T total parameters and are unverified."), br,
   { text: "Source: Anthropic, \"Introducing Claude Opus 5.5\" (22 Sep 2026); OpenAI, \"GPT-6 Astra\" (3 Sep 2026); Moonshot AI, \"Kimi K3 Tech Blog\" (16 Jul 2026); Artificial Analysis; Databricks; Fireworks AI." },
-], Object.assign({ x: L, y: gridBottom + 0.14, w: R - L - 0.4, h: 0.62, lineSpacingMultiple: 1.0 }, note));
-txt("1", { x: R - 0.3, y: 7.08, w: 0.3, h: 0.16, fontSize: 8, color: MUTED, align: "right" });
+], { x: L, y: gridBottom + 0.12, w: R - L - 0.4, h: 0.72, fontSize: 7, color: MUTED });
+txt("1", { x: R - 0.3, y: gridBottom + 0.12 + 0.72 - 0.14, w: 0.3, h: 0.14, fontSize: 8, color: MUTED, align: "right" });
 
 pres.writeFile({ fileName: "AI-Model-Comparison-Sep-2026.pptx" }).then(f => console.log("wrote", f));
