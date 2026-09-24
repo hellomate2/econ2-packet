@@ -18,7 +18,7 @@ const ratio = f => SIZES[f][0] / SIZES[f][1];
 let page = 0;
 function slide(bgFile, footer = true) {
   const s = pres.addSlide();
-  s.background = { data: img(bgFile) };
+  s.background = { data: "image/jpeg;base64," + fs.readFileSync(path.join(__dirname, "img", bgFile.replace(".png", ".jpg"))).toString("base64") };
   page++;
   if (footer) {
     s.addText("AZ Professional Development  ·  Speaker Series", { x: 0.6, y: 7.02, w: 6, h: 0.24, fontFace: REG, fontSize: 9, color: MUTED, margin: 0, isTextBox: true });

@@ -19,7 +19,7 @@ def bg(name, glows):
         img = img * (1 - t) + rgb(col) * t
     # a touch of grain so large flat areas don't band
     img += np.random.default_rng(1).normal(0, 1.4, img.shape)
-    Image.fromarray(img.clip(0, 255).astype(np.uint8)).save(f"img/{name}.png")
+    Image.fromarray(img.clip(0, 255).astype(np.uint8)).save(f"img/{name}.jpg", quality=88, subsampling=0)
 
 
 bg("bg-cover", [(0.92, 0.1, 0.9, "3B2E8F", 0.85), (0.05, 1.05, 0.8, "123E7A", 0.7)])
