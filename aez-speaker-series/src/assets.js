@@ -1,4 +1,4 @@
-// Renders colour icons, brand logos (on white tiles) and the AZ monogram to PNG.
+// Renders colour icons, brand logos (on white tiles) and the AEZ monogram to PNG.
 const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
@@ -52,12 +52,12 @@ const BRANDS = { discord: "siDiscord", postgres: "siPostgresql", rust: "siRust",
   const oa = fs.readFileSync(`${NM}/@lobehub/icons-static-svg/icons/openai.svg`, "utf8").match(/<path[^>]*d="([^"]+)"/)[1];
   await sharp(Buffer.from(tile(`<g transform="translate(116 116) scale(11.67)"><path d="${oa}" fill="#000000"/></g>`))).png().toFile(path.join(OUT, "logo-openai.png"));
 
-  // AZ monogram: gold ring, two-letter wordmark
+  // AEZ monogram: gold ring, two-letter wordmark
   const mono = (ring, text, bg) => `<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
     ${bg ? `<circle cx="256" cy="256" r="246" fill="${bg}"/>` : ""}
     <circle cx="256" cy="256" r="238" fill="none" stroke="${ring}" stroke-width="10"/>
     <circle cx="256" cy="256" r="212" fill="none" stroke="${ring}" stroke-width="3" opacity=".7"/>
-    <text x="256" y="300" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="150" fill="${text}" letter-spacing="6">AZ</text>
+    <text x="256" y="298" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="122" fill="${text}" letter-spacing="4">AEZ</text>
   </svg>`;
   await sharp(Buffer.from(mono("#FDB515", "#FDB515"))).png().toFile(path.join(OUT, "az-mark.png"));
   await sharp(Buffer.from(mono("#FFFFFF", "#FFFFFF"))).png().toFile(path.join(OUT, "az-mark-white.png"));

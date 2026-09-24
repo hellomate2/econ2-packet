@@ -4,7 +4,7 @@ const path = require("path");
 
 const pres = new pptxgen();
 pres.layout = "LAYOUT_WIDE"; // 13.333 x 7.5
-pres.title = "AZ Speaker Series, Fall 2026";
+pres.title = "AEZ Speaker Series, Fall 2026";
 pres.theme = { headFontFace: "Poppins", bodyFontFace: "Poppins" };
 
 // ---------------------------------------------------------------- design tokens
@@ -73,7 +73,7 @@ function content(title, sub, navIdx) {
   }
   if (sub) T(s, sub, { x: 0.8, y: 0.98, w: 11.4, h: 0.36, fontFace: LIGHT, fontSize: 15, italic: true, color: "DCE0F5" });
   img(s, "az-mark.png", 12.28, 0.3, 0.72, 0.72);
-  T(s, "AZ", { x: 0.55, y: 6.93, w: 0.8, h: 0.36, fontFace: SEMI, fontSize: 17, color: GOLD, charSpacing: 2, valign: "middle" });
+  T(s, "AEZ", { x: 0.55, y: 6.93, w: 1.1, h: 0.36, fontFace: SEMI, fontSize: 17, color: GOLD, charSpacing: 2, valign: "middle" });
   const x0 = 2.2, cw = 2.1;
   NAV.forEach((n, i) => {
     T(s, n, { x: x0 + i * cw, y: 6.95, w: cw, h: 0.32, fontSize: 11.5, align: "center", valign: "middle", color: i === navIdx ? WHITE : MUTED, fontFace: i === navIdx ? MED : REG });
@@ -140,7 +140,7 @@ const TALK = {
   img(s, "plexus-bottom-light.png", 0, 0, W, 7.5);
   img(s, "az-mark.png", 3.35, 2.1, 1.75, 1.75);
   line(s, 5.62, 2.72, 0.5, 0.5, "8FA8FF", 1.25);
-  line(s, 5.62, 3.22, 0.5, -0.5, "8FA8FF", 1.25);
+  s.addShape(pres.shapes.LINE, { x: 5.62, y: 2.72, w: 0.5, h: 0.5, flipV: true, line: { color: "8FA8FF", width: 1.25 } });
   T(s, "Speaker Series", { x: 6.6, y: 2.22, w: 6, h: 0.8, fontFace: LIGHT, fontSize: 44 });
   T(s, "Fall 2026  ·  Professional Development", { x: 6.64, y: 3.08, w: 6, h: 0.4, fontSize: 15, color: GOLD });
 }
@@ -413,7 +413,7 @@ divider(5, "Next Steps", ["Finding Speakers", "The Plan"]);
     }
   });
   bar(s, "Sample DM", LX, 5.62, RX - LX, 1.0, [
-    "\"Hi Sam, I'm in AZ at Berkeley and loved your post on moving your message store to ScyllaDB. Would you give a 30-minute talk to about 40 students who want to do this kind of work? Zoom or in person, any week this fall.\"",
+    "\"Hi Sam, I'm in AEZ at Berkeley and loved your post on moving your message store to ScyllaDB. Would you give a 30-minute talk to about 40 students who want to do this kind of work? Zoom or in person, any week this fall.\"",
   ], 13);
 }
 
@@ -433,4 +433,4 @@ divider(5, "Next Steps", ["Finding Speakers", "The Plan"]);
   });
 }
 
-pres.writeFile({ fileName: path.join(__dirname, "AZ-Speaker-Series.pptx") }).then(f => console.log("wrote", f));
+pres.writeFile({ fileName: path.join(__dirname, "AEZ-Speaker-Series.pptx") }).then(f => console.log("wrote", f));
