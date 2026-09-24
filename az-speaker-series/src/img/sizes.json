@@ -1,0 +1,50 @@
+{
+ "mock-market.png": [
+  1960,
+  1312
+ ],
+ "mock-hft.png": [
+  2240,
+  1008
+ ],
+ "mock-status.png": [
+  2240,
+  1364
+ ],
+ "mock-agent.png": [
+  2240,
+  994
+ ],
+ "mock-note.png": [
+  2360,
+  1114
+ ],
+ "art-rollback.png": [
+  1223,
+  458
+ ],
+ "art-ai.png": [
+  1228,
+  524
+ ],
+ "art-markets.png": [
+  393,
+  1446
+ ],
+ "art-health.png": [
+  4848,
+  344
+ ],
+ "art-systems.png": [
+  1064,
+  1480
+ ],
+ "art-metal.png": [
+  1088,
+  1488
+ ],
+ "art-pixel.png": [
+  644,
+  584
+ ]
+}
